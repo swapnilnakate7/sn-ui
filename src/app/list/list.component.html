@@ -1,7 +1,7 @@
 <aside>
   <ul [style]="{ padding: 0, listStyle: 'none' }">
     @for(component of list;track $index){
-    <li [innerHTML]="component" (click)="display(component)"></li>
+    <li [innerHTML]="component | titlecase" (click)="display(component)"></li>
     }
   </ul>
 </aside>
@@ -40,8 +40,16 @@
     excepturi.</sn-card
   >
   }@else if(_display ==='input'){
-  <sn-input></sn-input>
-  <sn-input type="checkbox"></sn-input>
-  <sn-input type="number"></sn-input>
+  <form>
+    <sn-input type="text"></sn-input>
+    <sn-input type="checkbox"></sn-input>
+    <sn-input type="number"></sn-input>
+    <sn-input type="date"></sn-input>
+    <sn-input type="datetime-local"></sn-input>
+    <sn-input type="email"></sn-input>
+    <sn-input type="password"></sn-input>
+    <sn-input type="color"></sn-input>
+    <sn-input type="range"></sn-input>
+  </form>
   }@else { Select Component 👆🏻 }
 </main>

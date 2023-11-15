@@ -26,11 +26,7 @@ export class SnButtonComponent implements OnInit {
     danger: 'danger',
     success: 'success',
   };
-  constructor() {
-    console.log('a', this.disabled);
-  }
+  constructor() {}
 
-  ngOnInit() {
-    console.log('onInit');
-  }
+  ngOnInit() {}
 }

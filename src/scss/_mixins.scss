@@ -1,0 +1,21 @@
+@mixin generateStyle($color, $bgColor: var(--background-color)) {
+  &:not(:disabled) {
+    color: $color;
+  }
+
+  &-outlined:not([disabled]) {
+    color: $color;
+    background-color: transparent;
+    border: 1px solid $color;
+    &:hover:not(:disabled) {
+      background-color: $color;
+      color: $bgColor;
+    }
+  }
+  &:hover:not(:disabled) {
+    background-color: $color;
+  }
+  &:hover:enabled {
+    color: $bgColor;
+  }
+}

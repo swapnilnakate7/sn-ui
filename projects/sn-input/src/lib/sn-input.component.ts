@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, Input, OnInit } from '@angular/core';
+import { CommonModule, TitleCasePipe } from '@angular/common';
+import { v4 } from 'uuid';
 
 @Component({
   selector: 'sn-input',
@@ -8,7 +9,14 @@ import { CommonModule } from '@angular/common';
   templateUrl: 'sn-input.html',
   styleUrl: 'sn-input.scss',
 })
-export class SnInputComponent {
-  @Input() type: string = 'text';
-  @Input() label: string = 'Label';
+export class SnInputComponent implements OnInit {
+  @Input({ required: true }) type: string = 'text';
+  @Input() label?: string;
+  @Input() placeholder: string = `Enter ${this.type}`;
+  _id = v4();
+  upperCasePipe: TitleCasePipe = new TitleCasePipe();
+
+  ngOnInit(): void {
+    this.placeholder = `Enter ${this.upperCasePipe.transform(this.type)}`;
+  }
 }
