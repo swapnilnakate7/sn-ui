@@ -9,11 +9,24 @@
   @if(_display === 'button'){
 
   <div class="buttons">
+    Filled
     <sn-button>Default</sn-button>
     <sn-button scheme="info">Info</sn-button>
     <sn-button scheme="warn">Warn</sn-button>
     <sn-button scheme="danger">Danger</sn-button>
     <sn-button scheme="success">Success</sn-button>
+    <sn-button [disabled]="true">Default Disabled</sn-button>
+  </div>
+  <div class="buttons">
+    Outlined
+    <sn-button scheme="default-outlined">Default</sn-button>
+    <sn-button scheme="info-outlined">Info outlined</sn-button>
+    <sn-button scheme="warn-outlined">Warn</sn-button>
+    <sn-button scheme="danger-outlined">Danger</sn-button>
+    <sn-button scheme="success-outlined">Success</sn-button>
+    <sn-button scheme="default-outlined" [disabled]="true"
+      >Default Outlined Disabled</sn-button
+    >
   </div>
 
   } @else if(_display === 'card'){
@@ -26,5 +39,9 @@
     saepe aut. Repellendus repudiandae iste tempora fugit quidem, provident
     excepturi.</sn-card
   >
-  }@else { Select Component }
+  }@else if(_display ==='input'){
+  <sn-input></sn-input>
+  <sn-input type="checkbox"></sn-input>
+  <sn-input type="number"></sn-input>
+  }@else { Select Component 👆🏻 }
 </main>

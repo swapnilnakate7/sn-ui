@@ -18,8 +18,10 @@
     "moduleResolution": "node",
     "paths": {
       "sn-button": ["./dist/sn-button"],
-      "@app": ["app/*"],
-      "sn-card": ["./dist/sn-card"]
+      "@libs/*": ["./projects/*"],
+      "@app/*": ["./src/app/*"],
+      "sn-card": ["./dist/sn-card"],
+      "sn-input": ["./dist/sn-input"]
     },
     "importHelpers": true,
     "target": "ES2022",

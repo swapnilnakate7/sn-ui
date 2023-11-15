@@ -1,4 +1,11 @@
-import { Component, Input, booleanAttribute } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnInit,
+  Signal,
+  booleanAttribute,
+  signal,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 @Component({
   selector: 'sn-button',
@@ -7,7 +14,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './sn-button.html',
   styleUrl: 'sn-button.scss',
 })
-export class SnButtonComponent {
+export class SnButtonComponent implements OnInit {
   @Input() type: string = 'submit';
   @Input() text: string = 'Default';
   @Input({ transform: booleanAttribute }) disabled: boolean = false;
@@ -19,4 +26,11 @@ export class SnButtonComponent {
     danger: 'danger',
     success: 'success',
   };
+  constructor() {
+    console.log('a', this.disabled);
+  }
+
+  ngOnInit() {
+    console.log('onInit');
+  }
 }
