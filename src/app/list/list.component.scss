@@ -1,0 +1,18 @@
+li {
+  margin: 0 0.125rem;
+  border: 1px solid #ececec;
+  width: 10%;
+  text-align: center;
+  display: inline-block;
+  transition: 1.2s background-color;
+  &:hover {
+    background-color: #0078d7;
+    color: #ffffff;
+  }
+}
+
+.buttons {
+  * {
+    margin: 1rem;
+  }
+}

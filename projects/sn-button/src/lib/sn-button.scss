@@ -1,0 +1,42 @@
+.sn-button {
+  border-width: 0;
+  outline: 1px solid #ececec;
+  background-color: #ffffff;
+  border-radius: 0.125rem;
+  font-size: small;
+  padding: 0.625rem;
+  transition: 1.2s background-color;
+
+  &:hover {
+    background-color: #0078d7;
+    color: #ffffff;
+  }
+}
+
+.info {
+  color: #0078d7;
+  &:hover {
+    background-color: #0078d7;
+  }
+}
+
+.warn {
+  color: #ffb900;
+  &:hover {
+    background-color: #ffb900;
+  }
+}
+
+.danger {
+  color: #e81123;
+  &:hover {
+    background-color: #e81123;
+  }
+}
+
+.success {
+  color: #00cc6a;
+  &:hover {
+    background-color: #00cc6a;
+  }
+}

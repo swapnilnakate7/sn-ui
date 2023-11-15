@@ -1,0 +1,18 @@
+header {
+  text-align: center;
+
+  h1,
+  h5 {
+    background-clip: text;
+    //-webkit-background-clip: text;
+    color: transparent;
+    width: fit-content;
+    margin: 0 auto;
+    background-image: linear-gradient(
+      90deg,
+      oklch(0.6332 0.24 31.68) 0%,
+      oklch(0.6902 0.277 332.77) 50%,
+      oklch(0.5318 0.28 296.97) 100%
+    );
+  }
+}

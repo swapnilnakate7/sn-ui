@@ -1,0 +1,30 @@
+<aside>
+  <ul [style]="{ padding: 0, listStyle: 'none' }">
+    @for(component of list;track $index){
+    <li [innerHTML]="component" (click)="display(component)"></li>
+    }
+  </ul>
+</aside>
+<main>
+  @if(_display === 'button'){
+
+  <div class="buttons">
+    <sn-button>Default</sn-button>
+    <sn-button scheme="info">Info</sn-button>
+    <sn-button scheme="warn">Warn</sn-button>
+    <sn-button scheme="danger">Danger</sn-button>
+    <sn-button scheme="success">Success</sn-button>
+  </div>
+
+  } @else if(_display === 'card'){
+  <sn-card title="wow"
+    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae officia rem
+    eaque reprehenderit iure facere quod earum. Placeat, ratione perspiciatis
+    eligendi officia commodi ex temporibus alias ab, tempore eaque aliquid. Ad
+    soluta ullam voluptate itaque, atque libero incidunt quibusdam vero repellat
+    exercitationem pariatur ipsam omnis natus repudiandae non dignissimos illo
+    saepe aut. Repellendus repudiandae iste tempora fugit quidem, provident
+    excepturi.</sn-card
+  >
+  }@else { Select Component }
+</main>
