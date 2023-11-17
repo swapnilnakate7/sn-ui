@@ -14,19 +14,27 @@ import { CommonModule } from '@angular/common';
   templateUrl: './sn-button.html',
   styleUrl: 'sn-button.scss',
 })
-export class SnButtonComponent implements OnInit {
+export class SnButtonComponent {
   @Input() type: string = 'submit';
   @Input() text: string = 'Default';
   @Input({ transform: booleanAttribute }) disabled: boolean = false;
+  @Input({ transform: booleanAttribute }) rounded: boolean = false;
+  @Input({ transform: booleanAttribute }) filled: boolean = false;
+
   @Input() scheme: string = 'default';
 
   _styles: any = {
-    info: 'info',
+    primary: 'primary',
     warn: 'warn',
     danger: 'danger',
     success: 'success',
   };
-  constructor() {}
-
-  ngOnInit() {}
+  getClasses() {
+    return [
+      'sn-button',
+      this.scheme,
+      this.rounded ? 'rounded' : '',
+      this.filled ? 'filled' : '',
+    ];
+  }
 }

@@ -9,22 +9,70 @@
   @if(_display === 'button'){
 
   <div class="buttons">
-    Filled
+    Text
     <sn-button>Default</sn-button>
-    <sn-button scheme="info">Info</sn-button>
+    <sn-button scheme="primary">Primary</sn-button>
     <sn-button scheme="warn">Warn</sn-button>
     <sn-button scheme="danger">Danger</sn-button>
     <sn-button scheme="success">Success</sn-button>
     <sn-button [disabled]="true">Default Disabled</sn-button>
   </div>
   <div class="buttons">
+    Text Rounded
+    <sn-button [rounded]="true">Default</sn-button>
+    <sn-button scheme="primary" [rounded]="true">Primary</sn-button>
+    <sn-button scheme="warn" [rounded]="true">Warn</sn-button>
+    <sn-button scheme="danger" [rounded]="true">Danger</sn-button>
+    <sn-button scheme="success" [rounded]="true">Success</sn-button>
+    <sn-button [disabled]="true" [rounded]="true">Default Disabled</sn-button>
+  </div>
+  <div class="buttons">
+    Text Filled
+    <sn-button [filled]="true">Default</sn-button>
+    <sn-button scheme="primary" [filled]="true">Primary</sn-button>
+    <sn-button scheme="warn" [filled]="true">Warn</sn-button>
+    <sn-button scheme="danger" [filled]="true">Danger</sn-button>
+    <sn-button scheme="success" [filled]="true">Success</sn-button>
+    <sn-button [disabled]="true" [filled]="true">Default Disabled</sn-button>
+  </div>
+  <div class="buttons">
+    Text Filled Rounded
+    <sn-button [filled]="true" [rounded]="true">Default</sn-button>
+    <sn-button scheme="primary" [filled]="true" [rounded]="true"
+      >Primary</sn-button
+    >
+    <sn-button scheme="warn" [filled]="true" [rounded]="true">Warn</sn-button>
+    <sn-button scheme="danger" [filled]="true" [rounded]="true"
+      >Danger</sn-button
+    >
+    <sn-button scheme="success" [filled]="true" [rounded]="true"
+      >Success</sn-button
+    >
+    <sn-button [disabled]="true" [filled]="true" [rounded]="true"
+      >Default Disabled</sn-button
+    >
+  </div>
+  <div class="buttons">
     Outlined
     <sn-button scheme="default-outlined">Default</sn-button>
-    <sn-button scheme="info-outlined">Info outlined</sn-button>
+    <sn-button scheme="primary-outlined">Primary outlined</sn-button>
     <sn-button scheme="warn-outlined">Warn</sn-button>
     <sn-button scheme="danger-outlined">Danger</sn-button>
     <sn-button scheme="success-outlined">Success</sn-button>
     <sn-button scheme="default-outlined" [disabled]="true"
+      >Default Outlined Disabled</sn-button
+    >
+  </div>
+  <div class="buttons">
+    Rounded
+    <sn-button scheme="default-outlined" [rounded]="true">Default</sn-button>
+    <sn-button scheme="primary-outlined" [rounded]="true"
+      >Primary outlined</sn-button
+    >
+    <sn-button scheme="warn-outlined" [rounded]="true">Warn</sn-button>
+    <sn-button scheme="danger-outlined" [rounded]="true">Danger</sn-button>
+    <sn-button scheme="success-outlined" [rounded]="true">Success</sn-button>
+    <sn-button scheme="default-outlined" [disabled]="true" [rounded]="true"
       >Default Outlined Disabled</sn-button
     >
   </div>

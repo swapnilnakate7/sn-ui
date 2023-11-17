@@ -1,13 +1,14 @@
 @import "../../../../src/scss/mixins";
-$infoColor: var(--info-color);
+$primaryColor: var(--primary-color);
 $warnColor: var(--warn-color);
 $dangerColor: var(--danger-color);
 $successColor: var(--success-color);
 $backgroundColor: var(--background-color);
-$black: var(--black-color);
+$black: var(--black-1);
 
 .sn-button {
   border-width: 0;
+  border: none;
   border: 1px solid var(--light-grey-color);
   background-color: $backgroundColor;
   border-radius: 0.225rem;
@@ -20,12 +21,16 @@ $black: var(--black-color);
     color: $backgroundColor;
   }
 
+  &.rounded {
+    border-radius: 2rem;
+  }
+
   &.default {
     @include generateStyle($black);
   }
 
-  &.info {
-    @include generateStyle($infoColor);
+  &.primary {
+    @include generateStyle($primaryColor);
   }
 
   &.warn {

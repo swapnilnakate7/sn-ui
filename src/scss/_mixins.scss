@@ -3,6 +3,11 @@
     color: $color;
   }
 
+  &.filled:not(:disabled) {
+    color: $bgColor;
+    background-color: $color;
+  }
+
   &-outlined:not([disabled]) {
     color: $color;
     background-color: transparent;
