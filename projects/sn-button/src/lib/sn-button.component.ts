@@ -2,26 +2,41 @@ import {
   Component,
   Input,
   OnInit,
-  Signal,
   booleanAttribute,
-  signal,
+  inject,
 } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgClass } from '@angular/common';
+import { FaIconComponent } from '@fortawesome/angular-fontawesome';
+import {
+  IconDefinition,
+  fa0,
+  faCoffee,
+} from '@fortawesome/free-solid-svg-icons';
+import { SnButtonService } from './sn-button.service';
+
 @Component({
   selector: 'sn-button',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NgClass, FaIconComponent],
+  providers: [SnButtonService],
   templateUrl: './sn-button.html',
   styleUrl: 'sn-button.scss',
 })
-export class SnButtonComponent {
+export class SnButtonComponent implements OnInit {
   @Input() type: string = 'submit';
   @Input() text: string = 'Default';
   @Input({ transform: booleanAttribute }) disabled: boolean = false;
   @Input({ transform: booleanAttribute }) rounded: boolean = false;
   @Input({ transform: booleanAttribute }) filled: boolean = false;
+  @Input({ transform: booleanAttribute }) raised: boolean = false;
+  @Input() icon: string = '';
 
   @Input() scheme: string = 'default';
+
+  currentClasses: Record<string, boolean> = {};
+  faCoffee = faCoffee;
+  currentIcon: IconDefinition = fa0;
+  service = inject(SnButtonService);
 
   _styles: any = {
     primary: 'primary',
@@ -29,12 +44,21 @@ export class SnButtonComponent {
     danger: 'danger',
     success: 'success',
   };
-  getClasses() {
-    return [
-      'sn-button',
-      this.scheme,
-      this.rounded ? 'rounded' : '',
-      this.filled ? 'filled' : '',
-    ];
+
+  ngOnInit(): void {
+    this.setCurrentClasses();
+    this.currentIcon = this.service.getCurrentIcon(
+      `fa${this.icon.toUpperCase()}`
+    );
+  }
+  setCurrentClasses() {
+    const scheme = this.scheme;
+    this.currentClasses = {
+      'sn-button': true,
+      rounded: this.rounded,
+      filled: this.filled,
+      raised: this.raised,
+    };
+    this.currentClasses[scheme] = true;
   }
 }

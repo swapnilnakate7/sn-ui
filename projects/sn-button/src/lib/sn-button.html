@@ -1,3 +1,4 @@
-<button [type]="type" [disabled]="disabled" [ngClass]="getClasses()">
+<button [type]="type" [disabled]="disabled" [ngClass]="currentClasses">
+  <fa-icon [icon]="currentIcon"></fa-icon>
   <ng-content></ng-content>
 </button>
