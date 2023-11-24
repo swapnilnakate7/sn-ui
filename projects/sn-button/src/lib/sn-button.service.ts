@@ -16,7 +16,7 @@ export class SnButtonService {
     let all = { ...allIcons };
     let key: keyof typeof allIcons;
     for (key in all) {
-      this.iconDefinitions.set(key.substring(2), all[key]);
+      this.iconDefinitions.set(key.substring(2).toLowerCase(), all[key]);
     }
 
     //console.log(all);
@@ -26,8 +26,8 @@ export class SnButtonService {
 
   getCurrentIcon(iconName: string): any {
     let icon: IconDefinition | IconPack | IconPrefix = allIcons.faInfo;
-    if (this.iconDefinitions.has(iconName)) {
-      icon = this.iconDefinitions.get(iconName) || icon;
+    if (this.iconDefinitions.has(iconName.toLowerCase())) {
+      icon = this.iconDefinitions.get(iconName.toLowerCase()) || icon;
     }
     return icon;
   }

@@ -50,3 +50,7 @@ $black: var(--black-1);
     @include generateStyle($successColor);
   }
 }
+
+.icon {
+  margin: 0 0.325rem 0 0;
+}

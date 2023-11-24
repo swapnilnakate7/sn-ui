@@ -5,7 +5,7 @@ import {
   booleanAttribute,
   inject,
 } from '@angular/core';
-import { CommonModule, NgClass } from '@angular/common';
+import { CommonModule, NgClass, TitleCasePipe } from '@angular/common';
 import { FaIconComponent } from '@fortawesome/angular-fontawesome';
 import {
   IconDefinition,
@@ -33,6 +33,8 @@ export class SnButtonComponent implements OnInit {
 
   @Input() scheme: string = 'default';
 
+  titleCase: TitleCasePipe = new TitleCasePipe();
+
   currentClasses: Record<string, boolean> = {};
   faCoffee = faCoffee;
   currentIcon: IconDefinition = fa0;
@@ -48,8 +50,11 @@ export class SnButtonComponent implements OnInit {
   ngOnInit(): void {
     this.setCurrentClasses();
     this.currentIcon = this.service.getCurrentIcon(
-      `fa${this.icon.toUpperCase()}`
+      this.titleCase.transform(this.icon)
     );
+    if (this.icon === 'coffee') {
+      console.log(this.currentIcon);
+    }
   }
   setCurrentClasses() {
     const scheme = this.scheme;

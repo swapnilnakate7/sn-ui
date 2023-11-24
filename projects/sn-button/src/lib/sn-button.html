@@ -1,4 +1,8 @@
 <button [type]="type" [disabled]="disabled" [ngClass]="currentClasses">
-  <fa-icon [icon]="currentIcon"></fa-icon>
+  @if(icon){
+  <span class="icon">
+    <fa-icon [icon]="currentIcon"></fa-icon>
+  </span>
+  } 
   <ng-content></ng-content>
 </button>
