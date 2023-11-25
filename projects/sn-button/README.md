@@ -1,24 +1,39 @@
 # SnButton
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
+Angular v17 standalone button component easy to use. It is a part of SnUI Library.
 
-## Code scaffolding
+## Importing to Project
 
-Run `ng generate component component-name --project sn-button` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project sn-button`.
-> Note: Don't forget to add `--project sn-button` or else it will be added to the default project in your `angular.json` file. 
+- Run `npm i sn-button` to add it in your project.
+- Add to `imports` array as follows
 
-## Build
+```javascript
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [CommonModule, SnButtonComponent],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.scss',
+})
+```
 
-Run `ng build sn-button` to build the project. The build artifacts will be stored in the `dist/` directory.
+- use `<sn-button>` element to render a button
 
-## Publishing
+## Supported properties
 
-After building your library with `ng build sn-button`, go to the dist folder `cd dist/sn-button` and run `npm publish`.
+| Attribute  | Supported Type                                |
+| ---------- | --------------------------------------------- |
+| `type`     | `string` ex. `submit\|reset`                  |
+| `disabled` | `boolean`                                     |
+| `rounded`  | `boolean`                                     |
+| `filled`   | `boolean`                                     |
+| `raised`   | `boolean`                                     |
+| `icon`     | `string` ex. `coffee`                         |
+| `scheme`   | `string` ex. `primary\|warn\|danger\|success` |
 
-## Running unit tests
-
-Run `ng test sn-button` to execute the unit tests via [Karma](https://karma-runner.github.io).
+based on `scheme` , `rounded`,`filled` and `raised` attribute respective button styles are rendered
+`icon` attribute supports font awesome icons
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Get in touch with me email: nakate.swapnil7@gmail.com | twitter: @SwapnilNakate7

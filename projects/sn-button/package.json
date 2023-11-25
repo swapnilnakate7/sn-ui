@@ -1,6 +1,18 @@
 {
   "name": "sn-button",
   "version": "0.0.1",
+  "description": "SnButton is an Angular 17 standalone component ",
+  "author": {
+    "name": "Swapnil Nakate",
+    "email": "nakate.swapnil7@gmail.com",
+    "url": "https://swapnilnakate.in"
+  },
+  "keywords": [
+    "sn-button",
+    "angular button",
+    "ng17",
+    "angular17"
+  ],
   "peerDependencies": {
     "@angular/common": "^17.0.0",
     "@angular/core": "^17.0.0"
@@ -8,5 +20,14 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "bugs": {
+    "url": "https://github.com/swapnilnakate7/sn-ui/issues",
+    "email": "nakate.swapnil7@gmail.com"
+  },
+  "repository": {
+    "url": "https://github.com/swapnilnakate7/sn-ui",
+    "type": "git"
+  },
+  "license": "MIT"
 }
