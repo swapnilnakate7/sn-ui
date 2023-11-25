@@ -1,5 +1,5 @@
 {
-  "name": "sn-button",
+  "name": "sn-button-x",
   "version": "0.0.1",
   "description": "SnButton is an Angular 17 standalone component ",
   "author": {
@@ -9,6 +9,7 @@
   },
   "keywords": [
     "sn-button",
+    "sn-button-x",
     "angular button",
     "ng17",
     "angular17"

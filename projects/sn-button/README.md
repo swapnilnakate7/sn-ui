@@ -4,7 +4,7 @@ Angular v17 standalone button component easy to use. It is a part of SnUI Librar
 
 ## Importing to Project
 
-- Run `npm i sn-button` to add it in your project.
+- Run `npm i sn-button-x` to add it in your project.
 - Add to `imports` array as follows
 
 ```javascript
