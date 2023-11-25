@@ -1,6 +1,6 @@
 {
   "name": "sn-button-x",
-  "version": "0.0.1",
+  "version": "0.0.1002",
   "description": "SnButton is an Angular 17 standalone component ",
   "author": {
     "name": "Swapnil Nakate",
@@ -16,7 +16,10 @@
   ],
   "peerDependencies": {
     "@angular/common": "^17.0.0",
-    "@angular/core": "^17.0.0"
+    "@angular/core": "^17.0.0",
+    "@fortawesome/angular-fontawesome": "^0.14.0",
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2"
   },
   "dependencies": {
     "tslib": "^2.3.0"

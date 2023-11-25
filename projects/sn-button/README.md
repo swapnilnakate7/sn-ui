@@ -17,7 +17,7 @@ Angular v17 standalone button component easy to use. It is a part of SnUI Librar
 })
 ```
 
-- use `<sn-button>` element to render a button
+- use `<sn-button>Submit</sn-button>` element to render a button
 
 ## Supported properties
 

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SnButtonComponent } from '@libs/sn-button/src/public-api';
+import { SnButtonComponent } from 'sn-button';
 import { SnCardComponent } from 'projects/sn-card/src/public-api';
 import { SnInputComponent } from 'projects/sn-input/src/public-api';
 
