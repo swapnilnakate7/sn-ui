@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component , EventEmitter} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { ListComponent } from '@app/list/list.component';

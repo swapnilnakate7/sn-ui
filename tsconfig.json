@@ -20,8 +20,9 @@
       "sn-button": ["./dist/sn-button"],
       "@libs/*": ["./projects/*"],
       "@app/*": ["./src/app/*"],
-      "sn-card": ["./dist/sn-card"],
-      "sn-input": ["./dist/sn-input"]
+      "sn-card": ["./dist/sn-card/*"],
+      "sn-input": ["./dist/sn-input/*"],
+      "@dist/*":["./dist/*"]
     },
     "importHelpers": true,
     "target": "ES2022",

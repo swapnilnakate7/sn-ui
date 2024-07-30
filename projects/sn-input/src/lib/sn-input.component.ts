@@ -13,6 +13,11 @@ export class SnInputComponent implements OnInit {
   @Input({ required: true }) type: string = 'text';
   @Input() label?: string;
   @Input() placeholder: string = `Enter ${this.type}`;
+  _info:boolean=true;
+  _error:boolean = false;
+  _warning:boolean=false;
+  _success:boolean=false;
+  
   _id = v4();
   upperCasePipe: TitleCasePipe = new TitleCasePipe();
 

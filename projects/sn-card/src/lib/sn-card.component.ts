@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -8,6 +8,15 @@ import { CommonModule } from '@angular/common';
   templateUrl: './sn-card.html',
   styleUrl: 'sn-card.scss',
 })
-export class SnCardComponent {
+export class SnCardComponent implements OnInit {
+  
+
   @Input() title?: string;
+  _imageSrc : string="https://picsum.photos/200";
+  _actions: any[] = []
+
+  ngOnInit(): void {
+  // this._imageSrc ="";
+  }
+  
 }

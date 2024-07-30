@@ -1,8 +1,36 @@
-<div class="card">
-  @if(title){
-  <h1 class="card-title">{{title}}</h1>
-  }
-  <div class="card-content">
-    <ng-content></ng-content>
+  <div class="grid  grid-flow-row grid-cols-12 grid-card-row  
+  gap-1
+  w-full pt-4 container border rounded-md shadow-md">
+   
+      @if (_imageSrc) {
+        <div class="col-span-2 row-span-1">
+        <img [src]="_imageSrc" class="rounded-xl" />
+      </div>
+      }
+      
+   
+    <div class="col-span-10 row-span-1">
+      @if(title){
+        <h1 class="text-3xl font-bold text-center">{{title}}</h1>
+        }
+        <div class="text-left">
+          <ng-content></ng-content>
+        </div>
+    </div>
+
+    @if(_actions.length){
+      <div class="row-span-1 col-span-12 flex text-sm justify-center">
+        <div class="flex-1 shadow-sm  text-center border-t-2 
+        hover:shadow-inner">Action 1</div>
+        <div class="flex-1 shadow-sm  text-center border-t-2 
+        hover:shadow-inner border-l-2 -ml-1">Action 2</div>
+       
+      </div>
+    }
+    
+    <!-- <div class="row-span-1 col-span-6 shadow-sm text-center border-t-2 border-r-gray-600 hover:shadow-inner">Action 1</div>
+    <div class="row-span-1 col-span-6 shadow-sm text-center border-t-2 hover:shadow-inner">Action 2</div>
+    -->
   </div>
-</div>
+
+

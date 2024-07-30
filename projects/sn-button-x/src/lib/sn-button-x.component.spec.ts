@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SnButtonComponent } from './sn-button.component';
+import { SnButtonComponent } from './sn-button-x.component';
 
 describe('SnButtonComponent', () => {
   let component: SnButtonComponent;

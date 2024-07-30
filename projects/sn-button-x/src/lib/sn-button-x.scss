@@ -1,0 +1,93 @@
+// $primaryColor: #0078d7;
+// $warnColor: #ffb900;
+// $dangerColor: #e81123;
+// $successColor: #00cc6a;
+// $backgroundColor: #ffffff;
+// $black: #212121;
+// $lightaGreyColor: #ececec;
+// $grey1: #9e9e9e;
+// $labelColor: #4c4a48;
+// $blackColor: #000000;
+// $black1: #212121;
+
+@import '../../../../src/scss/colors';
+@import '../../../../src/scss/_mixins';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// @mixin generateStyle($color, $bgColor: $backgroundColor) {
+//   &:not(:disabled) {
+//     color: $color;
+//   }
+
+//   &.filled:not(:disabled) {
+//     color: $bgColor;
+//     background-color: $color;
+//   }
+
+//   &-outlined:not([disabled]) {
+//     color: $color;
+//     background-color: transparent;
+//     border: 1px solid $color;
+//     &:hover:not(:disabled) {
+//       background-color: $color;
+//       color: $bgColor;
+//     }
+//   }
+//   &:hover:not(:disabled) {
+//     background-color: $color;
+//   }
+//   &:hover:enabled {
+//     color: $bgColor;
+//   }
+// }
+
+.sn-button {
+  border-width: 0;
+  border: none;
+  border: 1px solid var($lightaGreyColor);
+  background-color: $backgroundColor;
+  border-radius: 0.225rem;
+  font-size: small;
+  padding: 0.625rem;
+  transition: 1.2s background-color;
+
+  &:hover:not(:disabled) {
+    background-color: $backgroundColor;
+    color: $backgroundColor;
+  }
+
+  &.rounded {
+    border-radius: 2rem;
+  }
+
+  &.raised {
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+      0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  }
+
+  &.default {
+    @include generateStyle($black);
+  }
+
+  &.primary {
+    @include generateStyle($primaryColor);
+  }
+
+  &.warn {
+    @include generateStyle($warnColor);
+  }
+
+  &.danger {
+    @include generateStyle($dangerColor);
+  }
+
+  &.success {
+    @include generateStyle($successColor);
+  }
+}
+
+.icon {
+  margin: 0 0.325rem 0 0;
+}

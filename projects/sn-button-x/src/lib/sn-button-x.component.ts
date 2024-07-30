@@ -12,15 +12,15 @@ import {
   fa0,
   faCoffee,
 } from '@fortawesome/free-solid-svg-icons';
-import { SnButtonService } from './sn-button.service';
+import { SnButtonService } from './sn-button-x.service';
 
 @Component({
-  selector: 'sn-button',
+  selector: 'sn-button-x',
   standalone: true,
   imports: [CommonModule, NgClass, FaIconComponent],
   providers: [SnButtonService],
-  templateUrl: './sn-button.html',
-  styleUrl: 'sn-button.scss',
+  templateUrl: './sn-button-x.html',
+  styleUrl: 'sn-button-x.scss',
 })
 export class SnButtonComponent implements OnInit {
   @Input() type: string = 'submit';

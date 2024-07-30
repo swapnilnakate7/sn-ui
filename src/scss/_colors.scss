@@ -1,3 +1,5 @@
+@use "sass:map";
+
 :root {
   --background-color: #ffffff;
   --primary-color: #0078d7;
@@ -9,4 +11,26 @@
   --label-color: #4c4a48;
   --black-color: #000000;
   --black-1: #212121;
+
+
 }
+
+$themeColors :(
+  'primary': var(--primary-color),
+  'warn': var(--warn-color),
+  'success': var(--success-color),
+  'danger': var(--danger-color)
+);
+
+
+$primaryColor: map.get( $themeColors,  'primary');
+$warnColor: map.get( $themeColors,  'warn');
+$dangerColor: map.get( $themeColors,  'danger');
+$successColor: map.get( $themeColors,  'success');
+$backgroundColor: #ffffff;
+$black: #212121;
+$lightaGreyColor: #ececec;
+$grey1: #9e9e9e;
+$labelColor: #4c4a48;
+$blackColor: #000000;
+$black1: #212121;
