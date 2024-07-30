@@ -17,7 +17,7 @@ Angular v17 standalone button component easy to use. It is a part of SnUI Librar
 })
 ```
 
-- use `<sn-button>Submit</sn-button>` element to render a button
+- use `<sn-button-x>Submit</sn-button-x>` element to render a button
 
 ## Supported properties
 
@@ -39,45 +39,45 @@ based on `scheme` , `rounded`,`filled` and `raised` attribute respective button 
 #### Text
 
 ```html
-<sn-button>Default</sn-button>
-<sn-button scheme="primary" icon="coffee">Primary</sn-button>
-<sn-button scheme="warn" icon="viruscovid">Warn</sn-button>
-<sn-button scheme="danger" icon="bugs">Danger</sn-button>
-<sn-button scheme="success">Success</sn-button>
-<sn-button disabled>Default Disabled</sn-button>
+<sn-button-x>Default</sn-button-x>
+<sn-button-x scheme="primary" icon="coffee">Primary</sn-button-x>
+<sn-button-x scheme="warn" icon="viruscovid">Warn</sn-button-x>
+<sn-button-x scheme="danger" icon="bugs">Danger</sn-button-x>
+<sn-button-x scheme="success">Success</sn-button-x>
+<sn-button-x disabled>Default Disabled</sn-button-x>
 ```
 
 #### Text Rounded
 
 ```html
-<sn-button rounded>Default</sn-button>
-<sn-button scheme="primary" rounded>Primary</sn-button>
-<sn-button scheme="warn" rounded>Warn</sn-button>
-<sn-button scheme="danger" rounded>Danger</sn-button>
-<sn-button scheme="success" rounded>Success</sn-button>
-<sn-button disabled rounded>Default Disabled</sn-button>
+<sn-button-x rounded>Default</sn-button-x>
+<sn-button-x scheme="primary" rounded>Primary</sn-button-x>
+<sn-button-x scheme="warn" rounded>Warn</sn-button-x>
+<sn-button-x scheme="danger" rounded>Danger</sn-button-x>
+<sn-button-x scheme="success" rounded>Success</sn-button-x>
+<sn-button-x disabled rounded>Default Disabled</sn-button-x>
 ```
 
 #### Text Filled
 
 ```html
-<sn-button filled>Default</sn-button>
-<sn-button scheme="primary" filled>Primary</sn-button>
-<sn-button scheme="warn" filled>Warn</sn-button>
-<sn-button scheme="danger" filled>Danger</sn-button>
-<sn-button scheme="success" filled>Success</sn-button>
-<sn-button disabled filled>Default Disabled</sn-button>
+<sn-button-x filled>Default</sn-button-x>
+<sn-button-x scheme="primary" filled>Primary</sn-button-x>
+<sn-button-x scheme="warn" filled>Warn</sn-button-x>
+<sn-button-x scheme="danger" filled>Danger</sn-button-x>
+<sn-button-x scheme="success" filled>Success</sn-button-x>
+<sn-button-x disabled filled>Default Disabled</sn-button-x>
 ```
 
 #### Outlined
 
 ```html
-<sn-button scheme="default-outlined">Default</sn-button>
-<sn-button scheme="primary-outlined">Primary outlined</sn-button>
-<sn-button scheme="warn-outlined">Warn</sn-button>
-<sn-button scheme="danger-outlined">Danger</sn-button>
-<sn-button scheme="success-outlined">Success</sn-button>
-<sn-button scheme="default-outlined" disabled>Default Outlined Disabled</sn-button>
+<sn-button-x scheme="default-outlined">Default</sn-button-x>
+<sn-button-x scheme="primary-outlined">Primary outlined</sn-button-x>
+<sn-button-x scheme="warn-outlined">Warn</sn-button-x>
+<sn-button-x scheme="danger-outlined">Danger</sn-button-x>
+<sn-button-x scheme="success-outlined">Success</sn-button-x>
+<sn-button-x scheme="default-outlined" disabled>Default Outlined Disabled</sn-button-x>
 ```
 
 ## Further help
