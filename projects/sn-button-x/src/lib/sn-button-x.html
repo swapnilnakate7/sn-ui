@@ -1,4 +1,6 @@
-<button [type]="type" [disabled]="disabled" [ngClass]="currentClasses">
+<button [type]="type" [disabled]="disabled" [ngClass]="currentClasses"
+(click)="onClickBtn($event)"
+>
   @if(icon){
   <span class="icon">
     <fa-icon [icon]="currentIcon"></fa-icon>

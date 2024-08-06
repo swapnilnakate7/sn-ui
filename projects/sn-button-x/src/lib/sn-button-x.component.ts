@@ -1,7 +1,9 @@
 import {
   Component,
+  EventEmitter,
   Input,
   OnInit,
+  Output,
   booleanAttribute,
   inject,
 } from '@angular/core';
@@ -30,6 +32,7 @@ export class SnButtonComponent implements OnInit {
   @Input({ transform: booleanAttribute }) filled: boolean = false;
   @Input({ transform: booleanAttribute }) raised: boolean = false;
   @Input() icon: string = '';
+  @Output() clickBtn:EventEmitter<any>= new EventEmitter(); 
 
   @Input() scheme: string = 'default';
 
@@ -56,6 +59,11 @@ export class SnButtonComponent implements OnInit {
       console.log(this.currentIcon);
     }
   }
+
+  onClickBtn(clickEvent:any){
+    this.clickBtn?.emit([clickEvent]);
+  }
+
   setCurrentClasses() {
     const scheme = this.scheme;
     this.currentClasses = {

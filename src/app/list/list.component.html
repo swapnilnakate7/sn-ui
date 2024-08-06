@@ -1,20 +1,20 @@
-<aside>
-  <!-- <ul [style]="{ padding: 0, listStyle: 'none' }">
+<!-- <aside> -->
+<!-- <ul [style]="{ padding: 0, listStyle: 'none' }">
     @for(component of list;track $index){
     <li ><button class="outline" [innerHTML]="component | titlecase" (click)="display(component)"></button></li>
     }
   </ul> -->
-    @for(component of list;track $index){
+<!-- @for(component of list;track $index){
     <button class="rounded-md bg-indigo-600 text-white p-2 ml-2 mr-2 hover:text-indigo-400 
     hover:bg-white hover:outline" [innerHTML]="component | titlecase" (click)="display(component)"></button>
     }
-</aside>
+</aside> -->
 <main>
   @if(_display === 'button'){
 
-  <div class="buttons">
-    Text
-    <sn-button-x>Default</sn-button-x>
+  <div class="buttons border-b-2 border-gray-100">
+    <h2 class="text-2xl">Text Only</h2>
+    <sn-button-x (clickBtn)="sayHello($event)">Default</sn-button-x>
     <sn-button-x scheme="primary" icon="coffee">Primary</sn-button-x>
     <sn-button-x scheme="warn" icon="viruscovid">Warn</sn-button-x>
     <sn-button-x scheme="danger" icon="bugs">Danger</sn-button-x>
@@ -31,8 +31,8 @@
       >
     </code>
   </div>
-  <div class="buttons">
-    Text Rounded
+  <div class="buttons border-b-2 border-gray-100">
+    <h2 class="text-2xl">Text Rounded</h2>
     <sn-button-x rounded>Default</sn-button-x>
     <sn-button-x scheme="primary" rounded>Primary</sn-button-x>
     <sn-button-x scheme="warn" rounded>Warn</sn-button-x>
@@ -50,8 +50,8 @@
       >
     </code>
   </div>
-  <div class="buttons">
-    Text Filled
+  <div class="buttons border-b-2 border-gray-100">
+    <h2 class="text-2xl">Text Filled</h2>
     <sn-button-x filled>Default</sn-button-x>
     <sn-button-x scheme="primary" filled>Primary</sn-button-x>
     <sn-button-x scheme="warn" filled>Warn</sn-button-x>
@@ -69,8 +69,8 @@
       >
     </code>
   </div>
-  <div class="buttons">
-    Text Filled Rounded
+  <div class="buttons border-b-2 border-gray-100">
+    <h2 class="text-2xl">Text Filled Rounded</h2>
     <sn-button-x filled rounded>Default</sn-button-x>
     <sn-button-x scheme="primary" filled rounded>Primary</sn-button-x>
     <sn-button-x scheme="warn" filled rounded>Warn</sn-button-x>
@@ -88,8 +88,8 @@
       </pre>
     </code>
   </div>
-  <div class="buttons">
-    Outlined
+  <div class="buttons border-b-2 border-gray-100">
+    <h2 class="text-2xl">Outlined</h2>
     <sn-button-x scheme="default-outlined">Default</sn-button-x>
     <sn-button-x scheme="primary-outlined">Primary outlined</sn-button-x>
     <sn-button-x scheme="warn-outlined">Warn</sn-button-x>
@@ -109,10 +109,12 @@
       >
     </code>
   </div>
-  <div class="buttons">
-    Rounded
+  <div class="buttons border-b-2 border-gray-100">
+    <h2 class="text-2xl">Rounded</h2>
     <sn-button-x scheme="default-outlined" rounded>Default</sn-button-x>
-    <sn-button-x scheme="primary-outlined" rounded>Primary outlined</sn-button-x>
+    <sn-button-x scheme="primary-outlined" rounded
+      >Primary outlined</sn-button-x
+    >
     <sn-button-x scheme="warn-outlined" rounded>Warn</sn-button-x>
     <sn-button-x scheme="danger-outlined" rounded>Danger</sn-button-x>
     <sn-button-x scheme="success-outlined" rounded>Success</sn-button-x>
@@ -132,30 +134,82 @@
   </div>
 
   } @else if(_display === 'card'){
-    <div class="content-center w-full">
-      <sn-card title="wow"
-      
-        >Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae officia rem
-        eaque reprehenderit iure facere quod earum. Placeat, ratione perspiciatis
-        eligendi officia commodi ex temporibus alias ab, tempore eaque aliquid. Ad
-        soluta ullam voluptate itaque, atque libero incidunt quibusdam vero repellat
-        exercitationem pariatur ipsam omnis natus repudiandae non dignissimos illo
-        saepe aut. Repellendus repudiandae iste tempora fugit quidem, provident
-        excepturi.</sn-card
-      >
-    </div>
-  
+  <div class="content-center w-full">
+    <sn-card title="wow"
+      >Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae officia
+      rem eaque reprehenderit iure facere quod earum. Placeat, ratione
+      perspiciatis eligendi officia commodi ex temporibus alias ab, tempore
+      eaque aliquid. Ad soluta ullam voluptate itaque, atque libero incidunt
+      quibusdam vero repellat exercitationem pariatur ipsam omnis natus
+      repudiandae non dignissimos illo saepe aut. Repellendus repudiandae iste
+      tempora fugit quidem, provident excepturi.</sn-card
+    >
+  </div>
+
   }@else if(_display ==='input'){
-  <form>
-    <sn-input type="text"></sn-input>
-    <sn-input type="checkbox"></sn-input>
-    <sn-input type="number"></sn-input>
-    <sn-input type="date"></sn-input>
-    <sn-input type="datetime-local"></sn-input>
-    <sn-input type="email"></sn-input>
-    <sn-input type="password"></sn-input>
-    <sn-input type="color"></sn-input>
-    <sn-input type="range"></sn-input>
-  </form>
-  }@else { Select Component 👆🏻 }
+  <!-- <form class="grid grid-cols-4 gap-2">
+    <sn-input type="text" pattern="^[A-Z].*$" required
+    [successMessages]="['Message 1','Message 2']"
+    success="true"
+    class="col-span-2"
+    ></sn-input> -->
+
+  <!-- <sn-input type="checkbox"  class="col-span-2"></sn-input>
+    <sn-input type="number"  class="col-span-2"></sn-input>
+    <sn-input type="date"  class="col-span-2"></sn-input>
+    <sn-input type="datetime-local"  class="col-span-2"></sn-input>
+    <sn-input type="email"  class="col-span-2"></sn-input>
+    <sn-input type="password"  class="col-span-2"></sn-input>
+    <sn-input type="color"  class="col-span-2"></sn-input>
+    <sn-input type="range"  class="col-span-2"></sn-input> -->
+  <!-- </form> -->
+  <div class="flex flex-wrap">
+    <div class="p-2">
+      <h2 class="text-2xl">Text Input Info Messages</h2>
+      <sn-input
+       label="Name"
+       [placeholder]="'Enter Name'"
+        type="text"
+        pattern="^[A-Z].*$"
+        required
+        [infoMessages]="['Info Message 1', 'Info Message 2']"
+        
+      ></sn-input>
+    </div>
+
+    <div class="p-2">
+      <h2 class="text-2xl">Text Input Warning Messages</h2>
+      <sn-input
+        type="text"
+        pattern="^[A-Z].*$"
+        required
+        [warningMessages]="['Warning Message 1', 'Warning Message 2']"
+        class="w-64"
+      ></sn-input>
+    </div>
+
+    <div class="p-2">
+      <h2 class="text-2xl">Text Input Error Messages</h2>
+      <sn-input
+        type="text"
+        pattern="^[A-Z].*$"
+        required
+        [errorMessages]="['Error Message 1', 'Error Message 2']"
+        class="w-64"
+      ></sn-input>
+    </div>
+
+    <div class="p-2">
+      <h2 class="text-2xl">Text Input Success Messages</h2>
+      <sn-input
+        type="text"
+        pattern="^[A-Z].*$"
+        required
+        [successMessages]="['Success Message 1', 'Success Message 2']"
+        class="w-64"
+      ></sn-input>
+    </div>
+  </div>
+  }
+  <!-- @else { Select Component 👆🏻 } -->
 </main>

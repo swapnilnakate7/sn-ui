@@ -12,4 +12,8 @@ import { ListComponent } from '@app/list/list.component';
 })
 export class AppComponent {
   title = 'sn-ui';
+  componentNameToDisplay='button';
+  setComponentName(name:string){
+    this.componentNameToDisplay =name;
+  }
 }

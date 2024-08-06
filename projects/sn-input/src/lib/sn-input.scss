@@ -2,16 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-
-label {
-  display: block;
-  color: var(--label-color);
-  font-size: medium;
-  padding: 0.325rem 0;
-}
-
 input {
   border: 1px solid #ececec;
-  border-radius: 0.225rem;
-  padding: 0.625rem;
+}
+
+input[type="number"] {
+  appearance: none;
+
+  &::-webkit-inner-spin-button {
+    appearance: none;
+  }
+
+  &::-webkit-outer-spin-button {
+    appearance: none;
+  }
 }

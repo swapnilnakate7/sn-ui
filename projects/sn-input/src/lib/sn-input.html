@@ -1,17 +1,42 @@
-<label [for]="_id" class="leading font-medium text-gray-900">{{label||placeholder}}</label>
 
-<div class="relative mt-2 rounded-md shadow-sm">
+<div class="flex flex-col mb-4">
+    <label [for]="_id" class="text-gray-500 text-sm mb-1">{{label||placeholder}}</label>
+
     <input [id]="_id" [type]="type"
      [placeholder]="placeholder" 
-     [ngClass]="{'ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600':type!== 'checkbox'}"
-     class="block w-full rounded-md border-0 py-1.5 
-     pr-20 text-gray-900  sm:text-sm sm:leading-6" 
+     [formControl]="_control"
+     (keyup)="onInputChange()"
+     
+     [ngClass]="{'px-4 py-1.5 bg-white rounded-lg shadow-sm focus:ring-blue-300':type!== 'checkbox'}"
+    
      
      />
-    <div class="text-sm flex-col">
-        <span *ngIf="_info" class="block text-gray-500">Info Message</span>
-        <span *ngIf="_error" class="block text-red-500">Error Message</span>
-        <span  *ngIf="_warning" class="block text-orange-500">Warning Message</span>
-        <span *ngIf="_success" class="block text-green-500">Success Message</span>
+    <div class="flex flex-col mt-2 mb-4 pl-1">
+        @if(_info){
+            @for(message of infoMessages;track message){
+                <span class="text-sm text-blue-500">{{message}}</span>
+            }
+        }
+       
+        @if(_error){
+            @for(message of errorMessages;track message){
+                <span class="text-sm text-red-500">{{message}}
+                </span>
+            }
+        }
+
+        @if(_warning){
+            @for(message of warningMessages;track message){
+                
+                <span  class="text-sm text-yellow-500">{{message}}</span>
+            }
+        }
+
+        @if(_success){
+            @for(message of successMessages;track message){
+                <span class="text-sm text-green-500">{{message}}
+                </span>
+            }
+        }
     </div>
 </div>

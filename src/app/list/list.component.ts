@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SnButtonComponent } from '@libs/sn-button-x/src/public-api';
 import  {SnCardComponent}from '@libs/sn-card/src/public-api';
@@ -17,8 +17,11 @@ import  {SnInputComponent}from '@libs/sn-input/src/public-api';
 })
 export class ListComponent {
   list = ['button', 'card', 'input'];
-  _display = '';
+  @Input('componentName') _display = '';
   display(componentName: string) {
     this._display = componentName;
+  }
+  sayHello(evt:any){
+    console.log('Hello',evt);
   }
 }

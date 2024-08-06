@@ -21,8 +21,44 @@
     </nav>
   </div>
 </header>
-<section class="pt-6">
+<!-- <section class="pt-6">
   <h3 class="text-3xl text-blue-500 mb-4">List of Components</h3>
   <sn-list></sn-list>
-</section>
+</section> -->
+<aside class="flex h-screen bg-white float-left  shadow-inner">
+  <div class="w-64  p-4">
+    <h1 class="text-lg font-bold">Components</h1>
+    <ul>
+      <li><a href="#" class="block rounded-md p-2 hover:bg-gray-200 transition duration-300"
+        (click)="setComponentName('button')"
+        >Button</a></li>
+      <li><a href="#" class="block rounded-md p-2 hover:bg-gray-200 transition duration-300"
+        (click)="setComponentName('card')">Card</a></li>
+      <li><a href="#" class="block rounded-md p-2 hover:bg-gray-200 transition duration-300"
+        (click)="setComponentName('input')">Input Text</a></li>
+
+    </ul>
+
+    <!-- Dropdown menu -->
+    <!-- <div class="mt-4">
+      <button class="bg-transparent focus:outline-none py-2 px-4 rounded-full border-2 border-gray-400 hover:border-blue-500">Dropdown Menu</button>
+      <div class="hidden absolute bg-white mt-2 p-4 w-max text-left" role="menu">
+        Dropdown menu items
+      </div>
+    </div> -->
+
+    <!-- Other sidebar content here -->
+  </div>
+
+  
+</aside>
+
+<main class="flex shadow-md  h-full min-h-screen p-6">
+  
+    <!-- Your main content here -->
+    <!-- <h1 class="text-lg font-bold">Main Content</h1> -->
+    <sn-list [componentName]="componentNameToDisplay"></sn-list>
+
+</main>
+
 
