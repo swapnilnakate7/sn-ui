@@ -18,7 +18,12 @@
     "paths": {
       "@libs/*": ["./projects/*"],
       "@app/*": ["./src/app/*"],
-      "@dist/*":["./dist/*"]
+      "@dist/*": [
+        "./dist/*"
+      ],
+      "sntest": [
+        "./dist/sntest"
+      ]
     },
     "importHelpers": true,
     "target": "ES2022",

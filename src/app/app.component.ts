@@ -6,7 +6,7 @@ import { ListComponent } from '@app/list/list.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, ListComponent],
+  imports: [CommonModule, ListComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })

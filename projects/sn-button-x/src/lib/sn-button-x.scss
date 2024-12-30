@@ -10,8 +10,8 @@
 // $blackColor: #000000;
 // $black1: #212121;
 
-@import '../../../../src/scss/colors';
-@import '../../../../src/scss/_mixins';
+@use '../../../../src/scss/colors';
+@use '../../../../src/scss/_mixins';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -46,16 +46,16 @@
 .sn-button {
   border-width: 0;
   border: none;
-  border: 1px solid var($lightaGreyColor);
-  background-color: $backgroundColor;
+  border: 1px solid var(colors.$lightaGreyColor);
+  background-color: colors.$backgroundColor;
   border-radius: 0.225rem;
   font-size: small;
   padding: 0.625rem;
   transition: 1.2s background-color;
 
   &:hover:not(:disabled) {
-    background-color: $backgroundColor;
-    color: $backgroundColor;
+    background-color: colors.$backgroundColor;
+    color: colors.$backgroundColor;
   }
 
   &.rounded {
@@ -68,23 +68,23 @@
   }
 
   &.default {
-    @include generateStyle($black);
+    @include mixins.generateStyle(colors.$black);
   }
 
   &.primary {
-    @include generateStyle($primaryColor);
+    @include mixins.generateStyle(colors.$primaryColor);
   }
 
   &.warn {
-    @include generateStyle($warnColor);
+    @include mixins.generateStyle(colors.$warnColor);
   }
 
   &.danger {
-    @include generateStyle($dangerColor);
+    @include mixins.generateStyle(colors.$dangerColor);
   }
 
   &.success {
-    @include generateStyle($successColor);
+    @include mixins.generateStyle(colors.$successColor);
   }
 }
 
