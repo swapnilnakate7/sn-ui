@@ -1,6 +1,6 @@
 # SnButton
 
-Angular v17 standalone button component easy to use. It is a part of SnUI Library.
+Angular v19 standalone button component easy to use. It is a part of SnUI Library.
 
 ## Importing to Project
 
