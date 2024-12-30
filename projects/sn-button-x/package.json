@@ -11,8 +11,8 @@
     "sn-button",
     "sn-button-x",
     "angular button",
-    "ng17",
-    "angular17",
+    "ng19",
+    "angular19",
     "tailwindcss"
   ],
   "peerDependencies": {
