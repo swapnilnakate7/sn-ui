@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes sn-spin {
+  to { transform: rotate(360deg); }
+}
+
+.sn-spinner {
+  display: inline-block;
+  border-style: solid;
+  border-radius: 50%;
+  animation: sn-spin 0.75s linear infinite;
+
+  &.size-sm { width: 1rem;   height: 1rem;   border-width: 2px; }
+  &.size-md { width: 1.5rem; height: 1.5rem; border-width: 3px; }
+  &.size-lg { width: 2.5rem; height: 2.5rem; border-width: 4px; }
+
+  &.scheme-primary {
+    border-color: #3b82f6;
+    border-top-color: transparent;
+  }
+  &.scheme-warn {
+    border-color: #f59e0b;
+    border-top-color: transparent;
+  }
+  &.scheme-danger {
+    border-color: #ef4444;
+    border-top-color: transparent;
+  }
+  &.scheme-success {
+    border-color: #22c55e;
+    border-top-color: transparent;
+  }
+  &.scheme-default {
+    border-color: #6b7280;
+    border-top-color: transparent;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+}

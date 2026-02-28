@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.sn-modal-backdrop {
+  @apply fixed inset-0 z-50 flex items-center justify-center bg-black/50;
+}
+
+.sn-modal-panel {
+  @apply relative bg-white rounded-lg shadow-xl flex flex-col max-h-[90vh] overflow-hidden;
+
+  &.size-sm   { @apply w-full max-w-sm; }
+  &.size-md   { @apply w-full max-w-md; }
+  &.size-lg   { @apply w-full max-w-2xl; }
+  &.size-full { @apply w-full h-full max-w-none max-h-none rounded-none; }
+}
+
+.sn-modal-header {
+  @apply flex items-center justify-between px-6 py-4 border-b border-gray-200 flex-shrink-0;
+}
+
+.sn-modal-title {
+  @apply text-lg font-semibold text-gray-900 m-0;
+}
+
+.sn-modal-close {
+  @apply ml-auto -mr-2 p-1.5 rounded text-gray-400 hover:text-gray-700 hover:bg-gray-100 cursor-pointer bg-transparent border-none text-2xl leading-none;
+}
+
+.sn-modal-body {
+  @apply flex-1 overflow-y-auto px-6 py-4;
+}
+
+.sn-modal-footer {
+  @apply flex items-center justify-end gap-2 px-6 py-4 border-t border-gray-200 flex-shrink-0;
+
+  &:empty { @apply hidden; }
+}

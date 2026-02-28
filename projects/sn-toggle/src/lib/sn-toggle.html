@@ -1,0 +1,18 @@
+<div class="sn-toggle-wrapper">
+  <input
+    type="checkbox"
+    class="sn-toggle-input"
+    [id]="inputId"
+    [checked]="checked"
+    [disabled]="disabled"
+    (change)="onChange($event)"
+  />
+  <label [htmlFor]="inputId" class="sn-toggle-label" [ngClass]="'scheme-' + scheme">
+    <span class="sn-toggle-track">
+      <span class="sn-toggle-thumb"></span>
+    </span>
+    @if (label) {
+      <span class="sn-toggle-text">{{ label }}</span>
+    }
+  </label>
+</div>

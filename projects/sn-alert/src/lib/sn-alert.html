@@ -1,0 +1,16 @@
+@if (_visible) {
+  <div class="sn-alert" [ngClass]="'scheme-' + scheme" role="alert">
+    <span class="sn-alert-icon">{{ icon }}</span>
+    <div class="sn-alert-body">
+      @if (title) {
+        <strong class="sn-alert-title">{{ title }}</strong>
+      }
+      <div class="sn-alert-message">
+        <ng-content></ng-content>
+      </div>
+    </div>
+    @if (dismissible) {
+      <button class="sn-alert-dismiss" (click)="dismiss()" aria-label="Dismiss">&#x2715;</button>
+    }
+  </div>
+}

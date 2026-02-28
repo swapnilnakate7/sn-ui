@@ -212,4 +212,146 @@
   </div>
   }
   <!-- @else { Select Component 👆🏻 } -->
+
+  @else if(_display === 'badge'){
+  <div class="p-4">
+    <h2 class="text-2xl mb-4">Badge</h2>
+
+    <div class="mb-4">
+      <h3 class="text-lg font-semibold mb-2">Schemes</h3>
+      <div class="flex flex-wrap gap-2">
+        <sn-badge scheme="default">Default</sn-badge>
+        <sn-badge scheme="primary">Primary</sn-badge>
+        <sn-badge scheme="warn">Warn</sn-badge>
+        <sn-badge scheme="danger">Danger</sn-badge>
+        <sn-badge scheme="success">Success</sn-badge>
+      </div>
+    </div>
+
+    <div class="mb-4">
+      <h3 class="text-lg font-semibold mb-2">Pill</h3>
+      <div class="flex flex-wrap gap-2">
+        <sn-badge scheme="primary" pill>Primary</sn-badge>
+        <sn-badge scheme="success" pill>Success</sn-badge>
+        <sn-badge scheme="danger" pill>Danger</sn-badge>
+      </div>
+    </div>
+
+    <div class="mb-4">
+      <h3 class="text-lg font-semibold mb-2">Sizes</h3>
+      <div class="flex flex-wrap gap-2 items-center">
+        <sn-badge scheme="primary" size="sm">Small</sn-badge>
+        <sn-badge scheme="primary" size="md">Medium</sn-badge>
+        <sn-badge scheme="primary" size="lg">Large</sn-badge>
+      </div>
+    </div>
+
+    <code><pre>
+&lt;sn-badge scheme="primary"&gt;Primary&lt;/sn-badge&gt;
+&lt;sn-badge scheme="success" pill&gt;Success&lt;/sn-badge&gt;
+&lt;sn-badge scheme="danger" size="lg"&gt;Danger&lt;/sn-badge&gt;</pre></code>
+  </div>
+
+  } @else if(_display === 'alert'){
+  <div class="p-4 max-w-xl">
+    <h2 class="text-2xl mb-4">Alert</h2>
+
+    <sn-alert scheme="info" title="Info Alert">This is an informational message for the user.</sn-alert>
+    <sn-alert scheme="success" title="Success!">Your action was completed successfully.</sn-alert>
+    <sn-alert scheme="warn" title="Warning">Please review the details before proceeding.</sn-alert>
+    <sn-alert scheme="danger" title="Error">Something went wrong. Please try again.</sn-alert>
+    <sn-alert scheme="info" title="Dismissible Alert" dismissible>You can dismiss this alert by clicking ×.</sn-alert>
+
+    <code><pre>
+&lt;sn-alert scheme="info" title="Info Alert"&gt;Message here.&lt;/sn-alert&gt;
+&lt;sn-alert scheme="success" title="Success!"&gt;Done!&lt;/sn-alert&gt;
+&lt;sn-alert scheme="danger" dismissible&gt;Dismiss me.&lt;/sn-alert&gt;</pre></code>
+  </div>
+
+  } @else if(_display === 'spinner'){
+  <div class="p-4">
+    <h2 class="text-2xl mb-4">Spinner</h2>
+
+    <div class="mb-4">
+      <h3 class="text-lg font-semibold mb-2">Schemes</h3>
+      <div class="flex flex-wrap gap-6 items-center">
+        <sn-spinner scheme="primary"></sn-spinner>
+        <sn-spinner scheme="success"></sn-spinner>
+        <sn-spinner scheme="warn"></sn-spinner>
+        <sn-spinner scheme="danger"></sn-spinner>
+        <sn-spinner scheme="default"></sn-spinner>
+      </div>
+    </div>
+
+    <div class="mb-4">
+      <h3 class="text-lg font-semibold mb-2">Sizes</h3>
+      <div class="flex flex-wrap gap-6 items-center">
+        <sn-spinner size="sm" scheme="primary"></sn-spinner>
+        <sn-spinner size="md" scheme="primary"></sn-spinner>
+        <sn-spinner size="lg" scheme="primary"></sn-spinner>
+      </div>
+    </div>
+
+    <code><pre>
+&lt;sn-spinner scheme="primary"&gt;&lt;/sn-spinner&gt;
+&lt;sn-spinner scheme="success" size="lg"&gt;&lt;/sn-spinner&gt;</pre></code>
+  </div>
+
+  } @else if(_display === 'modal'){
+  <div class="p-4">
+    <h2 class="text-2xl mb-4">Modal</h2>
+
+    <sn-button-x scheme="primary" filled (clickBtn)="openModal()">Open Modal</sn-button-x>
+
+    <sn-modal [open]="_modalOpen" title="Example Modal" (closed)="onModalClosed()">
+      <div modal-body>
+        <p>This is the modal body. You can place any content here.</p>
+        <p class="mt-2 text-gray-500 text-sm">Click outside the modal or the × button to close.</p>
+      </div>
+      <div modal-footer class="flex justify-end gap-2">
+        <sn-button-x scheme="default-outlined" (clickBtn)="onModalClosed()">Cancel</sn-button-x>
+        <sn-button-x scheme="primary" filled (clickBtn)="onModalClosed()">Confirm</sn-button-x>
+      </div>
+    </sn-modal>
+
+    <code><pre>
+&lt;sn-modal [open]="isOpen" title="My Modal" (closed)="isOpen=false"&gt;
+  &lt;div modal-body&gt;Body content here.&lt;/div&gt;
+  &lt;div modal-footer&gt;Footer actions here.&lt;/div&gt;
+&lt;/sn-modal&gt;</pre></code>
+  </div>
+
+  } @else if(_display === 'tabs'){
+  <div class="p-4 max-w-lg">
+    <h2 class="text-2xl mb-4">Tabs</h2>
+
+    <sn-tabs [tabs]="demoTabs"></sn-tabs>
+
+    <code class="mt-4 block"><pre>
+&lt;sn-tabs [tabs]="myTabs"&gt;&lt;/sn-tabs&gt;
+// myTabs = [
+//   {{ '{' }} label: 'Tab One', content: 'Content one' {{ '}' }},
+//   {{ '{' }} label: 'Tab Two', content: 'Content two' {{ '}' }},
+// ];</pre></code>
+  </div>
+
+  } @else if(_display === 'toggle'){
+  <div class="p-4">
+    <h2 class="text-2xl mb-4">Toggle</h2>
+
+    <div class="flex flex-col gap-4">
+      <sn-toggle label="Notifications" [checked]="_toggle1" scheme="primary" (toggled)="_toggle1=$event"></sn-toggle>
+      <sn-toggle label="Dark Mode" [checked]="_toggle2" scheme="success" (toggled)="_toggle2=$event"></sn-toggle>
+      <sn-toggle label="Disabled Toggle" disabled></sn-toggle>
+      <sn-toggle label="No label scheme warn" scheme="warn" [checked]="true"></sn-toggle>
+    </div>
+
+    <p class="mt-4 text-sm text-gray-500">
+      Notifications: {{ _toggle1 ? 'ON' : 'OFF' }} | Dark Mode: {{ _toggle2 ? 'ON' : 'OFF' }}
+    </p>
+
+    <code class="mt-4 block"><pre>
+&lt;sn-toggle label="Notifications" [checked]="isOn" scheme="primary" (toggled)="isOn=$event"&gt;&lt;/sn-toggle&gt;</pre></code>
+  </div>
+  }
 </main>
