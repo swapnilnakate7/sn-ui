@@ -1,0 +1,13 @@
+{
+  "name": "sn-spinner",
+  "version": "0.0.1",
+  "description": "SnSpinner is an Angular 19 standalone loading spinner component",
+  "peerDependencies": {
+    "@angular/common": "^19.0.0",
+    "@angular/core": "^19.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false
+}

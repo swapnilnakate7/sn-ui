@@ -1,0 +1,18 @@
+@if (open) {
+  <div class="sn-modal-backdrop" (click)="onBackdropClick()">
+    <div [ngClass]="panelClasses" (click)="$event.stopPropagation()" role="dialog" [attr.aria-modal]="true" [attr.aria-label]="title">
+      <div class="sn-modal-header">
+        @if (title) {
+          <h2 class="sn-modal-title">{{ title }}</h2>
+        }
+        <button class="sn-modal-close" (click)="close()" aria-label="Close">&times;</button>
+      </div>
+      <div class="sn-modal-body">
+        <ng-content select="[modal-body]"></ng-content>
+      </div>
+      <div class="sn-modal-footer">
+        <ng-content select="[modal-footer]"></ng-content>
+      </div>
+    </div>
+  </div>
+}

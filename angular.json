@@ -82,6 +82,186 @@
         }
       }
     },
+    "sn-badge": {
+      "projectType": "library",
+      "root": "projects/sn-badge",
+      "sourceRoot": "projects/sn-badge/src",
+      "prefix": "sn",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/sn-badge/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/sn-badge/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/sn-badge/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/sn-badge/tsconfig.spec.json",
+            "polyfills": ["zone.js", "zone.js/testing"]
+          }
+        }
+      }
+    },
+    "sn-alert": {
+      "projectType": "library",
+      "root": "projects/sn-alert",
+      "sourceRoot": "projects/sn-alert/src",
+      "prefix": "sn",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/sn-alert/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/sn-alert/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/sn-alert/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/sn-alert/tsconfig.spec.json",
+            "polyfills": ["zone.js", "zone.js/testing"]
+          }
+        }
+      }
+    },
+    "sn-spinner": {
+      "projectType": "library",
+      "root": "projects/sn-spinner",
+      "sourceRoot": "projects/sn-spinner/src",
+      "prefix": "sn",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/sn-spinner/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/sn-spinner/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/sn-spinner/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/sn-spinner/tsconfig.spec.json",
+            "polyfills": ["zone.js", "zone.js/testing"]
+          }
+        }
+      }
+    },
+    "sn-modal": {
+      "projectType": "library",
+      "root": "projects/sn-modal",
+      "sourceRoot": "projects/sn-modal/src",
+      "prefix": "sn",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/sn-modal/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/sn-modal/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/sn-modal/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/sn-modal/tsconfig.spec.json",
+            "polyfills": ["zone.js", "zone.js/testing"]
+          }
+        }
+      }
+    },
+    "sn-tabs": {
+      "projectType": "library",
+      "root": "projects/sn-tabs",
+      "sourceRoot": "projects/sn-tabs/src",
+      "prefix": "sn",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/sn-tabs/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/sn-tabs/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/sn-tabs/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/sn-tabs/tsconfig.spec.json",
+            "polyfills": ["zone.js", "zone.js/testing"]
+          }
+        }
+      }
+    },
+    "sn-toggle": {
+      "projectType": "library",
+      "root": "projects/sn-toggle",
+      "sourceRoot": "projects/sn-toggle/src",
+      "prefix": "sn",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/sn-toggle/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/sn-toggle/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/sn-toggle/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/sn-toggle/tsconfig.spec.json",
+            "polyfills": ["zone.js", "zone.js/testing"]
+          }
+        }
+      }
+    },
     "sn-button-x": {
       "projectType": "library",
       "root": "projects/sn-button-x",

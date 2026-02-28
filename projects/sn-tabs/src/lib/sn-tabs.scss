@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.sn-tabs {
+  @apply w-full;
+
+  .sn-tabs-bar {
+    @apply flex border-b border-gray-200;
+  }
+
+  .sn-tab-btn {
+    @apply px-4 py-2 text-sm font-medium text-gray-500 border-b-2 border-transparent -mb-px cursor-pointer bg-transparent outline-none transition-colors;
+
+    &:hover { @apply text-gray-700; }
+
+    &.active {
+      @apply text-blue-600 border-blue-600;
+    }
+  }
+
+  .sn-tab-content {
+    @apply p-4 text-sm text-gray-700;
+  }
+}

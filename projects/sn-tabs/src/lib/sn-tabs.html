@@ -1,0 +1,16 @@
+<div class="sn-tabs">
+  <div class="sn-tabs-bar" role="tablist">
+    @for (tab of tabs; track tab.label; let i = $index) {
+      <button
+        class="sn-tab-btn"
+        [class.active]="i === activeIndex"
+        (click)="selectTab(i)"
+        role="tab"
+        [attr.aria-selected]="i === activeIndex"
+      >{{ tab.label }}</button>
+    }
+  </div>
+  <div class="sn-tab-content" role="tabpanel">
+    {{ (activeIndex >= 0 && activeIndex < tabs.length) ? tabs[activeIndex].content : '' }}
+  </div>
+</div>
