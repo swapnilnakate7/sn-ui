@@ -1,7 +1,7 @@
 {
   "name": "sn-button-x",
   "version": "0.0.1004",
-  "description": "SnButton is an Angular 19 standalone component ",
+  "description": "SnButton is an Angular 21 standalone component ",
   "author": {
     "name": "Swapnil Nakate",
     "email": "nakate.swapnil7@gmail.com",
@@ -11,14 +11,14 @@
     "sn-button",
     "sn-button-x",
     "angular button",
-    "ng19",
-    "angular19",
+    "ng21",
+    "angular21",
     "tailwindcss"
   ],
   "peerDependencies": {
-    "@angular/common": "^19.0.0",
-    "@angular/core": "^19.0.0",
-    "@fortawesome/angular-fontawesome": "^1.0.0",
+    "@angular/common": "^21.0.0",
+    "@angular/core": "^21.0.0",
+    "@fortawesome/angular-fontawesome": "^4.0.0",
     "@fortawesome/free-solid-svg-icons": "^6.7.1",
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "autoprefixer": "^10.4.19",

@@ -1,6 +1,6 @@
 # SnUi
 
-UI Component Library for Angular version 19.0.5.
+UI Component Library for Angular version 21.2.0.
 
 ## Help
 
