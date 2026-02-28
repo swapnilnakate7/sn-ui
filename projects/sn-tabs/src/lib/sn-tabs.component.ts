@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { CommonModule, NgClass } from '@angular/common';
+import { CommonModule } from '@angular/common';
 
 export interface SnTab {
   label: string;
@@ -9,7 +9,7 @@ export interface SnTab {
 @Component({
   selector: 'sn-tabs',
   standalone: true,
-  imports: [CommonModule, NgClass],
+  imports: [CommonModule],
   templateUrl: './sn-tabs.html',
   styleUrl: 'sn-tabs.scss',
 })
