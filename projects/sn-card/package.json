@@ -2,8 +2,8 @@
   "name": "sn-card",
   "version": "0.0.2",
   "peerDependencies": {
-    "@angular/common": "^19.0.0",
-    "@angular/core": "^19.0.0",
+    "@angular/common": "^21.0.0",
+    "@angular/core": "^21.0.0",
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.40",
     "tailwindcss": "^3.4.7"

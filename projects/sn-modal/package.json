@@ -1,10 +1,10 @@
 {
   "name": "sn-modal",
   "version": "0.0.1",
-  "description": "SnModal is an Angular 19 standalone modal dialog component",
+  "description": "SnModal is an Angular 21 standalone modal dialog component",
   "peerDependencies": {
-    "@angular/common": "^19.0.0",
-    "@angular/core": "^19.0.0"
+    "@angular/common": "^21.0.0",
+    "@angular/core": "^21.0.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"
