@@ -1,0 +1,28 @@
+{
+  "name": "sn-spinner-x",
+  "version": "0.0.1",
+  "description": "SnSpinner is an Angular 21 standalone loading spinner component",
+  "author": {
+    "name": "Swapnil Nakate",
+    "email": "nakate.swapnil7@gmail.com",
+    "url": "https://swapnilnakate.in"
+  },
+  "peerDependencies": {
+    "@angular/common": "^21.0.0",
+    "@angular/core": "^21.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false,
+  "bugs": {
+    "url": "https://github.com/swapnilnakate7/sn-ui/issues",
+    "email": "nakate.swapnil7@gmail.com"
+  },
+  "repository": {
+    "url": "https://github.com/swapnilnakate7/sn-ui",
+    "type": "git",
+    "directory": "projects/sn-spinner"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,33 @@
+<div class="sn-textarea-wrapper">
+  @if (label) {
+    <label class="sn-textarea-label" [attr.for]="id">
+      {{ label }}
+    </label>
+  }
+  <div class="sn-textarea-container">
+    <textarea
+      #textarea
+      class="sn-textarea-input"
+      [id]="id"
+      [name]="name"
+      [value]="value"
+      [disabled]="disabled"
+      [readonly]="readonly"
+      [rows]="rows"
+      [attr.maxlength]="maxLength"
+      [placeholder]="placeholder"
+      (input)="onTextareaChange($event)"
+      (blur)="onBlur()"
+      aria-role="textbox"
+      [attr.aria-label]="label"
+    ></textarea>
+  </div>
+  <div class="sn-textarea-footer">
+    @if (maxLength) {
+      <span class="sn-textarea-counter">
+        {{ characterCount }} / {{ maxLength }}
+      </span>
+    }
+  </div>
+</div>
+

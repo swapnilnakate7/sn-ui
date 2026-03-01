@@ -1,0 +1,38 @@
+{
+  "name": "sn-textarea",
+  "version": "0.0.1",
+  "description": "Angular textarea component with auto-resize and character counter - SnUI Library",
+  "author": {
+    "name": "Swapnil Nakate",
+    "email": "nakate.swapnil7@gmail.com",
+    "url": "https://swapnilnakate.in"
+  },
+  "keywords": [
+    "textarea",
+    "angular",
+    "form-control",
+    "auto-resize",
+    "character-counter",
+    "tailwindcss",
+    "accessible",
+    "snui"
+  ],
+  "peerDependencies": {
+    "@angular/common": "^21.2.0",
+    "@angular/core": "^21.2.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false,
+  "bugs": {
+    "url": "https://github.com/swapnilnakate7/sn-ui/issues",
+    "email": "nakate.swapnil7@gmail.com"
+  },
+  "repository": {
+    "url": "https://github.com/swapnilnakate7/sn-ui",
+    "type": "git",
+    "directory": "projects/sn-textarea"
+  },
+  "license": "MIT"
+}

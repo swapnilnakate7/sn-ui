@@ -1,0 +1,20 @@
+<div class="sn-radio-wrapper">
+  <input
+    type="radio"
+    class="sn-radio-input"
+    [id]="id"
+    [name]="name"
+    [value]="value"
+    [checked]="checked"
+    [disabled]="disabled"
+    (change)="onRadioChange($event)"
+    (blur)="onBlur()"
+    aria-role="radio"
+    [attr.aria-checked]="checked"
+    [attr.aria-label]="label"
+  />
+  <label class="sn-radio-label" [attr.for]="id" *ngIf="label">
+    {{ label }}
+  </label>
+</div>
+

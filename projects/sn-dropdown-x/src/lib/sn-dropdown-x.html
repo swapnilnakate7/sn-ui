@@ -1,0 +1,78 @@
+<div class="sn-select-wrapper">
+  @if (label) {
+    <label class="sn-select-label" [attr.for]="id">
+      {{ label }}
+    </label>
+  }
+
+  <div class="sn-select-container">
+    <div
+      class="sn-select-trigger"
+      [class.disabled]="disabled"
+      [class.open]="isOpen"
+      (click)="toggleDropdown()"
+      [attr.aria-expanded]="isOpen"
+      [attr.aria-haspopup]="true"
+      role="combobox"
+    >
+      <span class="sn-select-value">{{ displayValue }}</span>
+      <div class="sn-select-actions">
+        @if (clearable && (selectedValue || selectedValues.length > 0) && !disabled) {
+          <button
+            class="sn-select-clear"
+            (click)="clearSelection($event)"
+            aria-label="Clear selection"
+            type="button"
+          >
+            ✕
+          </button>
+        }
+        <span class="sn-select-arrow" [class.open]="isOpen">▼</span>
+      </div>
+    </div>
+
+    @if (isOpen) {
+      <div class="sn-select-dropdown" role="listbox">
+        @if (searchable) {
+          <div class="sn-select-search">
+            <input
+              type="text"
+              class="sn-select-search-input"
+              placeholder="Search..."
+              [(ngModel)]="searchQuery"
+              (click)="$event.stopPropagation()"
+              aria-label="Search options"
+            />
+          </div>
+        }
+
+        <div class="sn-select-options">
+          @if (filteredOptions.length === 0) {
+            <div class="sn-select-no-results">No results found</div>
+          } @else {
+            @for (option of filteredOptions; track option.value) {
+              <div
+                class="sn-select-option"
+                [class.selected]="isSelected(option)"
+                [class.disabled]="option.disabled"
+                (click)="selectOption(option)"
+                role="option"
+                [attr.aria-selected]="isSelected(option)"
+              >
+                @if (multiple) {
+                  <span class="sn-select-checkbox">
+                    @if (isSelected(option)) {
+                      <span class="sn-select-check">✓</span>
+                    }
+                  </span>
+                }
+                <span class="sn-select-option-label">{{ option.label }}</span>
+              </div>
+            }
+          }
+        </div>
+      </div>
+    }
+  </div>
+</div>
+

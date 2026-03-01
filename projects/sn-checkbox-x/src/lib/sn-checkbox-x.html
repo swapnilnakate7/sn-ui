@@ -1,0 +1,20 @@
+<div class="sn-checkbox-wrapper">
+  <input
+    type="checkbox"
+    class="sn-checkbox-input"
+    [id]="id"
+    [name]="name"
+    [checked]="checked"
+    [disabled]="disabled"
+    [indeterminate]="indeterminate"
+    (change)="onCheckboxChange($event)"
+    (blur)="onBlur()"
+    aria-role="checkbox"
+    [attr.aria-checked]="indeterminate ? 'mixed' : checked"
+    [attr.aria-label]="label"
+  />
+  <label class="sn-checkbox-label" [attr.for]="id" *ngIf="label">
+    {{ label }}
+  </label>
+</div>
+

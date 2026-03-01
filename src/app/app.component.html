@@ -48,6 +48,16 @@
         (click)="setComponentName('tabs')">Tabs</a></li>
       <li><a href="#" class="block rounded-md p-2 hover:bg-gray-200 transition duration-300"
         (click)="setComponentName('toggle')">Toggle</a></li>
+      <li><a href="#" class="block rounded-md p-2 hover:bg-gray-200 transition duration-300"
+        (click)="setComponentName('checkbox')">Checkbox</a></li>
+      <li><a href="#" class="block rounded-md p-2 hover:bg-gray-200 transition duration-300"
+        (click)="setComponentName('radio')">Radio</a></li>
+      <li><a href="#" class="block rounded-md p-2 hover:bg-gray-200 transition duration-300"
+        (click)="setComponentName('textarea')">Textarea</a></li>
+      <li><a href="#" class="block rounded-md p-2 hover:bg-gray-200 transition duration-300"
+        (click)="setComponentName('select')">Select</a></li>
+      <li><a href="#" class="block rounded-md p-2 hover:bg-gray-200 transition duration-300"
+        (click)="setComponentName('table')">Table</a></li>
 
     </ul>
 
@@ -62,11 +72,11 @@
     <!-- Other sidebar content here -->
   </div>
 
-  
+
 </aside>
 
 <main class="flex shadow-md  h-full min-h-screen p-6">
-  
+
     <!-- Your main content here -->
     <!-- <h1 class="text-lg font-bold">Main Content</h1> -->
     <sn-list [componentName]="componentNameToDisplay"></sn-list>

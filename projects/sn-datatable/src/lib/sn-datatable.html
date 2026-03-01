@@ -1,0 +1,71 @@
+<div class="sn-table-wrapper">
+  <table class="sn-table" [class.striped]="striped" [class.hoverable]="hoverable" [class.bordered]="bordered">
+    <thead>
+      <tr>
+        @for (column of columns; track column.key) {
+          <th
+            class="sn-table-header"
+            [style.width]="column.width"
+            [style.text-align]="column.align || 'left'"
+            [class.sortable]="column.sortable !== false"
+            (click)="column.sortable !== false && sort(column.key)"
+          >
+            <span class="sn-table-header-content">
+              {{ column.header }}
+              @if (column.sortable !== false) {
+                <span class="sn-table-sort-icon">{{ getSortIcon(column.key) }}</span>
+              }
+            </span>
+          </th>
+        }
+      </tr>
+    </thead>
+    <tbody>
+      @if (paginatedData.length > 0) {
+        @for (row of paginatedData; track $index) {
+          <tr class="sn-table-row">
+            @for (column of columns; track column.key) {
+              <td
+                class="sn-table-cell"
+                [style.text-align]="column.align || 'left'"
+              >
+                {{ row[column.key] }}
+              </td>
+            }
+          </tr>
+        }
+      } @else {
+        <tr>
+          <td [attr.colspan]="columns.length" class="sn-table-empty">
+            No data available
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+
+  @if (totalPages > 1) {
+    <div class="sn-table-pagination">
+      <button
+        class="sn-table-btn-prev"
+        (click)="prevPage()"
+        [disabled]="currentPage === 1"
+      >
+        ← Previous
+      </button>
+
+      <span class="sn-table-page-info">
+        Page {{ currentPage }} of {{ totalPages }}
+      </span>
+
+      <button
+        class="sn-table-btn-next"
+        (click)="nextPage()"
+        [disabled]="currentPage === totalPages"
+      >
+        Next →
+      </button>
+    </div>
+  }
+</div>
+

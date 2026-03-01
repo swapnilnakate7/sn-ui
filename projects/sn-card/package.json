@@ -1,6 +1,12 @@
 {
   "name": "sn-card",
   "version": "0.0.2",
+  "description": "Angular card component for displaying content in containers - SnUI Library",
+  "author": {
+    "name": "Swapnil Nakate",
+    "email": "nakate.swapnil7@gmail.com",
+    "url": "https://swapnilnakate.in"
+  },
   "peerDependencies": {
     "@angular/common": "^21.0.0",
     "@angular/core": "^21.0.0",
@@ -11,5 +17,15 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "bugs": {
+    "url": "https://github.com/swapnilnakate7/sn-ui/issues",
+    "email": "nakate.swapnil7@gmail.com"
+  },
+  "repository": {
+    "url": "https://github.com/swapnilnakate7/sn-ui",
+    "type": "git",
+    "directory": "projects/sn-card"
+  },
+  "license": "MIT"
 }

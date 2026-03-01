@@ -21,6 +21,21 @@
       "@dist/*": [
         "./dist/*"
       ],
+      "sn-checkbox": [
+        "./dist/sn-checkbox"
+      ],
+      "sn-radio": [
+        "./dist/sn-radio"
+      ],
+      "sn-select": [
+        "./dist/sn-select"
+      ],
+      "sn-table": [
+        "./dist/sn-table"
+      ],
+      "sn-textarea": [
+        "./dist/sn-textarea"
+      ],
       "sntest": [
         "./dist/sntest"
       ]
@@ -35,5 +50,37 @@
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
-  }
+  },
+  "references": [
+    {
+      "path": "./projects/sn-checkbox/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/sn-checkbox/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/sn-radio/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/sn-radio/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/sn-textarea/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/sn-textarea/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/sn-select/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/sn-select/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/sn-table/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/sn-table/tsconfig.spec.json"
+    }
+  ]
 }

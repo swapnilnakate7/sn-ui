@@ -1,0 +1,38 @@
+{
+  "name": "sn-radio",
+  "version": "0.0.1",
+  "description": "Angular radio button component with grouping and value selection - SnUI Library",
+  "author": {
+    "name": "Swapnil Nakate",
+    "email": "nakate.swapnil7@gmail.com",
+    "url": "https://swapnilnakate.in"
+  },
+  "keywords": [
+    "radio",
+    "angular",
+    "form-control",
+    "grouping",
+    "tailwindcss",
+    "accessible",
+    "aria",
+    "snui"
+  ],
+  "peerDependencies": {
+    "@angular/common": "^21.2.0",
+    "@angular/core": "^21.2.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false,
+  "bugs": {
+    "url": "https://github.com/swapnilnakate7/sn-ui/issues",
+    "email": "nakate.swapnil7@gmail.com"
+  },
+  "repository": {
+    "url": "https://github.com/swapnilnakate7/sn-ui",
+    "type": "git",
+    "directory": "projects/sn-radio"
+  },
+  "license": "MIT"
+}

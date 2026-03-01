@@ -1,0 +1,140 @@
+.sn-table-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: auto;
+}
+
+.sn-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  border-radius: 0.375rem;
+  overflow: hidden;
+
+  &.bordered {
+    border: 1px solid #e5e7eb;
+  }
+}
+
+.sn-table-header {
+  padding: 0.75rem;
+  background-color: #f9fafb;
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 2px solid #e5e7eb;
+  user-select: none;
+  transition: all 0.2s ease-in-out;
+
+  &.sortable {
+    cursor: pointer;
+
+    &:hover {
+      background-color: #f3f4f6;
+    }
+  }
+}
+
+.sn-table-header-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sn-table-sort-icon {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  transition: color 0.2s ease-in-out;
+}
+
+.sn-table-header:hover .sn-table-sort-icon {
+  color: #3b82f6;
+}
+
+.sn-table-row {
+  border-bottom: 1px solid #f3f4f6;
+  transition: background-color 0.15s ease-in-out;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  @media (hover: hover) {
+    .sn-table.hoverable &:hover {
+      background-color: #f9fafb;
+    }
+  }
+}
+
+.sn-table-cell {
+  padding: 0.75rem;
+  color: #1f2937;
+
+  &:first-child {
+    font-weight: 500;
+  }
+}
+
+.sn-table.striped tbody tr:nth-child(odd) {
+  background-color: #f9fafb;
+
+  &:hover {
+    background-color: #f3f4f6;
+  }
+}
+
+.sn-table-empty {
+  text-align: center;
+  color: #9ca3af;
+  padding: 2rem 0.75rem !important;
+  font-style: italic;
+}
+
+.sn-table-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-top: 1px solid #e5e7eb;
+  background-color: #f9fafb;
+  flex-wrap: wrap;
+}
+
+.sn-table-page-info {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+  min-width: 8rem;
+  text-align: center;
+}
+
+.sn-table-btn-prev,
+.sn-table-btn-next {
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  background-color: #ffffff;
+  color: #374151;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover:not(:disabled) {
+    border-color: #3b82f6;
+    color: #3b82f6;
+    background-color: #f0f9ff;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &:active:not(:disabled) {
+    background-color: #dbeafe;
+  }
+}
+
