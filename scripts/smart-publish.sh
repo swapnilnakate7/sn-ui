@@ -160,8 +160,9 @@ publish_component() {
     local package_file="projects/$component/package.json"
     local package_name=$(node -pe "require('./$package_file').name")
     local local_version=$(node -pe "require('./$package_file').version")
+    local dest_path=$(node -pe "require('path').resolve('projects/$component', require('./projects/$component/ng-package.json').dest)")
 
-    cd "projects/$component"
+    cd "$dest_path"
 
     echo "📤 Publishing $package_name@$local_version..."
 
@@ -317,16 +318,23 @@ for component in "${COMPONENTS[@]}"; do
 
         if update_version "$component"; then
             echo ""
-            echo "🔄 Retrying publish with new version..."
-            echo ""
+            echo "🔨 Rebuilding component with new version..."
+            if build_component "$component"; then
+                echo ""
+                echo "🔄 Retrying publish with new version..."
+                echo ""
 
-            # Retry publish
-            publish_component "$component"
-            retry_result=$?
+                # Retry publish
+                publish_component "$component"
+                retry_result=$?
 
-            if [ $retry_result -eq 0 ]; then
-                PUBLISHED+=("$component")
+                if [ $retry_result -eq 0 ]; then
+                    PUBLISHED+=("$component")
+                else
+                    FAILED+=("$component")
+                fi
             else
+                echo -e "${RED}❌ Build failed during retry${NC}"
                 FAILED+=("$component")
             fi
         else

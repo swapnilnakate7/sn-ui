@@ -1,6 +1,6 @@
 {
   "name": "sn-badge",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "SnBadge is an Angular 21 standalone badge/pill component",
   "author": {
     "name": "Swapnil Nakate",

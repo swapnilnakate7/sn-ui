@@ -95,9 +95,7 @@
     <sn-button-x scheme="warn-outlined">Warn</sn-button-x>
     <sn-button-x scheme="danger-outlined">Danger</sn-button-x>
     <sn-button-x scheme="success-outlined">Success</sn-button-x>
-    <sn-button-x scheme="default-outlined" disabled
-      >Default Outlined Disabled</sn-button-x
-    >
+    <sn-button-x scheme="default-outlined" disabled>Default Outlined Disabled</sn-button-x>
     <code class="language-html">
       <pre>
     &lt;sn-button-x scheme="default-outlined"> Default &lt;/sn-button-x>
@@ -112,15 +110,11 @@
   <div class="buttons border-b-2 border-gray-100">
     <h2 class="text-2xl">Rounded</h2>
     <sn-button-x scheme="default-outlined" rounded>Default</sn-button-x>
-    <sn-button-x scheme="primary-outlined" rounded
-      >Primary outlined</sn-button-x
-    >
+    <sn-button-x scheme="primary-outlined" rounded>Primary outlined</sn-button-x>
     <sn-button-x scheme="warn-outlined" rounded>Warn</sn-button-x>
     <sn-button-x scheme="danger-outlined" rounded>Danger</sn-button-x>
     <sn-button-x scheme="success-outlined" rounded>Success</sn-button-x>
-    <sn-button-x scheme="default-outlined" disabled rounded
-      >Default Outlined Disabled</sn-button-x
-    >
+    <sn-button-x scheme="default-outlined" disabled rounded>Default Outlined Disabled</sn-button-x>
     <code class="language-html">
       <pre>
       &lt;sn-button-x scheme="default-outlined" rounded> Default &lt;/sn-button-x>
@@ -135,15 +129,13 @@
 
   } @else if(_display === 'card'){
   <div class="content-center w-full">
-    <sn-card title="wow"
-      >Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae officia
+    <sn-card title="wow">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae officia
       rem eaque reprehenderit iure facere quod earum. Placeat, ratione
       perspiciatis eligendi officia commodi ex temporibus alias ab, tempore
       eaque aliquid. Ad soluta ullam voluptate itaque, atque libero incidunt
       quibusdam vero repellat exercitationem pariatur ipsam omnis natus
       repudiandae non dignissimos illo saepe aut. Repellendus repudiandae iste
-      tempora fugit quidem, provident excepturi.</sn-card
-    >
+      tempora fugit quidem, provident excepturi.</sn-card>
   </div>
 
   }@else if(_display ==='input'){
@@ -166,48 +158,26 @@
   <div class="flex flex-wrap">
     <div class="p-2">
       <h2 class="text-2xl">Text Input Info Messages</h2>
-      <sn-input
-       label="Name"
-       [placeholder]="'Enter Name'"
-        type="text"
-        pattern="^[A-Z].*$"
-        required
-        [infoMessages]="['Info Message 1', 'Info Message 2']"
-
-      ></sn-input>
+      <sn-input label="Name" [placeholder]="'Enter Name'" type="text" pattern="^[A-Z].*$" required
+        [infoMessages]="['Info Message 1', 'Info Message 2']"></sn-input>
     </div>
 
     <div class="p-2">
       <h2 class="text-2xl">Text Input Warning Messages</h2>
-      <sn-input
-        type="text"
-        pattern="^[A-Z].*$"
-        required
-        [warningMessages]="['Warning Message 1', 'Warning Message 2']"
-        class="w-64"
-      ></sn-input>
+      <sn-input type="text" pattern="^[A-Z].*$" required [warningMessages]="['Warning Message 1', 'Warning Message 2']"
+        class="w-64"></sn-input>
     </div>
 
     <div class="p-2">
       <h2 class="text-2xl">Text Input Error Messages</h2>
-      <sn-input
-        type="text"
-        pattern="^[A-Z].*$"
-        required
-        [errorMessages]="['Error Message 1', 'Error Message 2']"
-        class="w-64"
-      ></sn-input>
+      <sn-input type="text" pattern="^[A-Z].*$" required [errorMessages]="['Error Message 1', 'Error Message 2']"
+        class="w-64"></sn-input>
     </div>
 
     <div class="p-2">
       <h2 class="text-2xl">Text Input Success Messages</h2>
-      <sn-input
-        type="text"
-        pattern="^[A-Z].*$"
-        required
-        [successMessages]="['Success Message 1', 'Success Message 2']"
-        class="w-64"
-      ></sn-input>
+      <sn-input type="text" pattern="^[A-Z].*$" required [successMessages]="['Success Message 1', 'Success Message 2']"
+        class="w-64"></sn-input>
     </div>
   </div>
 
@@ -348,7 +318,8 @@
       Notifications: {{ _toggle1 ? 'ON' : 'OFF' }} | Dark Mode: {{ _toggle2 ? 'ON' : 'OFF' }}
     </p>
 
-    <code class="mt-4 block"><pre>
+    <code
+      class="mt-4 block"><pre>
 &lt;sn-toggle label="Notifications" [checked]="isOn" scheme="primary" (toggled)="isOn=$event"&gt;&lt;/sn-toggle&gt;</pre></code>
   </div>
   }
@@ -359,39 +330,20 @@
 
     <div class="flex flex-col gap-4">
       <h3 class="text-lg font-semibold">Basic Checkbox</h3>
-      <sn-checkbox-x
-        id="check1"
-        label="I agree to the terms and conditions"
-        [(ngModel)]="agreeTerms"
-        (changed)="onCheckboxChange($event)"
-      ></sn-checkbox-x>
+      <sn-checkbox-x id="check1" label="I agree to the terms and conditions" [(ngModel)]="agreeTerms"
+        (changed)="onCheckboxChange($event)"></sn-checkbox-x>
 
       <h3 class="text-lg font-semibold mt-4">Checkbox States</h3>
-      <sn-checkbox-x
-        id="check2"
-        label="Checked by default"
-        [(ngModel)]="checkboxValue"
-      ></sn-checkbox-x>
-      <sn-checkbox-x
-        id="check3"
-        label="Disabled checkbox"
-        [disabled]="true"
-      ></sn-checkbox-x>
-      <sn-checkbox-x
-        id="check4"
-        label="Disabled and checked"
-        [disabled]="true"
-        [(ngModel)]="disabledCheckedValue"
-      ></sn-checkbox-x>
+      <sn-checkbox-x id="check2" label="Checked by default" [(ngModel)]="checkboxValue"></sn-checkbox-x>
+      <sn-checkbox-x id="check3" label="Disabled checkbox" [disabled]="true"></sn-checkbox-x>
+      <sn-checkbox-x id="check4" label="Disabled and checked" [disabled]="true"
+        [(ngModel)]="disabledCheckedValue"></sn-checkbox-x>
 
       <h3 class="text-lg font-semibold mt-4">Indeterminate State</h3>
-      <sn-checkbox-x
-        id="check5"
-        label="Select All"
-        [indeterminate]="indeterminateState"
-        [(ngModel)]="selectAll"
-      ></sn-checkbox-x>
-      <p class="text-xs text-gray-500 ml-6">(Indeterminate state is used for "Select All" when some items are selected)</p>
+      <sn-checkbox-x id="check5" label="Select All" [indeterminate]="indeterminateState"
+        [(ngModel)]="selectAll"></sn-checkbox-x>
+      <p class="text-xs text-gray-500 ml-6">(Indeterminate state is used for "Select All" when some items are selected)
+      </p>
     </div>
 
     <p class="mt-4 text-sm text-gray-500">
@@ -415,63 +367,22 @@
     <div class="flex flex-col gap-4">
       <h3 class="text-lg font-semibold">Gender Selection</h3>
       <div class="flex gap-4">
-        <sn-radio
-          id="male"
-          name="gender"
-          value="male"
-          label="Male"
-          [(ngModel)]="selectedGender"
-          (changed)="onRadioChange($event)"
-        ></sn-radio>
-        <sn-radio
-          id="female"
-          name="gender"
-          value="female"
-          label="Female"
-          [(ngModel)]="selectedGender"
-        ></sn-radio>
-        <sn-radio
-          id="other"
-          name="gender"
-          value="other"
-          label="Other"
-          [(ngModel)]="selectedGender"
-        ></sn-radio>
+        <sn-radio id="male" name="gender" value="male" label="Male" [(ngModel)]="selectedGender"
+          (changed)="onRadioChange($event)"></sn-radio>
+        <sn-radio id="female" name="gender" value="female" label="Female" [(ngModel)]="selectedGender"></sn-radio>
+        <sn-radio id="other" name="gender" value="other" label="Other" [(ngModel)]="selectedGender"></sn-radio>
       </div>
 
       <h3 class="text-lg font-semibold mt-4">Size Selection</h3>
       <div class="flex gap-4">
-        <sn-radio
-          id="small"
-          name="size"
-          value="small"
-          label="Small"
-          [(ngModel)]="selectedSize"
-        ></sn-radio>
-        <sn-radio
-          id="medium"
-          name="size"
-          value="medium"
-          label="Medium"
-          [(ngModel)]="selectedSize"
-        ></sn-radio>
-        <sn-radio
-          id="large"
-          name="size"
-          value="large"
-          label="Large"
-          [(ngModel)]="selectedSize"
-        ></sn-radio>
+        <sn-radio id="small" name="size" value="small" label="Small" [(ngModel)]="selectedSize"></sn-radio>
+        <sn-radio id="medium" name="size" value="medium" label="Medium" [(ngModel)]="selectedSize"></sn-radio>
+        <sn-radio id="large" name="size" value="large" label="Large" [(ngModel)]="selectedSize"></sn-radio>
       </div>
 
       <h3 class="text-lg font-semibold mt-4">Disabled Radio</h3>
-      <sn-radio
-        id="disabled-radio"
-        name="disabled-group"
-        value="disabled"
-        label="Disabled option"
-        [disabled]="true"
-      ></sn-radio>
+      <sn-radio id="disabled-radio" name="disabled-group" value="disabled" label="Disabled option"
+        [disabled]="true"></sn-radio>
     </div>
 
     <p class="mt-4 text-sm text-gray-500">
@@ -495,47 +406,23 @@
 
     <div class="flex flex-col gap-4">
       <h3 class="text-lg font-semibold">Basic Textarea</h3>
-      <sn-textarea
-        id="comments"
-        label="Comments"
-        placeholder="Enter your comments here..."
-        [(ngModel)]="comments"
-        (changed)="onTextareaChange($event)"
-      ></sn-textarea>
+      <sn-textarea id="comments" label="Comments" placeholder="Enter your comments here..." [(ngModel)]="comments"
+        (changed)="onTextareaChange($event)"></sn-textarea>
 
       <h3 class="text-lg font-semibold mt-4">With Character Counter</h3>
-      <sn-textarea
-        id="feedback"
-        label="Feedback (Max 200 characters)"
-        placeholder="Tell us what you think..."
-        [maxLength]="200"
-        [(ngModel)]="feedback"
-      ></sn-textarea>
+      <sn-textarea id="feedback" label="Feedback (Max 200 characters)" placeholder="Tell us what you think..."
+        [maxLength]="200" [(ngModel)]="feedback"></sn-textarea>
 
       <h3 class="text-lg font-semibold mt-4">Auto-resize Disabled</h3>
-      <sn-textarea
-        id="fixed-height"
-        label="Fixed Height"
-        placeholder="This textarea won't auto-resize"
-        [autoResize]="false"
-        [rows]="6"
-      ></sn-textarea>
+      <sn-textarea id="fixed-height" label="Fixed Height" placeholder="This textarea won't auto-resize"
+        [autoResize]="false" [rows]="6"></sn-textarea>
 
       <h3 class="text-lg font-semibold mt-4">Disabled Textarea</h3>
-      <sn-textarea
-        id="disabled-textarea"
-        label="Disabled"
-        placeholder="This is disabled"
-        [disabled]="true"
-      ></sn-textarea>
+      <sn-textarea id="disabled-textarea" label="Disabled" placeholder="This is disabled"
+        [disabled]="true"></sn-textarea>
 
       <h3 class="text-lg font-semibold mt-4">Readonly Textarea</h3>
-      <sn-textarea
-        id="readonly-textarea"
-        label="Readonly"
-        [(ngModel)]="readonlyText"
-        [readonly]="true"
-      ></sn-textarea>
+      <sn-textarea id="readonly-textarea" label="Readonly" [(ngModel)]="readonlyText" [readonly]="true"></sn-textarea>
     </div>
 
     <p class="mt-4 text-sm text-gray-500">
@@ -559,65 +446,34 @@
 
     <div class="flex flex-col gap-6">
       <h3 class="text-lg font-semibold">Basic Select</h3>
-      <sn-dropdown-x
-        id="country"
-        label="Country"
-        placeholder="Select a country"
-        [options]="countries"
-        [(ngModel)]="selectedCountry"
-        (changed)="onSelectChange($event)"
-      ></sn-dropdown-x>
+      <sn-dropdown-x id="country" label="Country" placeholder="Select a country" [options]="countries"
+        [(ngModel)]="selectedCountry" (changed)="onSelectChange($event)"></sn-dropdown-x>
 
       <h3 class="text-lg font-semibold mt-4">Searchable Select</h3>
-      <sn-dropdown-x
-        id="searchable-country"
-        label="Country (with search)"
-        placeholder="Type to search..."
-        [options]="countries"
-        [searchable]="true"
-      ></sn-dropdown-x>
+      <sn-dropdown-x id="searchable-country" label="Country (with search)" placeholder="Type to search..."
+        [options]="countries" [searchable]="true"></sn-dropdown-x>
 
       <h3 class="text-lg font-semibold mt-4">Multi-Select</h3>
-      <sn-dropdown-x
-        id="languages"
-        label="Programming Languages"
-        placeholder="Select multiple languages"
-        [options]="languages"
-        [multiple]="true"
-        [(ngModel)]="selectedLanguages"
-      ></sn-dropdown-x>
+      <sn-dropdown-x id="languages" label="Programming Languages" placeholder="Select multiple languages"
+        [options]="languages" [multiple]="true" [(ngModel)]="selectedLanguages"></sn-dropdown-x>
 
       <h3 class="text-lg font-semibold mt-4">Multi-Select with Search</h3>
-      <sn-dropdown-x
-        id="multi-search"
-        label="Languages (searchable multi-select)"
-        placeholder="Search and select multiple"
-        [options]="languages"
-        [multiple]="true"
-        [searchable]="true"
-      ></sn-dropdown-x>
+      <sn-dropdown-x id="multi-search" label="Languages (searchable multi-select)"
+        placeholder="Search and select multiple" [options]="languages" [multiple]="true"
+        [searchable]="true"></sn-dropdown-x>
 
       <h3 class="text-lg font-semibold mt-4">Disabled Select</h3>
-      <sn-dropdown-x
-        id="disabled-select"
-        label="Disabled"
-        placeholder="This is disabled"
-        [options]="countries"
-        [disabled]="true"
-      ></sn-dropdown-x>
+      <sn-dropdown-x id="disabled-select" label="Disabled" placeholder="This is disabled" [options]="countries"
+        [disabled]="true"></sn-dropdown-x>
 
       <h3 class="text-lg font-semibold mt-4">Not Clearable</h3>
-      <sn-dropdown-x
-        id="not-clearable"
-        label="Not Clearable"
-        placeholder="Select (no clear button)"
-        [options]="countries"
-        [clearable]="false"
-      ></sn-dropdown-x>
+      <sn-dropdown-x id="not-clearable" label="Not Clearable" placeholder="Select (no clear button)"
+        [options]="countries" [clearable]="false"></sn-dropdown-x>
     </div>
 
     <p class="mt-4 text-sm text-gray-500">
-      Selected Country: {{ selectedCountry || 'None' }} | Selected Languages: {{ selectedLanguages.length > 0 ? selectedLanguages.join(', ') : 'None' }}
+      Selected Country: {{ selectedCountry || 'None' }} | Selected Languages: {{ selectedLanguages.length > 0 ?
+      selectedLanguages.join(', ') : 'None' }}
     </p>
 
     <code class="mt-4 block"><pre>
@@ -639,39 +495,21 @@
     <div class="flex flex-col gap-6">
       <h3 class="text-lg font-semibold">Basic Table with Sorting</h3>
       <p class="text-xs text-gray-500">Click any column header to sort. Click again to reverse order.</p>
-      <sn-datatable
-        [columns]="tableColumns"
-        [data]="tableData"
-        [striped]="true"
-        [hoverable]="true"
-        [pageSize]="5"
-        (sorted)="onTableSorted($event)"
-      ></sn-datatable>
+      <sn-datatable [columns]="tableColumns" [data]="tableData" [striped]="true" [hoverable]="true" [pageSize]="5"
+        (sorted)="onTableSorted($event)"></sn-datatable>
 
       <h3 class="text-lg font-semibold mt-6">Table Styling Variants</h3>
 
       <div class="mt-4">
         <p class="text-sm text-gray-600 mb-3">Bordered Table:</p>
-        <sn-datatable
-          [columns]="tableColumns"
-          [data]="tableData.slice(0, 3)"
-          [striped]="false"
-          [hoverable]="true"
-          [bordered]="true"
-          [pageSize]="10"
-        ></sn-datatable>
+        <sn-datatable [columns]="tableColumns" [data]="tableData.slice(0, 3)" [striped]="false" [hoverable]="true"
+          [bordered]="true" [pageSize]="10"></sn-datatable>
       </div>
 
       <div class="mt-4">
         <p class="text-sm text-gray-600 mb-3">Minimal Table (No Striping):</p>
-        <sn-datatable
-          [columns]="tableColumns"
-          [data]="tableData.slice(0, 4)"
-          [striped]="false"
-          [hoverable]="false"
-          [bordered]="false"
-          [pageSize]="10"
-        ></sn-datatable>
+        <sn-datatable [columns]="tableColumns" [data]="tableData.slice(0, 4)" [striped]="false" [hoverable]="false"
+          [bordered]="false" [pageSize]="10"></sn-datatable>
       </div>
     </div>
 
@@ -684,6 +522,28 @@
   [pageSize]="10"
   (sorted)="onTableSorted($event)"
 &gt;&lt;/sn-datatable&gt;</pre></code>
+  </div>
+  }
+
+  @if(_display === 'tooltip'){
+  <div class="component-section border-b-2 border-gray-100 p-6">
+    <h2 class="text-2xl mb-4">Tooltip</h2>
+
+    <div class="flex flex-col gap-6">
+      <h3 class="text-lg font-semibold">Basic Tooltips</h3>
+      <div class="flex gap-4">
+        <sn-button-x scheme="primary" filled snTooltip="This is a simple tooltip on top">Hover Me</sn-button-x>
+        <sn-button-x scheme="success" filled snTooltip="Bottom tooltip" tooltipPosition="bottom">Bottom</sn-button-x>
+        <span snTooltip="Left text tooltip" tooltipPosition="left"
+          class="cursor-help underline text-indigo-600 self-center">Hover Text (Left)</span>
+        <span snTooltip="Right text tooltip" tooltipPosition="right"
+          class="cursor-help underline text-indigo-600 self-center">Hover Text (Right)</span>
+      </div>
+    </div>
+
+    <code
+      class="mt-4 block"><pre>
+&lt;sn-button-x scheme="primary" filled snTooltip="Tooltip text here!" tooltipPosition="top"&gt;Hover Me&lt;/sn-button-x&gt;</pre></code>
   </div>
   }
 </main>

@@ -46,3 +46,8 @@ Thumbs.db
 0.py
 index.js
 result.*
+
+# Development documentation (iterations, notes, progress)
+docs/
+
+

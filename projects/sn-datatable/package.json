@@ -1,6 +1,6 @@
 {
   "name": "sn-datatable",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Angular data table component with sorting and pagination - SnUI Library",
   "author": {
     "name": "Swapnil Nakate",

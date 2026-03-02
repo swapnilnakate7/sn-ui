@@ -1,8 +1,8 @@
-t
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SnRadioComponent } from './sn-radio';
 import { DebugElement } from '@angular/core';
 import { By } from '@angular/platform-browser';
+import { vi } from 'vitest';
 
 describe('SnRadioComponent', () => {
   let component: SnRadioComponent;
@@ -26,7 +26,7 @@ describe('SnRadioComponent', () => {
   });
 
   it('should toggle radio value on change', () => {
-    const spy = jasmine.createSpy('onChange');
+    const spy = vi.fn();
     component.registerOnChange(spy);
     component.value = 'test-value';
 
@@ -38,7 +38,7 @@ describe('SnRadioComponent', () => {
   });
 
   it('should emit changed event on radio change', () => {
-    const spy = spyOn(component.changed, 'emit');
+    const spy = vi.spyOn(component.changed, 'emit');
     component.value = 'test-value';
 
     inputElement.nativeElement.click();
@@ -83,7 +83,7 @@ describe('SnRadioComponent', () => {
   });
 
   it('should call onTouched on blur', () => {
-    const spy = jasmine.createSpy('onTouched');
+    const spy = vi.fn();
     component.registerOnTouched(spy);
 
     inputElement.nativeElement.dispatchEvent(new Event('blur'));

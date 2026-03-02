@@ -11,10 +11,11 @@ import { SnToggleComponent } from '@libs/sn-toggle/src/public-api';
 import { SnCheckboxXComponent } from '../../../projects/sn-checkbox-x/src/public-api';
 import { SnRadioComponent } from '../../../projects/sn-radio/src/public-api';
 import { SnTextareaComponent } from '../../../projects/sn-textarea/src/public-api';
-import {SnDatatableComponent, TableColumn, TableRow} from "@libs/sn-datatable/src/lib/sn-datatable";
-import {SelectOption, SnDropdownXComponent} from "@libs/sn-dropdown-x/src/lib/sn-dropdown-x";
-import {SnTab, SnTabsXComponent} from "@libs/sn-tabs-x/src/lib/sn-tabs-x.component";
-import {SnSpinnerXComponent} from "@libs/sn-spinner-x/src/lib/sn-spinner-x.component";
+import { SnDatatableComponent, TableColumn, TableRow } from "@libs/sn-datatable/src/lib/sn-datatable";
+import { SelectOption, SnDropdownXComponent } from "@libs/sn-dropdown-x/src/lib/sn-dropdown-x";
+import { SnTab, SnTabsXComponent } from "@libs/sn-tabs-x/src/lib/sn-tabs-x.component";
+import { SnSpinnerXComponent } from "@libs/sn-spinner-x/src/lib/sn-spinner-x.component";
+import { TooltipDirective } from "../../../projects/sn-tooltip/src/public-api";
 
 @Component({
   selector: 'sn-list',
@@ -22,7 +23,7 @@ import {SnSpinnerXComponent} from "@libs/sn-spinner-x/src/lib/sn-spinner-x.compo
   imports: [CommonModule, FormsModule, SnButtonComponent, SnCardComponent, SnInputComponent,
     SnBadgeComponent, SnAlertComponent, SnSpinnerXComponent, SnModalComponent,
     SnTabsXComponent, SnToggleComponent, SnCheckboxXComponent, SnRadioComponent,
-    SnTextareaComponent, SnDropdownXComponent, SnDatatableComponent],
+    SnTextareaComponent, SnDropdownXComponent, SnDatatableComponent, TooltipDirective],
   templateUrl: './list.component.html',
   styleUrl: './list.component.scss',
 })
@@ -32,8 +33,8 @@ export class ListComponent {
   display(componentName: string) {
     this._display = componentName;
   }
-  sayHello(evt:any){
-    console.log('Hello',evt);
+  sayHello(evt: any) {
+    console.log('Hello', evt);
   }
 
   // Modal demo state

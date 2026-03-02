@@ -6,6 +6,12 @@
     "outDir": "../../out-tsc/spec",
     "types": [
       "vitest/globals"
+    ],
+    "lib": [
+      "ES2022",
+      "DOM",
+      "DOM.Iterable",
+      "ESNext.Disposable"
     ]
   },
   "include": [

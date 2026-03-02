@@ -16,8 +16,12 @@
     "experimentalDecorators": true,
     "moduleResolution": "bundler",
     "paths": {
-      "@libs/*": ["./projects/*"],
-      "@app/*": ["./src/app/*"],
+      "@libs/*": [
+        "./projects/*"
+      ],
+      "@app/*": [
+        "./src/app/*"
+      ],
       "@dist/*": [
         "./dist/*"
       ],
@@ -36,6 +40,9 @@
       "sn-textarea": [
         "./dist/sn-textarea"
       ],
+      "sn-tooltip": [
+        "./dist/sn-tooltip"
+      ],
       "sntest": [
         "./dist/sntest"
       ]
@@ -50,37 +57,5 @@
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
-  },
-  "references": [
-    {
-      "path": "./projects/sn-checkbox/tsconfig.lib.json"
-    },
-    {
-      "path": "./projects/sn-checkbox/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/sn-radio/tsconfig.lib.json"
-    },
-    {
-      "path": "./projects/sn-radio/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/sn-textarea/tsconfig.lib.json"
-    },
-    {
-      "path": "./projects/sn-textarea/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/sn-select/tsconfig.lib.json"
-    },
-    {
-      "path": "./projects/sn-select/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/sn-table/tsconfig.lib.json"
-    },
-    {
-      "path": "./projects/sn-table/tsconfig.spec.json"
-    }
-  ]
+  }
 }

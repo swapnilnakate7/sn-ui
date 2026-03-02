@@ -44,8 +44,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "20kb",
-                  "maximumError": "20kb"
+                  "maximumWarning": "40kb",
+                  "maximumError": "50kb"
                 }
               ],
               "outputHashing": "all"
@@ -398,7 +398,7 @@
       "projectType": "library",
       "root": "projects/sn-checkbox-x",
       "sourceRoot": "projects/sn-checkbox-x/src",
-      "prefix": "lib",
+      "prefix": "sn",
       "architect": {
         "build": {
           "builder": "@angular/build:ng-packagr",
@@ -428,7 +428,7 @@
       "projectType": "library",
       "root": "projects/sn-radio",
       "sourceRoot": "projects/sn-radio/src",
-      "prefix": "lib",
+      "prefix": "sn",
       "architect": {
         "build": {
           "builder": "@angular/build:ng-packagr",
@@ -454,7 +454,7 @@
       "projectType": "library",
       "root": "projects/sn-textarea",
       "sourceRoot": "projects/sn-textarea/src",
-      "prefix": "lib",
+      "prefix": "sn",
       "architect": {
         "build": {
           "builder": "@angular/build:ng-packagr",
@@ -480,7 +480,7 @@
       "projectType": "library",
       "root": "projects/sn-dropdown-x",
       "sourceRoot": "projects/sn-dropdown-x/src",
-      "prefix": "lib",
+      "prefix": "sn",
       "architect": {
         "build": {
           "builder": "@angular/build:ng-packagr",
@@ -506,7 +506,7 @@
       "projectType": "library",
       "root": "projects/sn-datatable",
       "sourceRoot": "projects/sn-datatable/src",
-      "prefix": "lib",
+      "prefix": "sn",
       "architect": {
         "build": {
           "builder": "@angular/build:ng-packagr",
@@ -524,6 +524,32 @@
           "builder": "@angular/build:unit-test",
           "options": {
             "tsConfig": "projects/sn-datatable/tsconfig.spec.json"
+          }
+        }
+      }
+    },
+    "sn-tooltip": {
+      "projectType": "library",
+      "root": "projects/sn-tooltip",
+      "sourceRoot": "projects/sn-tooltip/src",
+      "prefix": "sn",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/sn-tooltip/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/sn-tooltip/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "tsConfig": "projects/sn-tooltip/tsconfig.spec.json"
           }
         }
       }
