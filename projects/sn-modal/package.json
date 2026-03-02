@@ -1,6 +1,6 @@
 {
   "name": "sn-modal",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "SnModal is an Angular 21 standalone modal dialog component",
   "author": {
     "name": "Swapnil Nakate",

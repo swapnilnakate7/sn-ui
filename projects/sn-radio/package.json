@@ -1,6 +1,6 @@
 {
   "name": "sn-radio",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Angular radio button component with grouping and value selection - SnUI Library",
   "author": {
     "name": "Swapnil Nakate",

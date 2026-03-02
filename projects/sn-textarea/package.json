@@ -1,6 +1,6 @@
 {
   "name": "sn-textarea",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Angular textarea component with auto-resize and character counter - SnUI Library",
   "author": {
     "name": "Swapnil Nakate",
