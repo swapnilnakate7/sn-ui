@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.sn-avatar {
+    @apply inline-flex items-center justify-center align-middle overflow-hidden bg-gray-100 flex-shrink-0;
+}
+
+/* Base shape modifiers */
+.sn-avatar-circle {
+    @apply rounded-full;
+}
+
+.sn-avatar-square {
+    @apply rounded-none;
+}
+
+.sn-avatar-rounded {
+    @apply rounded-lg;
+}
+
+/* Sizing modifiers */
+.sn-avatar-sm {
+    @apply w-8 h-8;
+
+    .sn-avatar-text {
+        @apply text-xs;
+    }
+}
+
+.sn-avatar-md {
+    @apply w-12 h-12;
+
+    .sn-avatar-text {
+        @apply text-base;
+    }
+}
+
+.sn-avatar-lg {
+    @apply w-16 h-16;
+
+    .sn-avatar-text {
+        @apply text-xl;
+    }
+}
+
+.sn-avatar-xl {
+    @apply w-24 h-24;
+
+    .sn-avatar-text {
+        @apply text-3xl;
+    }
+}
+
+.sn-avatar-text {
+    @apply font-medium text-gray-500 uppercase;
+}

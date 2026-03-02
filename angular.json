@@ -553,6 +553,32 @@
           }
         }
       }
+    },
+    "sn-avatar": {
+      "projectType": "library",
+      "root": "projects/sn-avatar",
+      "sourceRoot": "projects/sn-avatar/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/sn-avatar/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/sn-avatar/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "tsConfig": "projects/sn-avatar/tsconfig.spec.json"
+          }
+        }
+      }
     }
   },
   "cli": {

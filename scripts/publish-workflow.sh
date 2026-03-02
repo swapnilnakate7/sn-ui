@@ -42,9 +42,11 @@ COMPONENTS=(
     # "sn-spinner-x"
     # "sn-datatable"
     # "sn-tabs-x"
-    "sn-textarea"
-    "sn-toggle"
+    # "sn-textarea"
+    # "sn-toggle"
+    "sn-avatar"
 )
+
 
 echo "🔍 Checking npm login status..."
 if ! npm whoami > /dev/null 2>&1; then

@@ -25,6 +25,9 @@
       "@dist/*": [
         "./dist/*"
       ],
+      "sn-avatar": [
+        "./dist/sn-avatar"
+      ],
       "sn-checkbox": [
         "./dist/sn-checkbox"
       ],
@@ -57,5 +60,13 @@
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
-  }
+  },
+  "references": [
+    {
+      "path": "./projects/sn-avatar/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/sn-avatar/tsconfig.spec.json"
+    }
+  ]
 }

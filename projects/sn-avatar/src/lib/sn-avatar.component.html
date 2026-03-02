@@ -1,0 +1,10 @@
+<div class="relative inline-flex items-center justify-center align-middle overflow-hidden bg-gray-100 flex-shrink-0"
+    [ngClass]="wrapperClasses" [ngStyle]="wrapperStyles">
+    @if (showImage) {
+    <img [src]="src" [alt]="alt" class="w-full h-full object-cover rounded-none m-0" (error)="onImageError()" />
+    } @else {
+    <span class="font-medium text-gray-500 sn-avatar-text">
+        {{ computedInitials }}
+    </span>
+    }
+</div>
