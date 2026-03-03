@@ -31,6 +31,9 @@
       "sn-checkbox": [
         "./dist/sn-checkbox"
       ],
+      "sn-pagination": [
+        "./dist/sn-pagination"
+      ],
       "sn-radio": [
         "./dist/sn-radio"
       ],
@@ -76,6 +79,12 @@
     },
     {
       "path": "./projects/sn-skeleton/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/sn-pagination/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/sn-pagination/tsconfig.spec.json"
     }
   ]
 }

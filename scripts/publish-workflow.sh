@@ -46,6 +46,7 @@ COMPONENTS=(
     # "sn-toggle"
     "sn-avatar"
     "sn-skeleton"
+    "sn-pagination"
 )
 
 

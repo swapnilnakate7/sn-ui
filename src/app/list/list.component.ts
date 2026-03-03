@@ -8,14 +8,14 @@ import { SnBadgeComponent } from '@libs/sn-badge/src/public-api';
 import { SnAlertComponent } from '@libs/sn-alert/src/public-api';
 import { SnModalComponent } from '@libs/sn-modal/src/public-api';
 import { SnToggleComponent } from '@libs/sn-toggle/src/public-api';
-import { SnCheckboxXComponent } from '../../../projects/sn-checkbox-x/src/public-api';
-import { SnRadioComponent } from '../../../projects/sn-radio/src/public-api';
-import { SnTextareaComponent } from '../../../projects/sn-textarea/src/public-api';
+import { SnCheckboxXComponent } from '@libs/sn-checkbox-x/src/public-api';
+import { SnRadioComponent } from '@libs/sn-radio/src/public-api';
+import { SnTextareaComponent } from '@libs/sn-textarea/src/public-api';
 import { SnDatatableComponent, TableColumn, TableRow } from "@libs/sn-datatable/src/lib/sn-datatable";
 import { SelectOption, SnDropdownXComponent } from "@libs/sn-dropdown-x/src/lib/sn-dropdown-x";
 import { SnTab, SnTabsXComponent } from "@libs/sn-tabs-x/src/lib/sn-tabs-x.component";
 import { SnSpinnerXComponent } from "@libs/sn-spinner-x/src/lib/sn-spinner-x.component";
-import { TooltipDirective } from "../../../projects/sn-tooltip/src/public-api";
+import { TooltipDirective } from "@libs/sn-tooltip/src/public-api";
 
 @Component({
   selector: 'sn-list',

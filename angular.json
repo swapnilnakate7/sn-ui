@@ -605,6 +605,32 @@
           }
         }
       }
+    },
+    "sn-pagination": {
+      "projectType": "library",
+      "root": "projects/sn-pagination",
+      "sourceRoot": "projects/sn-pagination/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/sn-pagination/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/sn-pagination/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "tsConfig": "projects/sn-pagination/tsconfig.spec.json"
+          }
+        }
+      }
     }
   },
   "cli": {

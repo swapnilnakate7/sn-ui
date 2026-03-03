@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.sn-pagination-container {
+    @apply flex items-center;
+}
+
+.sn-pagination-list {
+    @apply inline-flex -space-x-px text-sm m-0 p-0 list-none;
+}
+
+.sn-pagination-item {
+    @apply flex items-center justify-center border border-gray-300 bg-white text-gray-500 hover:bg-gray-100 hover:text-gray-700 transition-colors w-10 h-10 font-medium;
+
+    &:disabled {
+        @apply opacity-50 cursor-not-allowed hover:bg-white hover:text-gray-500 bg-gray-50 text-gray-400;
+    }
+}
+
+.sn-pagination-prev {
+    @apply rounded-l-md;
+}
+
+.sn-pagination-next {
+    @apply rounded-r-md;
+}
+
+/* Active State */
+.sn-pagination-active {
+    @apply z-10 bg-indigo-50 border-indigo-500 text-indigo-600 hover:bg-indigo-100 hover:text-indigo-700;
+}
+
+/* Sizing Modifiers */
+.sn-pagination-sm .sn-pagination-item {
+    @apply w-8 h-8 text-xs;
+}
+
+.sn-pagination-lg .sn-pagination-item {
+    @apply w-12 h-12 text-base;
+}
+
+/* Global Disabled State */
+.sn-pagination-disabled .sn-pagination-item {
+    @apply opacity-60 cursor-not-allowed bg-gray-50 hover:bg-gray-50 text-gray-400;
+
+    &.sn-pagination-active {
+        @apply border-gray-300;
+    }
+}

@@ -1,0 +1,39 @@
+<nav class="sn-pagination-container" [ngClass]="'sn-pagination-' + size + (disabled ? ' sn-pagination-disabled' : '')"
+    aria-label="Pagination Navigation">
+    <ul class="sn-pagination-list">
+        <!-- Previous Button -->
+        <li>
+            <button type="button" class="sn-pagination-item sn-pagination-prev"
+                [disabled]="disabled || currentPage === 1" (click)="previousPage()" aria-label="Previous page">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                        clip-rule="evenodd" />
+                </svg>
+            </button>
+        </li>
+
+        <!-- Page Numbers -->
+        @for (page of pages; track page) {
+        <li>
+            <button type="button" class="sn-pagination-item" [class.sn-pagination-active]="page === currentPage"
+                [disabled]="disabled" (click)="goToPage(page)"
+                [attr.aria-current]="page === currentPage ? 'page' : null">
+                {{ page }}
+            </button>
+        </li>
+        }
+
+        <!-- Next Button -->
+        <li>
+            <button type="button" class="sn-pagination-item sn-pagination-next"
+                [disabled]="disabled || currentPage === totalPages" (click)="nextPage()" aria-label="Next page">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                        clip-rule="evenodd" />
+                </svg>
+            </button>
+        </li>
+    </ul>
+</nav>
