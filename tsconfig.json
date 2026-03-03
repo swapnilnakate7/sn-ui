@@ -25,11 +25,17 @@
       "@dist/*": [
         "./dist/*"
       ],
+      "sn-advanced-datatable": [
+        "./dist/sn-advanced-datatable"
+      ],
       "sn-avatar": [
         "./dist/sn-avatar"
       ],
       "sn-breadcrumbs": [
         "./dist/sn-breadcrumbs"
+      ],
+      "sn-charts": [
+        "./dist/sn-charts"
       ],
       "sn-checkbox": [
         "./dist/sn-checkbox"
@@ -112,6 +118,18 @@
     },
     {
       "path": "./projects/sn-breadcrumbs/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/sn-charts/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/sn-charts/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/sn-advanced-datatable/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/sn-advanced-datatable/tsconfig.spec.json"
     }
   ]
 }

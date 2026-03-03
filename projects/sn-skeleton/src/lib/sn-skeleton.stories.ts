@@ -25,7 +25,7 @@ const meta: Meta<SnSkeletonComponent> = {
         },
         width: { control: 'text', description: 'Width of the skeleton (e.g. "100%", "4rem")' },
         height: { control: 'text', description: 'Height of the skeleton (e.g. "1rem", "100px")' },
-        customClasses: { control: 'text', description: 'Additional CSS classes to apply' },
+        customClass: { control: 'text', description: 'Additional CSS classes to apply' },
     },
     args: {
         type: 'text',
@@ -41,7 +41,7 @@ const meta: Meta<SnSkeletonComponent> = {
         [animation]="animation" 
         [width]="width" 
         [height]="height" 
-        [customClasses]="customClasses">
+        [customClass]="customClass">
       </sn-skeleton>
     `,
     }),

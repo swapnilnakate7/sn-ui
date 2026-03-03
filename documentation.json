@@ -509,7 +509,7 @@
         },
         {
             "name": "ListComponent",
-            "id": "component-ListComponent-bddad71c9a290d7196c47cc5c04d8518a2a82fa12b74c9559b03721ec41c658c026b8f0d1fb987538736c936fab6384c6f94752768a84790f724de5ad6f84fc7",
+            "id": "component-ListComponent-f18c885a018ecea469a54c71104a9a337105ca8f174794c667f88b014b48d493680164164971b7aee46812668a7796bd4f3e41cac2d0a8c7b8d319ce2202eab5",
             "file": "src/app/list/list.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -530,7 +530,7 @@
                     "defaultValue": "''",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 35,
+                    "line": 43,
                     "type": "string",
                     "decorators": []
                 }
@@ -546,7 +546,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 54
+                    "line": 66
                 },
                 {
                     "name": "_toggle1",
@@ -557,7 +557,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 66
+                    "line": 78
                 },
                 {
                     "name": "_toggle2",
@@ -568,7 +568,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 67
+                    "line": 79
                 },
                 {
                     "name": "agreeTerms",
@@ -579,7 +579,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 71
+                    "line": 83
                 },
                 {
                     "name": "checkboxValue",
@@ -590,7 +590,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 70
+                    "line": 82
                 },
                 {
                     "name": "comments",
@@ -601,7 +601,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 81
+                    "line": 93
                 },
                 {
                     "name": "countries",
@@ -612,7 +612,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 89
+                    "line": 101
                 },
                 {
                     "name": "demoTabs",
@@ -623,7 +623,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 59
+                    "line": 71
                 },
                 {
                     "name": "disabledCheckedValue",
@@ -634,7 +634,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 74
+                    "line": 86
                 },
                 {
                     "name": "feedback",
@@ -645,7 +645,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 82
+                    "line": 94
                 },
                 {
                     "name": "indeterminateState",
@@ -656,7 +656,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 73
+                    "line": 85
                 },
                 {
                     "name": "languages",
@@ -667,18 +667,18 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 100
+                    "line": 112
                 },
                 {
                     "name": "list",
-                    "defaultValue": "['button', 'card', 'input', 'badge', 'alert', 'spinner', 'modal', 'tabs', 'toggle', 'checkbox', 'radio', 'textarea', 'dropdown', 'datatable']",
+                    "defaultValue": "['button', 'card', 'input', 'badge', 'alert', 'spinner', 'modal', 'tabs', 'toggle', 'checkbox', 'radio', 'textarea', 'dropdown', 'datatable', 'sn-progress-bar', 'sn-empty-state', 'sn-breadcrumbs', 'sn-avatar', 'sn-skeleton', 'sn-pagination']",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "[]",
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 34
+                    "line": 42
                 },
                 {
                     "name": "readonlyText",
@@ -689,7 +689,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 83
+                    "line": 95
                 },
                 {
                     "name": "route",
@@ -700,7 +700,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 32,
+                    "line": 40,
                     "modifierKind": [
                         123
                     ]
@@ -714,7 +714,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 72
+                    "line": 84
                 },
                 {
                     "name": "selectedCountry",
@@ -725,7 +725,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 86
+                    "line": 98
                 },
                 {
                     "name": "selectedGender",
@@ -736,7 +736,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 77
+                    "line": 89
                 },
                 {
                     "name": "selectedLanguages",
@@ -747,7 +747,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 87
+                    "line": 99
                 },
                 {
                     "name": "selectedSize",
@@ -758,7 +758,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 78
+                    "line": 90
                 },
                 {
                     "name": "tableColumns",
@@ -769,7 +769,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 110
+                    "line": 122
                 },
                 {
                     "name": "tableData",
@@ -780,10 +780,20 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 118
+                    "line": 130
                 }
             ],
             "methodsClass": [
+                {
+                    "name": "click",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 58,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
                 {
                     "name": "display",
                     "args": [
@@ -799,7 +809,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 46,
+                    "line": 54,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -822,7 +832,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 37,
+                    "line": 45,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -841,7 +851,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 133,
+                    "line": 145,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -864,7 +874,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 56,
+                    "line": 68,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -883,7 +893,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 137,
+                    "line": 149,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -915,7 +925,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 145,
+                    "line": 157,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -947,7 +957,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 149,
+                    "line": 161,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -979,7 +989,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 141,
+                    "line": 153,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -1002,7 +1012,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 55,
+                    "line": 67,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -1021,7 +1031,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 49,
+                    "line": 61,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -1112,12 +1122,36 @@
                 {
                     "name": "TooltipDirective",
                     "type": "directive"
+                },
+                {
+                    "name": "SnAvatarComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "SnSkeletonComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "SnPaginationComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "SnEmptyStateComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "SnProgressBarComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "SnBreadcrumbsComponent",
+                    "type": "component"
                 }
             ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, OnInit, inject } from '@angular/core';\nimport { ActivatedRoute } from '@angular/router';\nimport { CommonModule } from '@angular/common';\nimport { FormsModule } from '@angular/forms';\nimport { SnButtonComponent } from '@libs/sn-button-x/src/public-api';\nimport { SnCardComponent } from '@libs/sn-card/src/public-api';\nimport { SnInputComponent } from '@libs/sn-input/src/public-api';\nimport { SnBadgeComponent } from '@libs/sn-badge/src/public-api';\nimport { SnAlertComponent } from '@libs/sn-alert/src/public-api';\nimport { SnModalComponent } from '@libs/sn-modal/src/public-api';\nimport { SnToggleComponent } from '@libs/sn-toggle/src/public-api';\nimport { SnCheckboxXComponent } from '@libs/sn-checkbox-x/src/public-api';\nimport { SnRadioComponent } from '@libs/sn-radio/src/public-api';\nimport { SnTextareaComponent } from '@libs/sn-textarea/src/public-api';\nimport { SnDatatableComponent, TableColumn, TableRow } from \"@libs/sn-datatable/src/lib/sn-datatable\";\nimport { SelectOption, SnDropdownXComponent } from \"@libs/sn-dropdown-x/src/lib/sn-dropdown-x\";\nimport { SnTab, SnTabsXComponent } from \"@libs/sn-tabs-x/src/lib/sn-tabs-x.component\";\nimport { SnSpinnerXComponent } from \"@libs/sn-spinner-x/src/lib/sn-spinner-x.component\";\nimport { TooltipDirective } from \"@libs/sn-tooltip/src/public-api\";\n\n@Component({\n  selector: 'sn-list',\n  standalone: true,\n  imports: [CommonModule, FormsModule, SnButtonComponent, SnCardComponent, SnInputComponent,\n    SnBadgeComponent, SnAlertComponent, SnSpinnerXComponent, SnModalComponent,\n    SnTabsXComponent, SnToggleComponent, SnCheckboxXComponent, SnRadioComponent,\n    SnTextareaComponent, SnDropdownXComponent, SnDatatableComponent, TooltipDirective],\n  templateUrl: './list.component.html',\n  styleUrl: './list.component.scss',\n})\nexport class ListComponent implements OnInit {\n  private route = inject(ActivatedRoute);\n\n  list = ['button', 'card', 'input', 'badge', 'alert', 'spinner', 'modal', 'tabs', 'toggle', 'checkbox', 'radio', 'textarea', 'dropdown', 'datatable'];\n  @Input('componentName') _display = '';\n\n  ngOnInit() {\n    this.route.paramMap.subscribe(params => {\n      const name = params.get('name');\n      if (name) {\n        this._display = name;\n      }\n    });\n  }\n\n  display(componentName: string) {\n    this._display = componentName;\n  }\n  sayHello(evt: any) {\n    console.log('Hello', evt);\n  }\n\n  // Modal demo state\n  _modalOpen = false;\n  openModal() { this._modalOpen = true; }\n  onModalClosed() { this._modalOpen = false; }\n\n  // Tabs demo data\n  demoTabs: SnTab[] = [\n    { label: 'Tab One', content: 'Content for Tab One: This is the first tab panel.' },\n    { label: 'Tab Two', content: 'Content for Tab Two: Here is some different content.' },\n    { label: 'Tab Three', content: 'Content for Tab Three: And a third tab for good measure.' },\n  ];\n\n  // Toggle demo state\n  _toggle1 = false;\n  _toggle2 = true;\n\n  // Checkbox demo state\n  checkboxValue = false;\n  agreeTerms = false;\n  selectAll = false;\n  indeterminateState = false;\n  disabledCheckedValue = true;\n\n  // Radio demo state\n  selectedGender = 'male';\n  selectedSize = 'medium';\n\n  // Textarea demo state\n  comments = '';\n  feedback = '';\n  readonlyText = 'This text is readonly and cannot be edited';\n\n  // Select demo state\n  selectedCountry: string | null = null;\n  selectedLanguages: string[] = [];\n\n  countries: SelectOption[] = [\n    { label: 'United States', value: 'us' },\n    { label: 'United Kingdom', value: 'uk' },\n    { label: 'Canada', value: 'ca' },\n    { label: 'Australia', value: 'au' },\n    { label: 'Germany', value: 'de' },\n    { label: 'France', value: 'fr' },\n    { label: 'Japan', value: 'jp' },\n    { label: 'India', value: 'in' },\n  ];\n\n  languages: SelectOption[] = [\n    { label: 'JavaScript', value: 'js' },\n    { label: 'TypeScript', value: 'ts' },\n    { label: 'Python', value: 'py' },\n    { label: 'Java', value: 'java' },\n    { label: 'C#', value: 'csharp' },\n    { label: 'Ruby', value: 'ruby' },\n  ];\n\n  // Table demo data\n  tableColumns: TableColumn[] = [\n    { header: 'ID', key: 'id', sortable: true, width: '80px', align: 'center' },\n    { header: 'Name', key: 'name', sortable: true, width: '200px', align: 'left' },\n    { header: 'Email', key: 'email', sortable: true, width: '250px', align: 'left' },\n    { header: 'Department', key: 'department', sortable: true, width: '150px', align: 'left' },\n    { header: 'Status', key: 'status', sortable: false, width: '120px', align: 'center' },\n  ];\n\n  tableData: TableRow[] = [\n    { id: 1, name: 'Alice Johnson', email: 'alice.johnson@company.com', department: 'Engineering', status: 'Active' },\n    { id: 2, name: 'Bob Smith', email: 'bob.smith@company.com', department: 'Marketing', status: 'Active' },\n    { id: 3, name: 'Charlie Brown', email: 'charlie.brown@company.com', department: 'Engineering', status: 'Inactive' },\n    { id: 4, name: 'Diana Prince', email: 'diana.prince@company.com', department: 'Sales', status: 'Active' },\n    { id: 5, name: 'Eve Wilson', email: 'eve.wilson@company.com', department: 'HR', status: 'Active' },\n    { id: 6, name: 'Frank Miller', email: 'frank.miller@company.com', department: 'Engineering', status: 'Active' },\n    { id: 7, name: 'Grace Lee', email: 'grace.lee@company.com', department: 'Finance', status: 'Inactive' },\n    { id: 8, name: 'Henry Taylor', email: 'henry.taylor@company.com', department: 'Marketing', status: 'Active' },\n    { id: 9, name: 'Iris Davis', email: 'iris.davis@company.com', department: 'Engineering', status: 'Active' },\n    { id: 10, name: 'Jack Anderson', email: 'jack.anderson@company.com', department: 'Sales', status: 'Active' },\n    { id: 11, name: 'Karen White', email: 'karen.white@company.com', department: 'HR', status: 'Inactive' },\n    { id: 12, name: 'Leo Harris', email: 'leo.harris@company.com', department: 'Engineering', status: 'Active' },\n  ];\n\n  onCheckboxChange(value: boolean) {\n    console.log('Checkbox changed:', value);\n  }\n\n  onRadioChange(value: string) {\n    console.log('Radio changed:', value);\n  }\n\n  onTextareaChange(value: string) {\n    console.log('Textarea changed:', value);\n  }\n\n  onSelectChange(value: any) {\n    console.log('Select changed:', value);\n  }\n\n  onTableSorted(event: any) {\n    console.log('Table sorted:', event);\n  }\n}\n",
+            "sourceCode": "import { Component, Input, OnInit, inject } from '@angular/core';\nimport { ActivatedRoute } from '@angular/router';\nimport { CommonModule } from '@angular/common';\nimport { FormsModule } from '@angular/forms';\nimport { SnButtonComponent } from '@libs/sn-button-x/src/public-api';\nimport { SnCardComponent } from '@libs/sn-card/src/public-api';\nimport { SnInputComponent } from '@libs/sn-input/src/public-api';\nimport { SnBadgeComponent } from '@libs/sn-badge/src/public-api';\nimport { SnAlertComponent } from '@libs/sn-alert/src/public-api';\nimport { SnModalComponent } from '@libs/sn-modal/src/public-api';\nimport { SnToggleComponent } from '@libs/sn-toggle/src/public-api';\nimport { SnCheckboxXComponent } from '@libs/sn-checkbox-x/src/public-api';\nimport { SnRadioComponent } from '@libs/sn-radio/src/public-api';\nimport { SnTextareaComponent } from '@libs/sn-textarea/src/public-api';\nimport { SnDatatableComponent, TableColumn, TableRow } from \"@libs/sn-datatable/src/lib/sn-datatable\";\nimport { SelectOption, SnDropdownXComponent } from \"@libs/sn-dropdown-x/src/lib/sn-dropdown-x\";\nimport { SnTab, SnTabsXComponent } from \"@libs/sn-tabs-x/src/lib/sn-tabs-x.component\";\nimport { SnSpinnerXComponent } from \"@libs/sn-spinner-x/src/lib/sn-spinner-x.component\";\nimport { TooltipDirective } from \"@libs/sn-tooltip/src/public-api\";\nimport { SnAvatarComponent } from \"@libs/sn-avatar/src/public-api\";\nimport { SnSkeletonComponent } from \"@libs/sn-skeleton/src/public-api\";\nimport { SnPaginationComponent } from \"@libs/sn-pagination/src/public-api\";\nimport { SnEmptyStateComponent } from \"@libs/sn-empty-state/src/public-api\";\nimport { SnProgressBarComponent } from \"@libs/sn-progress-bar/src/public-api\";\nimport { SnBreadcrumbsComponent } from \"@libs/sn-breadcrumbs/src/public-api\";\n\n@Component({\n  selector: 'sn-list',\n  standalone: true,\n  imports: [CommonModule, FormsModule, SnButtonComponent, SnCardComponent, SnInputComponent,\n    SnBadgeComponent, SnAlertComponent, SnSpinnerXComponent, SnModalComponent,\n    SnTabsXComponent, SnToggleComponent, SnCheckboxXComponent, SnRadioComponent,\n    SnTextareaComponent, SnDropdownXComponent, SnDatatableComponent, TooltipDirective,\n    SnAvatarComponent, SnSkeletonComponent, SnPaginationComponent, SnEmptyStateComponent,\n    SnProgressBarComponent, SnBreadcrumbsComponent],\n  templateUrl: './list.component.html',\n  styleUrl: './list.component.scss',\n})\nexport class ListComponent implements OnInit {\n  private route = inject(ActivatedRoute);\n\n  list = ['button', 'card', 'input', 'badge', 'alert', 'spinner', 'modal', 'tabs', 'toggle', 'checkbox', 'radio', 'textarea', 'dropdown', 'datatable', 'sn-progress-bar', 'sn-empty-state', 'sn-breadcrumbs', 'sn-avatar', 'sn-skeleton', 'sn-pagination'];\n  @Input('componentName') _display = '';\n\n  ngOnInit() {\n    this.route.paramMap.subscribe(params => {\n      const name = params.get('name');\n      if (name) {\n        this._display = name;\n      }\n    });\n  }\n\n  display(componentName: string) {\n    this._display = componentName;\n  }\n\n  click() {\n    console.log('Action clicked');\n  }\n  sayHello(evt: any) {\n    console.log('Hello', evt);\n  }\n\n  // Modal demo state\n  _modalOpen = false;\n  openModal() { this._modalOpen = true; }\n  onModalClosed() { this._modalOpen = false; }\n\n  // Tabs demo data\n  demoTabs: SnTab[] = [\n    { label: 'Tab One', content: 'Content for Tab One: This is the first tab panel.' },\n    { label: 'Tab Two', content: 'Content for Tab Two: Here is some different content.' },\n    { label: 'Tab Three', content: 'Content for Tab Three: And a third tab for good measure.' },\n  ];\n\n  // Toggle demo state\n  _toggle1 = false;\n  _toggle2 = true;\n\n  // Checkbox demo state\n  checkboxValue = false;\n  agreeTerms = false;\n  selectAll = false;\n  indeterminateState = false;\n  disabledCheckedValue = true;\n\n  // Radio demo state\n  selectedGender = 'male';\n  selectedSize = 'medium';\n\n  // Textarea demo state\n  comments = '';\n  feedback = '';\n  readonlyText = 'This text is readonly and cannot be edited';\n\n  // Select demo state\n  selectedCountry: string | null = null;\n  selectedLanguages: string[] = [];\n\n  countries: SelectOption[] = [\n    { label: 'United States', value: 'us' },\n    { label: 'United Kingdom', value: 'uk' },\n    { label: 'Canada', value: 'ca' },\n    { label: 'Australia', value: 'au' },\n    { label: 'Germany', value: 'de' },\n    { label: 'France', value: 'fr' },\n    { label: 'Japan', value: 'jp' },\n    { label: 'India', value: 'in' },\n  ];\n\n  languages: SelectOption[] = [\n    { label: 'JavaScript', value: 'js' },\n    { label: 'TypeScript', value: 'ts' },\n    { label: 'Python', value: 'py' },\n    { label: 'Java', value: 'java' },\n    { label: 'C#', value: 'csharp' },\n    { label: 'Ruby', value: 'ruby' },\n  ];\n\n  // Table demo data\n  tableColumns: TableColumn[] = [\n    { header: 'ID', key: 'id', sortable: true, width: '80px', align: 'center' },\n    { header: 'Name', key: 'name', sortable: true, width: '200px', align: 'left' },\n    { header: 'Email', key: 'email', sortable: true, width: '250px', align: 'left' },\n    { header: 'Department', key: 'department', sortable: true, width: '150px', align: 'left' },\n    { header: 'Status', key: 'status', sortable: false, width: '120px', align: 'center' },\n  ];\n\n  tableData: TableRow[] = [\n    { id: 1, name: 'Alice Johnson', email: 'alice.johnson@company.com', department: 'Engineering', status: 'Active' },\n    { id: 2, name: 'Bob Smith', email: 'bob.smith@company.com', department: 'Marketing', status: 'Active' },\n    { id: 3, name: 'Charlie Brown', email: 'charlie.brown@company.com', department: 'Engineering', status: 'Inactive' },\n    { id: 4, name: 'Diana Prince', email: 'diana.prince@company.com', department: 'Sales', status: 'Active' },\n    { id: 5, name: 'Eve Wilson', email: 'eve.wilson@company.com', department: 'HR', status: 'Active' },\n    { id: 6, name: 'Frank Miller', email: 'frank.miller@company.com', department: 'Engineering', status: 'Active' },\n    { id: 7, name: 'Grace Lee', email: 'grace.lee@company.com', department: 'Finance', status: 'Inactive' },\n    { id: 8, name: 'Henry Taylor', email: 'henry.taylor@company.com', department: 'Marketing', status: 'Active' },\n    { id: 9, name: 'Iris Davis', email: 'iris.davis@company.com', department: 'Engineering', status: 'Active' },\n    { id: 10, name: 'Jack Anderson', email: 'jack.anderson@company.com', department: 'Sales', status: 'Active' },\n    { id: 11, name: 'Karen White', email: 'karen.white@company.com', department: 'HR', status: 'Inactive' },\n    { id: 12, name: 'Leo Harris', email: 'leo.harris@company.com', department: 'Engineering', status: 'Active' },\n  ];\n\n  onCheckboxChange(value: boolean) {\n    console.log('Checkbox changed:', value);\n  }\n\n  onRadioChange(value: string) {\n    console.log('Radio changed:', value);\n  }\n\n  onTextareaChange(value: string) {\n    console.log('Textarea changed:', value);\n  }\n\n  onSelectChange(value: any) {\n    console.log('Select changed:', value);\n  }\n\n  onTableSorted(event: any) {\n    console.log('Table sorted:', event);\n  }\n}\n",
             "styleUrl": "./list.component.scss",
             "assetsDirs": [],
             "styleUrlsData": "",
@@ -1126,7 +1160,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<!-- <aside> -->\n<!-- <ul [style]=\"{ padding: 0, listStyle: 'none' }\">\n    @for(component of list;track $index){\n    <li ><button class=\"outline\" [innerHTML]=\"component | titlecase\" (click)=\"display(component)\"></button></li>\n    }\n  </ul> -->\n<!-- @for(component of list;track $index){\n    <button class=\"rounded-md bg-indigo-600 text-white p-2 ml-2 mr-2 hover:text-indigo-400\n    hover:bg-white hover:outline\" [innerHTML]=\"component | titlecase\" (click)=\"display(component)\"></button>\n    }\n</aside> -->\n<main>\n  @if(_display === 'button'){\n\n  <div class=\"buttons border-b-2 border-gray-100\">\n    <h2 class=\"text-2xl\">Text Only</h2>\n    <sn-button-x (clickBtn)=\"sayHello($event)\">Default</sn-button-x>\n    <sn-button-x scheme=\"primary\" icon=\"coffee\">Primary</sn-button-x>\n    <sn-button-x scheme=\"warn\" icon=\"viruscovid\">Warn</sn-button-x>\n    <sn-button-x scheme=\"danger\" icon=\"bugs\">Danger</sn-button-x>\n    <sn-button-x scheme=\"success\">Success</sn-button-x>\n    <sn-button-x disabled>Default Disabled</sn-button-x>\n    <code class=\"language-html\">\n      <pre>\n      &lt;sn-button-x> Default &lt;/sn-button-x&gt;\n      &lt;sn-button-x scheme=\"primary\" icon=\"coffee\"> Primary &lt;/sn-button-x&gt;\n      &lt;sn-button-x scheme=\"warn\" icon=\"viruscovid\"> Warn &lt;/sn-button-x&gt;\n      &lt;sn-button-x scheme=\"danger\" icon=\"bugs\"> Danger &lt;/sn-button-x&gt;\n      &lt;sn-button-x scheme=\"success\"> Success &lt;/sn-button-x&gt;\n      &lt;sn-button-x disabled> Default Disabled &lt;/sn-button-x&gt;</pre\n      >\n    </code>\n  </div>\n  <div class=\"buttons border-b-2 border-gray-100\">\n    <h2 class=\"text-2xl\">Text Rounded</h2>\n    <sn-button-x rounded>Default</sn-button-x>\n    <sn-button-x scheme=\"primary\" rounded>Primary</sn-button-x>\n    <sn-button-x scheme=\"warn\" rounded>Warn</sn-button-x>\n    <sn-button-x scheme=\"danger\" rounded>Danger</sn-button-x>\n    <sn-button-x scheme=\"success\" rounded>Success</sn-button-x>\n    <sn-button-x disabled rounded>Default Disabled</sn-button-x>\n    <code class=\"language-javascript\">\n      <pre>\n    &lt;sn-button-x rounded> Default &lt;/sn-button-x>\n    &lt;sn-button-x scheme=\"primary\" rounded> Primary &lt;/sn-button-x>\n    &lt;sn-button-x scheme=\"warn\" rounded> Warn &lt;/sn-button-x>\n    &lt;sn-button-x scheme=\"danger\" rounded> Danger &lt;/sn-button-x>\n    &lt;sn-button-x scheme=\"success\" rounded> Success &lt;/sn-button-x>\n    &lt;sn-button-x disabled rounded> Default Disabled &lt;/sn-button-x></pre\n      >\n    </code>\n  </div>\n  <div class=\"buttons border-b-2 border-gray-100\">\n    <h2 class=\"text-2xl\">Text Filled</h2>\n    <sn-button-x filled>Default</sn-button-x>\n    <sn-button-x scheme=\"primary\" filled>Primary</sn-button-x>\n    <sn-button-x scheme=\"warn\" filled>Warn</sn-button-x>\n    <sn-button-x scheme=\"danger\" filled>Danger</sn-button-x>\n    <sn-button-x scheme=\"success\" filled>Success</sn-button-x>\n    <sn-button-x disabled filled>Default Disabled</sn-button-x>\n    <code class=\"language-javascript\">\n      <pre>\n    &lt;sn-button-x filled> Default &lt;/sn-button-x>\n    &lt;sn-button-x scheme=\"primary\" filled> Primary &lt;/sn-button-x>\n    &lt;sn-button-x scheme=\"warn\" filled> Warn &lt;/sn-button-x>\n    &lt;sn-button-x scheme=\"danger\" filled> Danger &lt;/sn-button-x>\n    &lt;sn-button-x scheme=\"success\" filled> Success &lt;/sn-button-x>\n    &lt;sn-button-x disabled filled> Default Disabled &lt;/sn-button-x></pre\n      >\n    </code>\n  </div>\n  <div class=\"buttons border-b-2 border-gray-100\">\n    <h2 class=\"text-2xl\">Text Filled Rounded</h2>\n    <sn-button-x filled rounded>Default</sn-button-x>\n    <sn-button-x scheme=\"primary\" filled rounded>Primary</sn-button-x>\n    <sn-button-x scheme=\"warn\" filled rounded>Warn</sn-button-x>\n    <sn-button-x scheme=\"danger\" filled rounded>Danger</sn-button-x>\n    <sn-button-x scheme=\"success\" filled rounded>Success</sn-button-x>\n    <sn-button-x disabled filled rounded>Default Disabled</sn-button-x>\n    <code class=\"language-html\">\n      <pre>\n    &lt;sn-button-x filled rounded>Default &lt;/sn-button-x>\n    &lt;sn-button-x scheme=\"primary\" filled rounded> Primary &lt;/sn-button-x>\n    &lt;sn-button-x scheme=\"warn\" filled rounded>Warn &lt;/sn-button-x>\n    &lt;sn-button-x scheme=\"danger\" filled rounded> Danger &lt;/sn-button-x>\n    &lt;sn-button-x scheme=\"success\" filled rounded> Success &lt;/sn-button-x>\n    &lt;sn-button-x disabled filled rounded> Default Disabled &lt;/sn-button-x>\n      </pre>\n    </code>\n  </div>\n  <div class=\"buttons border-b-2 border-gray-100\">\n    <h2 class=\"text-2xl\">Outlined</h2>\n    <sn-button-x scheme=\"default-outlined\">Default</sn-button-x>\n    <sn-button-x scheme=\"primary-outlined\">Primary outlined</sn-button-x>\n    <sn-button-x scheme=\"warn-outlined\">Warn</sn-button-x>\n    <sn-button-x scheme=\"danger-outlined\">Danger</sn-button-x>\n    <sn-button-x scheme=\"success-outlined\">Success</sn-button-x>\n    <sn-button-x scheme=\"default-outlined\" disabled>Default Outlined Disabled</sn-button-x>\n    <code class=\"language-html\">\n      <pre>\n    &lt;sn-button-x scheme=\"default-outlined\"> Default &lt;/sn-button-x>\n    &lt;sn-button-x scheme=\"primary-outlined\"> Primary outlined &lt;/sn-button-x>\n    &lt;sn-button-x scheme=\"warn-outlined\"> Warn &lt;/sn-button-x>\n    &lt;sn-button-x scheme=\"danger-outlined\"> Danger &lt;/sn-button-x>\n    &lt;sn-button-x scheme=\"success-outlined\"> Success &lt;/sn-button-x>\n    &lt;sn-button-x scheme=\"default-outlined\" disabled> Default Outlined Disabled &lt;/sn-button-x></pre\n      >\n    </code>\n  </div>\n  <div class=\"buttons border-b-2 border-gray-100\">\n    <h2 class=\"text-2xl\">Rounded</h2>\n    <sn-button-x scheme=\"default-outlined\" rounded>Default</sn-button-x>\n    <sn-button-x scheme=\"primary-outlined\" rounded>Primary outlined</sn-button-x>\n    <sn-button-x scheme=\"warn-outlined\" rounded>Warn</sn-button-x>\n    <sn-button-x scheme=\"danger-outlined\" rounded>Danger</sn-button-x>\n    <sn-button-x scheme=\"success-outlined\" rounded>Success</sn-button-x>\n    <sn-button-x scheme=\"default-outlined\" disabled rounded>Default Outlined Disabled</sn-button-x>\n    <code class=\"language-html\">\n      <pre>\n      &lt;sn-button-x scheme=\"default-outlined\" rounded> Default &lt;/sn-button-x>\n      &lt;sn-button-x scheme=\"primary-outlined\" rounded> Primary outlined &lt;/sn-button-x>\n      &lt;sn-button-x scheme=\"warn-outlined\" rounded> Warn &lt;/sn-button-x>\n      &lt;sn-button-x scheme=\"danger-outlined\" rounded> Danger &lt;/sn-button-x>\n      &lt;sn-button-x scheme=\"success-outlined\" rounded> Success &lt;/sn-button-x>\n      &lt;sn-button-x scheme=\"default-outlined\" disabled rounded> Default Outlined Disabled &lt;/sn-button-x></pre\n      >\n    </code>\n  </div>\n\n  } @else if(_display === 'card'){\n  <div class=\"content-center w-full\">\n    <sn-card title=\"wow\">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae officia\n      rem eaque reprehenderit iure facere quod earum. Placeat, ratione\n      perspiciatis eligendi officia commodi ex temporibus alias ab, tempore\n      eaque aliquid. Ad soluta ullam voluptate itaque, atque libero incidunt\n      quibusdam vero repellat exercitationem pariatur ipsam omnis natus\n      repudiandae non dignissimos illo saepe aut. Repellendus repudiandae iste\n      tempora fugit quidem, provident excepturi.</sn-card>\n  </div>\n\n  }@else if(_display ==='input'){\n\n  <div class=\"flex flex-wrap\">\n    <div class=\"p-2\">\n      <h2 class=\"text-2xl\">Text Input Info Messages</h2>\n      <sn-input label=\"Name\" [placeholder]=\"'Enter Name'\" type=\"text\" pattern=\"^[A-Z].*$\" required\n        [infoMessages]=\"['Info Message 1', 'Info Message 2']\"></sn-input>\n    </div>\n\n    <div class=\"p-2\">\n      <h2 class=\"text-2xl\">Text Input Warning Messages</h2>\n      <sn-input type=\"text\" pattern=\"^[A-Z].*$\" required [warningMessages]=\"['Warning Message 1', 'Warning Message 2']\"\n        class=\"w-64\"></sn-input>\n    </div>\n\n    <div class=\"p-2\">\n      <h2 class=\"text-2xl\">Text Input Error Messages</h2>\n      <sn-input type=\"text\" pattern=\"^[A-Z].*$\" required [errorMessages]=\"['Error Message 1', 'Error Message 2']\"\n        class=\"w-64\"></sn-input>\n    </div>\n\n    <div class=\"p-2\">\n      <h2 class=\"text-2xl\">Text Input Success Messages</h2>\n      <sn-input type=\"text\" pattern=\"^[A-Z].*$\" required [successMessages]=\"['Success Message 1', 'Success Message 2']\"\n        class=\"w-64\"></sn-input>\n    </div>\n  </div>\n\n  } @else if(_display === 'badge'){\n  <div class=\"p-4\">\n    <h2 class=\"text-2xl mb-4\">Badge</h2>\n\n    <div class=\"mb-4\">\n      <h3 class=\"text-lg font-semibold mb-2\">Schemes</h3>\n      <div class=\"flex flex-wrap gap-2\">\n        <sn-badge scheme=\"default\">Default</sn-badge>\n        <sn-badge scheme=\"primary\">Primary</sn-badge>\n        <sn-badge scheme=\"warn\">Warn</sn-badge>\n        <sn-badge scheme=\"danger\">Danger</sn-badge>\n        <sn-badge scheme=\"success\">Success</sn-badge>\n      </div>\n    </div>\n\n    <div class=\"mb-4\">\n      <h3 class=\"text-lg font-semibold mb-2\">Pill</h3>\n      <div class=\"flex flex-wrap gap-2\">\n        <sn-badge scheme=\"primary\" pill>Primary</sn-badge>\n        <sn-badge scheme=\"success\" pill>Success</sn-badge>\n        <sn-badge scheme=\"danger\" pill>Danger</sn-badge>\n      </div>\n    </div>\n\n    <div class=\"mb-4\">\n      <h3 class=\"text-lg font-semibold mb-2\">Sizes</h3>\n      <div class=\"flex flex-wrap gap-2 items-center\">\n        <sn-badge scheme=\"primary\" size=\"sm\">Small</sn-badge>\n        <sn-badge scheme=\"primary\" size=\"md\">Medium</sn-badge>\n        <sn-badge scheme=\"primary\" size=\"lg\">Large</sn-badge>\n      </div>\n    </div>\n\n\n  </div>\n\n  } @else if(_display === 'alert'){\n  <div class=\"p-4 max-w-xl\">\n    <h2 class=\"text-2xl mb-4\">Alert</h2>\n\n    <sn-alert scheme=\"info\" title=\"Info Alert\">This is an informational message for the user.</sn-alert>\n    <sn-alert scheme=\"success\" title=\"Success!\">Your action was completed successfully.</sn-alert>\n    <sn-alert scheme=\"warn\" title=\"Warning\">Please review the details before proceeding.</sn-alert>\n    <sn-alert scheme=\"danger\" title=\"Error\">Something went wrong. Please try again.</sn-alert>\n    <sn-alert scheme=\"info\" title=\"Dismissible Alert\" dismissible>You can dismiss this alert by clicking ×.</sn-alert>\n\n\n  </div>\n\n  } @else if(_display === 'spinner'){\n  <div class=\"p-4\">\n    <h2 class=\"text-2xl mb-4\">Spinner</h2>\n\n    <div class=\"mb-4\">\n      <h3 class=\"text-lg font-semibold mb-2\">Schemes</h3>\n      <div class=\"flex flex-wrap gap-6 items-center\">\n        <sn-spinner-x scheme=\"primary\"></sn-spinner-x>\n        <sn-spinner-x scheme=\"success\"></sn-spinner-x>\n        <sn-spinner-x scheme=\"warn\"></sn-spinner-x>\n        <sn-spinner-x scheme=\"danger\"></sn-spinner-x>\n        <sn-spinner-x scheme=\"default\"></sn-spinner-x>\n      </div>\n    </div>\n\n    <div class=\"mb-4\">\n      <h3 class=\"text-lg font-semibold mb-2\">Sizes</h3>\n      <div class=\"flex flex-wrap gap-6 items-center\">\n        <sn-spinner-x size=\"sm\" scheme=\"primary\"></sn-spinner-x>\n        <sn-spinner-x size=\"md\" scheme=\"primary\"></sn-spinner-x>\n        <sn-spinner-x size=\"lg\" scheme=\"primary\"></sn-spinner-x>\n      </div>\n    </div>\n  </div>\n\n  } @else if(_display === 'modal'){\n  <div class=\"p-4\">\n    <h2 class=\"text-2xl mb-4\">Modal</h2>\n\n    <sn-button-x scheme=\"primary\" filled (clickBtn)=\"openModal()\">Open Modal</sn-button-x>\n\n    <sn-modal [open]=\"_modalOpen\" title=\"Example Modal\" (closed)=\"onModalClosed()\">\n      <div modal-body>\n        <p>This is the modal body. You can place any content here.</p>\n        <p class=\"mt-2 text-gray-500 text-sm\">Click outside the modal or the × button to close.</p>\n      </div>\n      <div modal-footer class=\"flex justify-end gap-2\">\n        <sn-button-x scheme=\"default-outlined\" (clickBtn)=\"onModalClosed()\">Cancel</sn-button-x>\n        <sn-button-x scheme=\"primary\" filled (clickBtn)=\"onModalClosed()\">Confirm</sn-button-x>\n      </div>\n    </sn-modal>\n\n\n  </div>\n\n  } @else if(_display === 'tabs'){\n  <div class=\"p-4 max-w-lg\">\n    <h2 class=\"text-2xl mb-4\">Tabs</h2>\n\n    <sn-tabs-x [tabs]=\"demoTabs\"></sn-tabs-x>\n\n  </div>\n\n  } @else if(_display === 'toggle'){\n  <div class=\"p-4\">\n    <h2 class=\"text-2xl mb-4\">Toggle</h2>\n\n    <div class=\"flex flex-col gap-4\">\n      <sn-toggle label=\"Notifications\" [checked]=\"_toggle1\" scheme=\"primary\" (toggled)=\"_toggle1=$event\"></sn-toggle>\n      <sn-toggle label=\"Dark Mode\" [checked]=\"_toggle2\" scheme=\"success\" (toggled)=\"_toggle2=$event\"></sn-toggle>\n      <sn-toggle label=\"Disabled Toggle\" disabled></sn-toggle>\n      <sn-toggle label=\"No label scheme warn\" scheme=\"warn\" [checked]=\"true\"></sn-toggle>\n    </div>\n\n    <p class=\"mt-4 text-sm text-gray-500\">\n      Notifications: {{ _toggle1 ? 'ON' : 'OFF' }} | Dark Mode: {{ _toggle2 ? 'ON' : 'OFF' }}\n    </p>\n\n  </div>\n  }\n\n  @if(_display === 'checkbox'){\n  <div class=\"component-section border-b-2 border-gray-100 p-6\">\n    <h2 class=\"text-2xl mb-4\">Checkbox</h2>\n\n    <div class=\"flex flex-col gap-4\">\n      <h3 class=\"text-lg font-semibold\">Basic Checkbox</h3>\n      <sn-checkbox-x id=\"check1\" label=\"I agree to the terms and conditions\" [(ngModel)]=\"agreeTerms\"\n        (changed)=\"onCheckboxChange($event)\"></sn-checkbox-x>\n\n      <h3 class=\"text-lg font-semibold mt-4\">Checkbox States</h3>\n      <sn-checkbox-x id=\"check2\" label=\"Checked by default\" [(ngModel)]=\"checkboxValue\"></sn-checkbox-x>\n      <sn-checkbox-x id=\"check3\" label=\"Disabled checkbox\" [disabled]=\"true\"></sn-checkbox-x>\n      <sn-checkbox-x id=\"check4\" label=\"Disabled and checked\" [disabled]=\"true\"\n        [(ngModel)]=\"disabledCheckedValue\"></sn-checkbox-x>\n\n      <h3 class=\"text-lg font-semibold mt-4\">Indeterminate State</h3>\n      <sn-checkbox-x id=\"check5\" label=\"Select All\" [indeterminate]=\"indeterminateState\"\n        [(ngModel)]=\"selectAll\"></sn-checkbox-x>\n      <p class=\"text-xs text-gray-500 ml-6\">(Indeterminate state is used for \"Select All\" when some items are selected)\n      </p>\n    </div>\n\n    <p class=\"mt-4 text-sm text-gray-500\">\n      Terms Accepted: {{ agreeTerms ? 'Yes' : 'No' }} | Checkbox Value: {{ checkboxValue ? 'Checked' : 'Unchecked' }}\n    </p>\n\n\n  </div>\n  }\n\n  @if(_display === 'radio'){\n  <div class=\"component-section border-b-2 border-gray-100 p-6\">\n    <h2 class=\"text-2xl mb-4\">Radio Button</h2>\n\n    <div class=\"flex flex-col gap-4\">\n      <h3 class=\"text-lg font-semibold\">Gender Selection</h3>\n      <div class=\"flex gap-4\">\n        <sn-radio id=\"male\" name=\"gender\" value=\"male\" label=\"Male\" [(ngModel)]=\"selectedGender\"\n          (changed)=\"onRadioChange($event)\"></sn-radio>\n        <sn-radio id=\"female\" name=\"gender\" value=\"female\" label=\"Female\" [(ngModel)]=\"selectedGender\"></sn-radio>\n        <sn-radio id=\"other\" name=\"gender\" value=\"other\" label=\"Other\" [(ngModel)]=\"selectedGender\"></sn-radio>\n      </div>\n\n      <h3 class=\"text-lg font-semibold mt-4\">Size Selection</h3>\n      <div class=\"flex gap-4\">\n        <sn-radio id=\"small\" name=\"size\" value=\"small\" label=\"Small\" [(ngModel)]=\"selectedSize\"></sn-radio>\n        <sn-radio id=\"medium\" name=\"size\" value=\"medium\" label=\"Medium\" [(ngModel)]=\"selectedSize\"></sn-radio>\n        <sn-radio id=\"large\" name=\"size\" value=\"large\" label=\"Large\" [(ngModel)]=\"selectedSize\"></sn-radio>\n      </div>\n\n      <h3 class=\"text-lg font-semibold mt-4\">Disabled Radio</h3>\n      <sn-radio id=\"disabled-radio\" name=\"disabled-group\" value=\"disabled\" label=\"Disabled option\"\n        [disabled]=\"true\"></sn-radio>\n    </div>\n\n    <p class=\"mt-4 text-sm text-gray-500\">\n      Selected Gender: {{ selectedGender }} | Selected Size: {{ selectedSize }}\n    </p>\n\n\n  </div>\n  }\n\n  @if(_display === 'textarea'){\n  <div class=\"component-section border-b-2 border-gray-100 p-6\">\n    <h2 class=\"text-2xl mb-4\">Textarea</h2>\n\n    <div class=\"flex flex-col gap-4\">\n      <h3 class=\"text-lg font-semibold\">Basic Textarea</h3>\n      <sn-textarea id=\"comments\" label=\"Comments\" placeholder=\"Enter your comments here...\" [(ngModel)]=\"comments\"\n        (changed)=\"onTextareaChange($event)\"></sn-textarea>\n\n      <h3 class=\"text-lg font-semibold mt-4\">With Character Counter</h3>\n      <sn-textarea id=\"feedback\" label=\"Feedback (Max 200 characters)\" placeholder=\"Tell us what you think...\"\n        [maxLength]=\"200\" [(ngModel)]=\"feedback\"></sn-textarea>\n\n      <h3 class=\"text-lg font-semibold mt-4\">Auto-resize Disabled</h3>\n      <sn-textarea id=\"fixed-height\" label=\"Fixed Height\" placeholder=\"This textarea won't auto-resize\"\n        [autoResize]=\"false\" [rows]=\"6\"></sn-textarea>\n\n      <h3 class=\"text-lg font-semibold mt-4\">Disabled Textarea</h3>\n      <sn-textarea id=\"disabled-textarea\" label=\"Disabled\" placeholder=\"This is disabled\"\n        [disabled]=\"true\"></sn-textarea>\n\n      <h3 class=\"text-lg font-semibold mt-4\">Readonly Textarea</h3>\n      <sn-textarea id=\"readonly-textarea\" label=\"Readonly\" [(ngModel)]=\"readonlyText\" [readonly]=\"true\"></sn-textarea>\n    </div>\n\n    <p class=\"mt-4 text-sm text-gray-500\">\n      Comments length: {{ comments.length }} | Feedback length: {{ feedback.length }}\n    </p>\n\n\n  </div>\n  }\n\n  @if(_display === 'select'){\n  <div class=\"component-section border-b-2 border-gray-100 p-6\">\n    <h2 class=\"text-2xl mb-4\">Select Dropdown</h2>\n\n    <div class=\"flex flex-col gap-6\">\n      <h3 class=\"text-lg font-semibold\">Basic Select</h3>\n      <sn-dropdown-x id=\"country\" label=\"Country\" placeholder=\"Select a country\" [options]=\"countries\"\n        [(ngModel)]=\"selectedCountry\" (changed)=\"onSelectChange($event)\"></sn-dropdown-x>\n\n      <h3 class=\"text-lg font-semibold mt-4\">Searchable Select</h3>\n      <sn-dropdown-x id=\"searchable-country\" label=\"Country (with search)\" placeholder=\"Type to search...\"\n        [options]=\"countries\" [searchable]=\"true\"></sn-dropdown-x>\n\n      <h3 class=\"text-lg font-semibold mt-4\">Multi-Select</h3>\n      <sn-dropdown-x id=\"languages\" label=\"Programming Languages\" placeholder=\"Select multiple languages\"\n        [options]=\"languages\" [multiple]=\"true\" [(ngModel)]=\"selectedLanguages\"></sn-dropdown-x>\n\n      <h3 class=\"text-lg font-semibold mt-4\">Multi-Select with Search</h3>\n      <sn-dropdown-x id=\"multi-search\" label=\"Languages (searchable multi-select)\"\n        placeholder=\"Search and select multiple\" [options]=\"languages\" [multiple]=\"true\"\n        [searchable]=\"true\"></sn-dropdown-x>\n\n      <h3 class=\"text-lg font-semibold mt-4\">Disabled Select</h3>\n      <sn-dropdown-x id=\"disabled-select\" label=\"Disabled\" placeholder=\"This is disabled\" [options]=\"countries\"\n        [disabled]=\"true\"></sn-dropdown-x>\n\n      <h3 class=\"text-lg font-semibold mt-4\">Not Clearable</h3>\n      <sn-dropdown-x id=\"not-clearable\" label=\"Not Clearable\" placeholder=\"Select (no clear button)\"\n        [options]=\"countries\" [clearable]=\"false\"></sn-dropdown-x>\n    </div>\n\n    <p class=\"mt-4 text-sm text-gray-500\">\n      Selected Country: {{ selectedCountry || 'None' }} | Selected Languages: {{ selectedLanguages.length > 0 ?\n      selectedLanguages.join(', ') : 'None' }}\n    </p>\n\n\n  </div>\n  }\n\n  @if(_display === 'table'){\n  <div class=\"component-section border-b-2 border-gray-100 p-6\">\n    <h2 class=\"text-2xl mb-4\">Data Table</h2>\n\n    <div class=\"flex flex-col gap-6\">\n      <h3 class=\"text-lg font-semibold\">Basic Table with Sorting</h3>\n      <p class=\"text-xs text-gray-500\">Click any column header to sort. Click again to reverse order.</p>\n      <sn-datatable [columns]=\"tableColumns\" [data]=\"tableData\" [striped]=\"true\" [hoverable]=\"true\" [pageSize]=\"5\"\n        (sorted)=\"onTableSorted($event)\"></sn-datatable>\n\n      <h3 class=\"text-lg font-semibold mt-6\">Table Styling Variants</h3>\n\n      <div class=\"mt-4\">\n        <p class=\"text-sm text-gray-600 mb-3\">Bordered Table:</p>\n        <sn-datatable [columns]=\"tableColumns\" [data]=\"tableData.slice(0, 3)\" [striped]=\"false\" [hoverable]=\"true\"\n          [bordered]=\"true\" [pageSize]=\"10\"></sn-datatable>\n      </div>\n\n      <div class=\"mt-4\">\n        <p class=\"text-sm text-gray-600 mb-3\">Minimal Table (No Striping):</p>\n        <sn-datatable [columns]=\"tableColumns\" [data]=\"tableData.slice(0, 4)\" [striped]=\"false\" [hoverable]=\"false\"\n          [bordered]=\"false\" [pageSize]=\"10\"></sn-datatable>\n      </div>\n    </div>\n\n\n  </div>\n  }\n\n  @if(_display === 'tooltip'){\n  <div class=\"component-section border-b-2 border-gray-100 p-6\">\n    <h2 class=\"text-2xl mb-4\">Tooltip</h2>\n\n    <div class=\"flex flex-col gap-6\">\n      <h3 class=\"text-lg font-semibold\">Basic Tooltips</h3>\n      <div class=\"flex gap-4\">\n        <sn-button-x scheme=\"primary\" filled snTooltip=\"This is a simple tooltip on top\">Hover Me</sn-button-x>\n        <sn-button-x scheme=\"success\" filled snTooltip=\"Bottom tooltip\" tooltipPosition=\"bottom\">Bottom</sn-button-x>\n        <span snTooltip=\"Left text tooltip\" tooltipPosition=\"left\"\n          class=\"cursor-help underline text-indigo-600 self-center\">Hover Text (Left)</span>\n        <span snTooltip=\"Right text tooltip\" tooltipPosition=\"right\"\n          class=\"cursor-help underline text-indigo-600 self-center\">Hover Text (Right)</span>\n      </div>\n    </div>\n\n\n  </div>\n  }\n</main>"
+            "templateData": "<!-- <aside> -->\n<!-- <ul [style]=\"{ padding: 0, listStyle: 'none' }\">\n    @for(component of list;track $index){\n    <li ><button class=\"outline\" [innerHTML]=\"component | titlecase\" (click)=\"display(component)\"></button></li>\n    }\n  </ul> -->\n<!-- @for(component of list;track $index){\n    <button class=\"rounded-md bg-indigo-600 text-white p-2 ml-2 mr-2 hover:text-indigo-400\n    hover:bg-white hover:outline\" [innerHTML]=\"component | titlecase\" (click)=\"display(component)\"></button>\n    }\n</aside> -->\n<main>\n  @if(_display === 'button'){\n\n  <div class=\"buttons border-b-2 border-gray-100\">\n    <h2 class=\"text-2xl\">Text Only</h2>\n    <sn-button-x (clickBtn)=\"sayHello($event)\">Default</sn-button-x>\n    <sn-button-x scheme=\"primary\" icon=\"coffee\">Primary</sn-button-x>\n    <sn-button-x scheme=\"warn\" icon=\"viruscovid\">Warn</sn-button-x>\n    <sn-button-x scheme=\"danger\" icon=\"bugs\">Danger</sn-button-x>\n    <sn-button-x scheme=\"success\">Success</sn-button-x>\n    <sn-button-x disabled>Default Disabled</sn-button-x>\n    <code class=\"language-html\">\n      <pre>\n      &lt;sn-button-x> Default &lt;/sn-button-x&gt;\n      &lt;sn-button-x scheme=\"primary\" icon=\"coffee\"> Primary &lt;/sn-button-x&gt;\n      &lt;sn-button-x scheme=\"warn\" icon=\"viruscovid\"> Warn &lt;/sn-button-x&gt;\n      &lt;sn-button-x scheme=\"danger\" icon=\"bugs\"> Danger &lt;/sn-button-x&gt;\n      &lt;sn-button-x scheme=\"success\"> Success &lt;/sn-button-x&gt;\n      &lt;sn-button-x disabled> Default Disabled &lt;/sn-button-x&gt;</pre\n      >\n    </code>\n  </div>\n  <div class=\"buttons border-b-2 border-gray-100\">\n    <h2 class=\"text-2xl\">Text Rounded</h2>\n    <sn-button-x rounded>Default</sn-button-x>\n    <sn-button-x scheme=\"primary\" rounded>Primary</sn-button-x>\n    <sn-button-x scheme=\"warn\" rounded>Warn</sn-button-x>\n    <sn-button-x scheme=\"danger\" rounded>Danger</sn-button-x>\n    <sn-button-x scheme=\"success\" rounded>Success</sn-button-x>\n    <sn-button-x disabled rounded>Default Disabled</sn-button-x>\n    <code class=\"language-javascript\">\n      <pre>\n    &lt;sn-button-x rounded> Default &lt;/sn-button-x>\n    &lt;sn-button-x scheme=\"primary\" rounded> Primary &lt;/sn-button-x>\n    &lt;sn-button-x scheme=\"warn\" rounded> Warn &lt;/sn-button-x>\n    &lt;sn-button-x scheme=\"danger\" rounded> Danger &lt;/sn-button-x>\n    &lt;sn-button-x scheme=\"success\" rounded> Success &lt;/sn-button-x>\n    &lt;sn-button-x disabled rounded> Default Disabled &lt;/sn-button-x></pre\n      >\n    </code>\n  </div>\n  <div class=\"buttons border-b-2 border-gray-100\">\n    <h2 class=\"text-2xl\">Text Filled</h2>\n    <sn-button-x filled>Default</sn-button-x>\n    <sn-button-x scheme=\"primary\" filled>Primary</sn-button-x>\n    <sn-button-x scheme=\"warn\" filled>Warn</sn-button-x>\n    <sn-button-x scheme=\"danger\" filled>Danger</sn-button-x>\n    <sn-button-x scheme=\"success\" filled>Success</sn-button-x>\n    <sn-button-x disabled filled>Default Disabled</sn-button-x>\n    <code class=\"language-javascript\">\n      <pre>\n    &lt;sn-button-x filled> Default &lt;/sn-button-x>\n    &lt;sn-button-x scheme=\"primary\" filled> Primary &lt;/sn-button-x>\n    &lt;sn-button-x scheme=\"warn\" filled> Warn &lt;/sn-button-x>\n    &lt;sn-button-x scheme=\"danger\" filled> Danger &lt;/sn-button-x>\n    &lt;sn-button-x scheme=\"success\" filled> Success &lt;/sn-button-x>\n    &lt;sn-button-x disabled filled> Default Disabled &lt;/sn-button-x></pre\n      >\n    </code>\n  </div>\n  <div class=\"buttons border-b-2 border-gray-100\">\n    <h2 class=\"text-2xl\">Text Filled Rounded</h2>\n    <sn-button-x filled rounded>Default</sn-button-x>\n    <sn-button-x scheme=\"primary\" filled rounded>Primary</sn-button-x>\n    <sn-button-x scheme=\"warn\" filled rounded>Warn</sn-button-x>\n    <sn-button-x scheme=\"danger\" filled rounded>Danger</sn-button-x>\n    <sn-button-x scheme=\"success\" filled rounded>Success</sn-button-x>\n    <sn-button-x disabled filled rounded>Default Disabled</sn-button-x>\n    <code class=\"language-html\">\n      <pre>\n    &lt;sn-button-x filled rounded>Default &lt;/sn-button-x>\n    &lt;sn-button-x scheme=\"primary\" filled rounded> Primary &lt;/sn-button-x>\n    &lt;sn-button-x scheme=\"warn\" filled rounded>Warn &lt;/sn-button-x>\n    &lt;sn-button-x scheme=\"danger\" filled rounded> Danger &lt;/sn-button-x>\n    &lt;sn-button-x scheme=\"success\" filled rounded> Success &lt;/sn-button-x>\n    &lt;sn-button-x disabled filled rounded> Default Disabled &lt;/sn-button-x>\n      </pre>\n    </code>\n  </div>\n  <div class=\"buttons border-b-2 border-gray-100\">\n    <h2 class=\"text-2xl\">Outlined</h2>\n    <sn-button-x scheme=\"default-outlined\">Default</sn-button-x>\n    <sn-button-x scheme=\"primary-outlined\">Primary outlined</sn-button-x>\n    <sn-button-x scheme=\"warn-outlined\">Warn</sn-button-x>\n    <sn-button-x scheme=\"danger-outlined\">Danger</sn-button-x>\n    <sn-button-x scheme=\"success-outlined\">Success</sn-button-x>\n    <sn-button-x scheme=\"default-outlined\" disabled>Default Outlined Disabled</sn-button-x>\n    <code class=\"language-html\">\n      <pre>\n    &lt;sn-button-x scheme=\"default-outlined\"> Default &lt;/sn-button-x>\n    &lt;sn-button-x scheme=\"primary-outlined\"> Primary outlined &lt;/sn-button-x>\n    &lt;sn-button-x scheme=\"warn-outlined\"> Warn &lt;/sn-button-x>\n    &lt;sn-button-x scheme=\"danger-outlined\"> Danger &lt;/sn-button-x>\n    &lt;sn-button-x scheme=\"success-outlined\"> Success &lt;/sn-button-x>\n    &lt;sn-button-x scheme=\"default-outlined\" disabled> Default Outlined Disabled &lt;/sn-button-x></pre\n      >\n    </code>\n  </div>\n  <div class=\"buttons border-b-2 border-gray-100\">\n    <h2 class=\"text-2xl\">Rounded</h2>\n    <sn-button-x scheme=\"default-outlined\" rounded>Default</sn-button-x>\n    <sn-button-x scheme=\"primary-outlined\" rounded>Primary outlined</sn-button-x>\n    <sn-button-x scheme=\"warn-outlined\" rounded>Warn</sn-button-x>\n    <sn-button-x scheme=\"danger-outlined\" rounded>Danger</sn-button-x>\n    <sn-button-x scheme=\"success-outlined\" rounded>Success</sn-button-x>\n    <sn-button-x scheme=\"default-outlined\" disabled rounded>Default Outlined Disabled</sn-button-x>\n    <code class=\"language-html\">\n      <pre>\n      &lt;sn-button-x scheme=\"default-outlined\" rounded> Default &lt;/sn-button-x>\n      &lt;sn-button-x scheme=\"primary-outlined\" rounded> Primary outlined &lt;/sn-button-x>\n      &lt;sn-button-x scheme=\"warn-outlined\" rounded> Warn &lt;/sn-button-x>\n      &lt;sn-button-x scheme=\"danger-outlined\" rounded> Danger &lt;/sn-button-x>\n      &lt;sn-button-x scheme=\"success-outlined\" rounded> Success &lt;/sn-button-x>\n      &lt;sn-button-x scheme=\"default-outlined\" disabled rounded> Default Outlined Disabled &lt;/sn-button-x></pre\n      >\n    </code>\n  </div>\n\n  } @else if(_display === 'card'){\n  <div class=\"content-center w-full\">\n    <sn-card title=\"wow\">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae officia\n      rem eaque reprehenderit iure facere quod earum. Placeat, ratione\n      perspiciatis eligendi officia commodi ex temporibus alias ab, tempore\n      eaque aliquid. Ad soluta ullam voluptate itaque, atque libero incidunt\n      quibusdam vero repellat exercitationem pariatur ipsam omnis natus\n      repudiandae non dignissimos illo saepe aut. Repellendus repudiandae iste\n      tempora fugit quidem, provident excepturi.</sn-card>\n  </div>\n\n  }@else if(_display ==='input'){\n\n  <div class=\"flex flex-wrap\">\n    <div class=\"p-2\">\n      <h2 class=\"text-2xl\">Text Input Info Messages</h2>\n      <sn-input label=\"Name\" [placeholder]=\"'Enter Name'\" type=\"text\" pattern=\"^[A-Z].*$\" required\n        [infoMessages]=\"['Info Message 1', 'Info Message 2']\"></sn-input>\n    </div>\n\n    <div class=\"p-2\">\n      <h2 class=\"text-2xl\">Text Input Warning Messages</h2>\n      <sn-input type=\"text\" pattern=\"^[A-Z].*$\" required [warningMessages]=\"['Warning Message 1', 'Warning Message 2']\"\n        class=\"w-64\"></sn-input>\n    </div>\n\n    <div class=\"p-2\">\n      <h2 class=\"text-2xl\">Text Input Error Messages</h2>\n      <sn-input type=\"text\" pattern=\"^[A-Z].*$\" required [errorMessages]=\"['Error Message 1', 'Error Message 2']\"\n        class=\"w-64\"></sn-input>\n    </div>\n\n    <div class=\"p-2\">\n      <h2 class=\"text-2xl\">Text Input Success Messages</h2>\n      <sn-input type=\"text\" pattern=\"^[A-Z].*$\" required [successMessages]=\"['Success Message 1', 'Success Message 2']\"\n        class=\"w-64\"></sn-input>\n    </div>\n  </div>\n\n  } @else if(_display === 'badge'){\n  <div class=\"p-4\">\n    <h2 class=\"text-2xl mb-4\">Badge</h2>\n\n    <div class=\"mb-4\">\n      <h3 class=\"text-lg font-semibold mb-2\">Schemes</h3>\n      <div class=\"flex flex-wrap gap-2\">\n        <sn-badge scheme=\"default\">Default</sn-badge>\n        <sn-badge scheme=\"primary\">Primary</sn-badge>\n        <sn-badge scheme=\"warn\">Warn</sn-badge>\n        <sn-badge scheme=\"danger\">Danger</sn-badge>\n        <sn-badge scheme=\"success\">Success</sn-badge>\n      </div>\n    </div>\n\n    <div class=\"mb-4\">\n      <h3 class=\"text-lg font-semibold mb-2\">Pill</h3>\n      <div class=\"flex flex-wrap gap-2\">\n        <sn-badge scheme=\"primary\" pill>Primary</sn-badge>\n        <sn-badge scheme=\"success\" pill>Success</sn-badge>\n        <sn-badge scheme=\"danger\" pill>Danger</sn-badge>\n      </div>\n    </div>\n\n    <div class=\"mb-4\">\n      <h3 class=\"text-lg font-semibold mb-2\">Sizes</h3>\n      <div class=\"flex flex-wrap gap-2 items-center\">\n        <sn-badge scheme=\"primary\" size=\"sm\">Small</sn-badge>\n        <sn-badge scheme=\"primary\" size=\"md\">Medium</sn-badge>\n        <sn-badge scheme=\"primary\" size=\"lg\">Large</sn-badge>\n      </div>\n    </div>\n\n\n  </div>\n\n  } @else if(_display === 'alert'){\n  <div class=\"p-4 max-w-xl\">\n    <h2 class=\"text-2xl mb-4\">Alert</h2>\n\n    <sn-alert scheme=\"info\" title=\"Info Alert\">This is an informational message for the user.</sn-alert>\n    <sn-alert scheme=\"success\" title=\"Success!\">Your action was completed successfully.</sn-alert>\n    <sn-alert scheme=\"warn\" title=\"Warning\">Please review the details before proceeding.</sn-alert>\n    <sn-alert scheme=\"danger\" title=\"Error\">Something went wrong. Please try again.</sn-alert>\n    <sn-alert scheme=\"info\" title=\"Dismissible Alert\" dismissible>You can dismiss this alert by clicking ×.</sn-alert>\n\n\n  </div>\n\n  } @else if(_display === 'spinner'){\n  <div class=\"p-4\">\n    <h2 class=\"text-2xl mb-4\">Spinner</h2>\n\n    <div class=\"mb-4\">\n      <h3 class=\"text-lg font-semibold mb-2\">Schemes</h3>\n      <div class=\"flex flex-wrap gap-6 items-center\">\n        <sn-spinner-x scheme=\"primary\"></sn-spinner-x>\n        <sn-spinner-x scheme=\"success\"></sn-spinner-x>\n        <sn-spinner-x scheme=\"warn\"></sn-spinner-x>\n        <sn-spinner-x scheme=\"danger\"></sn-spinner-x>\n        <sn-spinner-x scheme=\"default\"></sn-spinner-x>\n      </div>\n    </div>\n\n    <div class=\"mb-4\">\n      <h3 class=\"text-lg font-semibold mb-2\">Sizes</h3>\n      <div class=\"flex flex-wrap gap-6 items-center\">\n        <sn-spinner-x size=\"sm\" scheme=\"primary\"></sn-spinner-x>\n        <sn-spinner-x size=\"md\" scheme=\"primary\"></sn-spinner-x>\n        <sn-spinner-x size=\"lg\" scheme=\"primary\"></sn-spinner-x>\n      </div>\n    </div>\n  </div>\n\n  } @else if(_display === 'modal'){\n  <div class=\"p-4\">\n    <h2 class=\"text-2xl mb-4\">Modal</h2>\n\n    <sn-button-x scheme=\"primary\" filled (clickBtn)=\"openModal()\">Open Modal</sn-button-x>\n\n    <sn-modal [open]=\"_modalOpen\" title=\"Example Modal\" (closed)=\"onModalClosed()\">\n      <div modal-body>\n        <p>This is the modal body. You can place any content here.</p>\n        <p class=\"mt-2 text-gray-500 text-sm\">Click outside the modal or the × button to close.</p>\n      </div>\n      <div modal-footer class=\"flex justify-end gap-2\">\n        <sn-button-x scheme=\"default-outlined\" (clickBtn)=\"onModalClosed()\">Cancel</sn-button-x>\n        <sn-button-x scheme=\"primary\" filled (clickBtn)=\"onModalClosed()\">Confirm</sn-button-x>\n      </div>\n    </sn-modal>\n\n\n  </div>\n\n  } @else if(_display === 'tabs'){\n  <div class=\"p-4 max-w-lg\">\n    <h2 class=\"text-2xl mb-4\">Tabs</h2>\n\n    <sn-tabs-x [tabs]=\"demoTabs\"></sn-tabs-x>\n\n  </div>\n\n  } @else if(_display === 'toggle'){\n  <div class=\"p-4\">\n    <h2 class=\"text-2xl mb-4\">Toggle</h2>\n\n    <div class=\"flex flex-col gap-4\">\n      <sn-toggle label=\"Notifications\" [checked]=\"_toggle1\" scheme=\"primary\" (toggled)=\"_toggle1=$event\"></sn-toggle>\n      <sn-toggle label=\"Dark Mode\" [checked]=\"_toggle2\" scheme=\"success\" (toggled)=\"_toggle2=$event\"></sn-toggle>\n      <sn-toggle label=\"Disabled Toggle\" disabled></sn-toggle>\n      <sn-toggle label=\"No label scheme warn\" scheme=\"warn\" [checked]=\"true\"></sn-toggle>\n    </div>\n\n    <p class=\"mt-4 text-sm text-gray-500\">\n      Notifications: {{ _toggle1 ? 'ON' : 'OFF' }} | Dark Mode: {{ _toggle2 ? 'ON' : 'OFF' }}\n    </p>\n\n  </div>\n  }\n\n  @if(_display === 'sn-progress-bar') {\n  <div class=\"flex flex-col gap-6 p-4\">\n    <sn-progress-bar [value]=\"45\" size=\"md\" theme=\"primary\" [showLabel]=\"true\"></sn-progress-bar>\n    <sn-progress-bar [value]=\"80\" size=\"lg\" theme=\"success\" [showLabel]=\"true\"\n      labelText=\"Uploading...\"></sn-progress-bar>\n    <sn-progress-bar [indeterminate]=\"true\" size=\"md\" theme=\"warn\"></sn-progress-bar>\n  </div>\n  }\n\n  @if(_display === 'sn-empty-state') {\n  <div class=\"p-4\">\n    <sn-empty-state title=\"No items found\"\n      description=\"You haven't added any items to this list yet. Get started by adding a new one.\"\n      actionText=\"Add Item\">\n    </sn-empty-state>\n  </div>\n  }\n\n  @if(_display === 'sn-breadcrumbs') {\n  <div class=\"p-4\">\n    <sn-breadcrumbs [items]=\"[\n      { label: 'Home', path: '#' },\n      { label: 'Library', path: '#' },\n      { label: 'Data', path: '#', disabled: true },\n      { label: 'Current Page' }\n    ]\"></sn-breadcrumbs>\n  </div>\n  }\n\n  @if(_display === 'sn-avatar') {\n  <div class=\"flex gap-4 items-center p-4\">\n    <sn-avatar initials=\"JD\" size=\"sm\" shape=\"circle\" bgColor=\"#3b82f6\" textColor=\"#fff\"></sn-avatar>\n    <sn-avatar src=\"https://i.pravatar.cc/150?img=68\" size=\"md\" shape=\"rounded\"></sn-avatar>\n    <sn-avatar src=\"https://i.pravatar.cc/150?img=33\" size=\"lg\" shape=\"square\"></sn-avatar>\n  </div>\n  }\n\n  @if(_display === 'sn-skeleton') {\n  <div class=\"flex flex-col gap-4 p-4\">\n    <div class=\"flex items-center gap-4\">\n      <sn-skeleton type=\"circle\" width=\"3rem\" height=\"3rem\" animation=\"pulse\"></sn-skeleton>\n      <div class=\"w-full flex-col flex gap-2\">\n        <sn-skeleton type=\"text\" width=\"60%\" height=\"1rem\" animation=\"pulse\"></sn-skeleton>\n        <sn-skeleton type=\"text\" width=\"40%\" height=\"1rem\" animation=\"pulse\"></sn-skeleton>\n      </div>\n    </div>\n    <sn-skeleton type=\"rectangle\" width=\"100%\" height=\"4rem\" animation=\"wave\"></sn-skeleton>\n  </div>\n  }\n\n  @if(_display === 'sn-pagination') {\n  <div class=\"p-4\">\n    <sn-pagination [totalItems]=\"120\" [pageSize]=\"10\" [currentPage]=\"3\" size=\"md\"></sn-pagination>\n  </div>\n  }\n\n\n  @if(_display === 'checkbox'){\n  <div class=\"component-section border-b-2 border-gray-100 p-6\">\n    <h2 class=\"text-2xl mb-4\">Checkbox</h2>\n\n    <div class=\"flex flex-col gap-4\">\n      <h3 class=\"text-lg font-semibold\">Basic Checkbox</h3>\n      <sn-checkbox-x id=\"check1\" label=\"I agree to the terms and conditions\" [(ngModel)]=\"agreeTerms\"\n        (changed)=\"onCheckboxChange($event)\"></sn-checkbox-x>\n\n      <h3 class=\"text-lg font-semibold mt-4\">Checkbox States</h3>\n      <sn-checkbox-x id=\"check2\" label=\"Checked by default\" [(ngModel)]=\"checkboxValue\"></sn-checkbox-x>\n      <sn-checkbox-x id=\"check3\" label=\"Disabled checkbox\" [disabled]=\"true\"></sn-checkbox-x>\n      <sn-checkbox-x id=\"check4\" label=\"Disabled and checked\" [disabled]=\"true\"\n        [(ngModel)]=\"disabledCheckedValue\"></sn-checkbox-x>\n\n      <h3 class=\"text-lg font-semibold mt-4\">Indeterminate State</h3>\n      <sn-checkbox-x id=\"check5\" label=\"Select All\" [indeterminate]=\"indeterminateState\"\n        [(ngModel)]=\"selectAll\"></sn-checkbox-x>\n      <p class=\"text-xs text-gray-500 ml-6\">(Indeterminate state is used for \"Select All\" when some items are selected)\n      </p>\n    </div>\n\n    <p class=\"mt-4 text-sm text-gray-500\">\n      Terms Accepted: {{ agreeTerms ? 'Yes' : 'No' }} | Checkbox Value: {{ checkboxValue ? 'Checked' : 'Unchecked' }}\n    </p>\n\n\n  </div>\n  }\n\n  @if(_display === 'radio'){\n  <div class=\"component-section border-b-2 border-gray-100 p-6\">\n    <h2 class=\"text-2xl mb-4\">Radio Button</h2>\n\n    <div class=\"flex flex-col gap-4\">\n      <h3 class=\"text-lg font-semibold\">Gender Selection</h3>\n      <div class=\"flex gap-4\">\n        <sn-radio id=\"male\" name=\"gender\" value=\"male\" label=\"Male\" [(ngModel)]=\"selectedGender\"\n          (changed)=\"onRadioChange($event)\"></sn-radio>\n        <sn-radio id=\"female\" name=\"gender\" value=\"female\" label=\"Female\" [(ngModel)]=\"selectedGender\"></sn-radio>\n        <sn-radio id=\"other\" name=\"gender\" value=\"other\" label=\"Other\" [(ngModel)]=\"selectedGender\"></sn-radio>\n      </div>\n\n      <h3 class=\"text-lg font-semibold mt-4\">Size Selection</h3>\n      <div class=\"flex gap-4\">\n        <sn-radio id=\"small\" name=\"size\" value=\"small\" label=\"Small\" [(ngModel)]=\"selectedSize\"></sn-radio>\n        <sn-radio id=\"medium\" name=\"size\" value=\"medium\" label=\"Medium\" [(ngModel)]=\"selectedSize\"></sn-radio>\n        <sn-radio id=\"large\" name=\"size\" value=\"large\" label=\"Large\" [(ngModel)]=\"selectedSize\"></sn-radio>\n      </div>\n\n      <h3 class=\"text-lg font-semibold mt-4\">Disabled Radio</h3>\n      <sn-radio id=\"disabled-radio\" name=\"disabled-group\" value=\"disabled\" label=\"Disabled option\"\n        [disabled]=\"true\"></sn-radio>\n    </div>\n\n    <p class=\"mt-4 text-sm text-gray-500\">\n      Selected Gender: {{ selectedGender }} | Selected Size: {{ selectedSize }}\n    </p>\n\n\n  </div>\n  }\n\n  @if(_display === 'textarea'){\n  <div class=\"component-section border-b-2 border-gray-100 p-6\">\n    <h2 class=\"text-2xl mb-4\">Textarea</h2>\n\n    <div class=\"flex flex-col gap-4\">\n      <h3 class=\"text-lg font-semibold\">Basic Textarea</h3>\n      <sn-textarea id=\"comments\" label=\"Comments\" placeholder=\"Enter your comments here...\" [(ngModel)]=\"comments\"\n        (changed)=\"onTextareaChange($event)\"></sn-textarea>\n\n      <h3 class=\"text-lg font-semibold mt-4\">With Character Counter</h3>\n      <sn-textarea id=\"feedback\" label=\"Feedback (Max 200 characters)\" placeholder=\"Tell us what you think...\"\n        [maxLength]=\"200\" [(ngModel)]=\"feedback\"></sn-textarea>\n\n      <h3 class=\"text-lg font-semibold mt-4\">Auto-resize Disabled</h3>\n      <sn-textarea id=\"fixed-height\" label=\"Fixed Height\" placeholder=\"This textarea won't auto-resize\"\n        [autoResize]=\"false\" [rows]=\"6\"></sn-textarea>\n\n      <h3 class=\"text-lg font-semibold mt-4\">Disabled Textarea</h3>\n      <sn-textarea id=\"disabled-textarea\" label=\"Disabled\" placeholder=\"This is disabled\"\n        [disabled]=\"true\"></sn-textarea>\n\n      <h3 class=\"text-lg font-semibold mt-4\">Readonly Textarea</h3>\n      <sn-textarea id=\"readonly-textarea\" label=\"Readonly\" [(ngModel)]=\"readonlyText\" [readonly]=\"true\"></sn-textarea>\n    </div>\n\n    <p class=\"mt-4 text-sm text-gray-500\">\n      Comments length: {{ comments.length }} | Feedback length: {{ feedback.length }}\n    </p>\n\n\n  </div>\n  }\n\n  @if(_display === 'select'){\n  <div class=\"component-section border-b-2 border-gray-100 p-6\">\n    <h2 class=\"text-2xl mb-4\">Select Dropdown</h2>\n\n    <div class=\"flex flex-col gap-6\">\n      <h3 class=\"text-lg font-semibold\">Basic Select</h3>\n      <sn-dropdown-x id=\"country\" label=\"Country\" placeholder=\"Select a country\" [options]=\"countries\"\n        [(ngModel)]=\"selectedCountry\" (changed)=\"onSelectChange($event)\"></sn-dropdown-x>\n\n      <h3 class=\"text-lg font-semibold mt-4\">Searchable Select</h3>\n      <sn-dropdown-x id=\"searchable-country\" label=\"Country (with search)\" placeholder=\"Type to search...\"\n        [options]=\"countries\" [searchable]=\"true\"></sn-dropdown-x>\n\n      <h3 class=\"text-lg font-semibold mt-4\">Multi-Select</h3>\n      <sn-dropdown-x id=\"languages\" label=\"Programming Languages\" placeholder=\"Select multiple languages\"\n        [options]=\"languages\" [multiple]=\"true\" [(ngModel)]=\"selectedLanguages\"></sn-dropdown-x>\n\n      <h3 class=\"text-lg font-semibold mt-4\">Multi-Select with Search</h3>\n      <sn-dropdown-x id=\"multi-search\" label=\"Languages (searchable multi-select)\"\n        placeholder=\"Search and select multiple\" [options]=\"languages\" [multiple]=\"true\"\n        [searchable]=\"true\"></sn-dropdown-x>\n\n      <h3 class=\"text-lg font-semibold mt-4\">Disabled Select</h3>\n      <sn-dropdown-x id=\"disabled-select\" label=\"Disabled\" placeholder=\"This is disabled\" [options]=\"countries\"\n        [disabled]=\"true\"></sn-dropdown-x>\n\n      <h3 class=\"text-lg font-semibold mt-4\">Not Clearable</h3>\n      <sn-dropdown-x id=\"not-clearable\" label=\"Not Clearable\" placeholder=\"Select (no clear button)\"\n        [options]=\"countries\" [clearable]=\"false\"></sn-dropdown-x>\n    </div>\n\n    <p class=\"mt-4 text-sm text-gray-500\">\n      Selected Country: {{ selectedCountry || 'None' }} | Selected Languages: {{ selectedLanguages.length > 0 ?\n      selectedLanguages.join(', ') : 'None' }}\n    </p>\n\n\n  </div>\n  }\n\n  @if(_display === 'table'){\n  <div class=\"component-section border-b-2 border-gray-100 p-6\">\n    <h2 class=\"text-2xl mb-4\">Data Table</h2>\n\n    <div class=\"flex flex-col gap-6\">\n      <h3 class=\"text-lg font-semibold\">Basic Table with Sorting</h3>\n      <p class=\"text-xs text-gray-500\">Click any column header to sort. Click again to reverse order.</p>\n      <sn-datatable [columns]=\"tableColumns\" [data]=\"tableData\" [striped]=\"true\" [hoverable]=\"true\" [pageSize]=\"5\"\n        (sorted)=\"onTableSorted($event)\"></sn-datatable>\n\n      <h3 class=\"text-lg font-semibold mt-6\">Table Styling Variants</h3>\n\n      <div class=\"mt-4\">\n        <p class=\"text-sm text-gray-600 mb-3\">Bordered Table:</p>\n        <sn-datatable [columns]=\"tableColumns\" [data]=\"tableData.slice(0, 3)\" [striped]=\"false\" [hoverable]=\"true\"\n          [bordered]=\"true\" [pageSize]=\"10\"></sn-datatable>\n      </div>\n\n      <div class=\"mt-4\">\n        <p class=\"text-sm text-gray-600 mb-3\">Minimal Table (No Striping):</p>\n        <sn-datatable [columns]=\"tableColumns\" [data]=\"tableData.slice(0, 4)\" [striped]=\"false\" [hoverable]=\"false\"\n          [bordered]=\"false\" [pageSize]=\"10\"></sn-datatable>\n      </div>\n    </div>\n\n\n  </div>\n  }\n\n  @if(_display === 'tooltip'){\n  <div class=\"component-section border-b-2 border-gray-100 p-6\">\n    <h2 class=\"text-2xl mb-4\">Tooltip</h2>\n\n    <div class=\"flex flex-col gap-6\">\n      <h3 class=\"text-lg font-semibold\">Basic Tooltips</h3>\n      <div class=\"flex gap-4\">\n        <sn-button-x scheme=\"primary\" filled snTooltip=\"This is a simple tooltip on top\">Hover Me</sn-button-x>\n        <sn-button-x scheme=\"success\" filled snTooltip=\"Bottom tooltip\" tooltipPosition=\"bottom\">Bottom</sn-button-x>\n        <span snTooltip=\"Left text tooltip\" tooltipPosition=\"left\"\n          class=\"cursor-help underline text-indigo-600 self-center\">Hover Text (Left)</span>\n        <span snTooltip=\"Right text tooltip\" tooltipPosition=\"right\"\n          class=\"cursor-help underline text-indigo-600 self-center\">Hover Text (Right)</span>\n      </div>\n    </div>\n\n\n  </div>\n  }\n</main>"
         },
         {
             "name": "PageComponent",
@@ -1331,7 +1365,7 @@
                 "linktype": "component",
                 "name": "ListComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/34",
+                "coverageCount": "0/35",
                 "status": "low"
             },
             {

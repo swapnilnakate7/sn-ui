@@ -739,6 +739,58 @@
           }
         }
       }
+    },
+    "sn-charts": {
+      "projectType": "library",
+      "root": "projects/sn-charts",
+      "sourceRoot": "projects/sn-charts/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/sn-charts/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/sn-charts/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "tsConfig": "projects/sn-charts/tsconfig.spec.json"
+          }
+        }
+      }
+    },
+    "sn-advanced-datatable": {
+      "projectType": "library",
+      "root": "projects/sn-advanced-datatable",
+      "sourceRoot": "projects/sn-advanced-datatable/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/sn-advanced-datatable/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/sn-advanced-datatable/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "tsConfig": "projects/sn-advanced-datatable/tsconfig.spec.json"
+          }
+        }
+      }
     }
   },
   "cli": {
