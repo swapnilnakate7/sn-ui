@@ -40,4 +40,3 @@ import { ... } from 'sn-breadcrumbs';
 |---|---|---|
 | `itemClick` | `EventEmitter<BreadcrumbItem>` | Fires when a breadcrumb link is clicked |
 
-## Part of [sn-ui](https://github.com/nicosnapps/sn-ui)

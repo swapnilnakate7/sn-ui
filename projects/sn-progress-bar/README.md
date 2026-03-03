@@ -34,4 +34,3 @@ import { ... } from 'sn-progress-bar';
 | `showLabel` | `boolean` | `false` | Show percentage label |
 | `labelText` | `string` | `''` | Custom label prefix |
 
-## Part of [sn-ui](https://github.com/nicosnapps/sn-ui)

@@ -27,4 +27,3 @@ export class MyComponent {
 }
 ```
 
-## Part of [sn-ui](https://github.com/nicosnapps/sn-ui)

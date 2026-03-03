@@ -21,4 +21,3 @@ import { ... } from 'sn-spinner-x';
 })
 ```
 
-## Part of [sn-ui](https://github.com/nicosnapps/sn-ui)

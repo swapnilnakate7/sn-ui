@@ -21,4 +21,3 @@ import { ... } from 'sn-toggle';
 })
 ```
 
-## Part of [sn-ui](https://github.com/nicosnapps/sn-ui)

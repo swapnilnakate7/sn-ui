@@ -52,4 +52,3 @@ export class MyComponent {
 | **Pagination** | Page size selector, visible page range |
 | **Appearance** | Striped, hoverable, bordered options |
 
-## Part of [sn-ui](https://github.com/nicosnapps/sn-ui)

@@ -33,4 +33,3 @@ import { ... } from 'sn-skeleton';
 | `height` | `string` | `'1rem'` | Height (CSS value) |
 | `customClass` | `string` | `''` | Additional CSS classes |
 
-## Part of [sn-ui](https://github.com/nicosnapps/sn-ui)

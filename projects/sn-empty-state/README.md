@@ -41,4 +41,3 @@ import { ... } from 'sn-empty-state';
 |---|---|---|
 | `actionClicked` | `EventEmitter<void>` | Fires when the CTA button is clicked |
 
-## Part of [sn-ui](https://github.com/nicosnapps/sn-ui)

@@ -71,4 +71,3 @@ export class MyComponent {
 - **Animated** — line draw animation, fade-in effects
 - **Donut mode** — pie chart supports donut with center label
 
-## Part of [sn-ui](https://github.com/nicosnapps/sn-ui)

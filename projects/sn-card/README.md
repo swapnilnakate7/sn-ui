@@ -23,4 +23,3 @@ import { ... } from 'sn-card';
 })
 ```
 
-## Part of [sn-ui](https://github.com/nicosnapps/sn-ui)

@@ -22,4 +22,3 @@ import { ... } from 'sn-badge';
 })
 ```
 
-## Part of [sn-ui](https://github.com/nicosnapps/sn-ui)

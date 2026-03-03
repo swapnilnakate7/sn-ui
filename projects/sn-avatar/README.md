@@ -34,4 +34,3 @@ import { ... } from 'sn-avatar';
 | `bgColor` | `string` | — | Background color for initials |
 | `textColor` | `string` | — | Text color for initials |
 
-## Part of [sn-ui](https://github.com/nicosnapps/sn-ui)

@@ -43,4 +43,3 @@ import { ... } from 'sn-pagination-x';
 |---|---|---|
 | `pageChange` | `EventEmitter<number>` | Emits the new page number |
 
-## Part of [sn-ui](https://github.com/nicosnapps/sn-ui)

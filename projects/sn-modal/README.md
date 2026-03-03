@@ -24,4 +24,3 @@ import { ... } from 'sn-modal';
 })
 ```
 
-## Part of [sn-ui](https://github.com/nicosnapps/sn-ui)
