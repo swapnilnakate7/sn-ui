@@ -8,5 +8,29 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "author": {
+    "name": "Swapnil Nakate",
+    "email": "nakate.swapnil7@gmail.com",
+    "url": "https://swapnilnakate.in"
+  },
+  "description": "Angular avatar component with image, initials, sizes, and shapes - SnUI Library",
+  "keywords": [
+    "avatar",
+    "angular",
+    "profile",
+    "initials",
+    "image",
+    "snui"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/swapnilnakate7/sn-ui",
+    "directory": "projects/sn-avatar"
+  },
+  "bugs": {
+    "url": "https://github.com/swapnilnakate7/sn-ui/issues",
+    "email": "nakate.swapnil7@gmail.com"
+  },
+  "license": "MIT"
 }

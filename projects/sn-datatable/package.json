@@ -32,7 +32,7 @@
   "repository": {
     "url": "https://github.com/swapnilnakate7/sn-ui",
     "type": "git",
-    "directory": "projects/sn-table"
+    "directory": "projects/sn-datatable"
   },
   "license": "MIT"
 }

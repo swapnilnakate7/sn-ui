@@ -8,5 +8,31 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "author": {
+    "name": "Swapnil Nakate",
+    "email": "nakate.swapnil7@gmail.com",
+    "url": "https://swapnilnakate.in"
+  },
+  "description": "Native SVG chart components for Angular (bar, line, pie/donut) - SnUI Library",
+  "keywords": [
+    "charts",
+    "angular",
+    "svg",
+    "bar-chart",
+    "line-chart",
+    "pie-chart",
+    "donut",
+    "snui"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/swapnilnakate7/sn-ui",
+    "directory": "projects/sn-charts"
+  },
+  "bugs": {
+    "url": "https://github.com/swapnilnakate7/sn-ui/issues",
+    "email": "nakate.swapnil7@gmail.com"
+  },
+  "license": "MIT"
 }

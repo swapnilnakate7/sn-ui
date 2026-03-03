@@ -8,5 +8,31 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "author": {
+    "name": "Swapnil Nakate",
+    "email": "nakate.swapnil7@gmail.com",
+    "url": "https://swapnilnakate.in"
+  },
+  "description": "Angular advanced data table with search, filters, sorting, selection, and expandable rows - SnUI Library",
+  "keywords": [
+    "datatable",
+    "table",
+    "angular",
+    "search",
+    "filter",
+    "sorting",
+    "selection",
+    "snui"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/swapnilnakate7/sn-ui",
+    "directory": "projects/sn-advanced-datatable"
+  },
+  "bugs": {
+    "url": "https://github.com/swapnilnakate7/sn-ui/issues",
+    "email": "nakate.swapnil7@gmail.com"
+  },
+  "license": "MIT"
 }

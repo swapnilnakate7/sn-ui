@@ -8,5 +8,28 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "author": {
+    "name": "Swapnil Nakate",
+    "email": "nakate.swapnil7@gmail.com",
+    "url": "https://swapnilnakate.in"
+  },
+  "description": "Angular empty state display component with title, description, and CTA - SnUI Library",
+  "keywords": [
+    "empty-state",
+    "angular",
+    "no-data",
+    "placeholder",
+    "snui"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/swapnilnakate7/sn-ui",
+    "directory": "projects/sn-empty-state"
+  },
+  "bugs": {
+    "url": "https://github.com/swapnilnakate7/sn-ui/issues",
+    "email": "nakate.swapnil7@gmail.com"
+  },
+  "license": "MIT"
 }

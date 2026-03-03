@@ -24,5 +24,11 @@
     "type": "git",
     "directory": "projects/sn-alert"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": [
+    "alert",
+    "angular",
+    "notification",
+    "snui"
+  ]
 }
