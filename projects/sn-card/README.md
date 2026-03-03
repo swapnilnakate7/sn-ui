@@ -11,7 +11,7 @@ npm i sn-card
 ## Usage
 
 ```typescript
-import { ... } from 'sn-card';
+import { SnCardComponent } from 'sn-card';
 
 @Component({
   imports: [SnCardComponent],

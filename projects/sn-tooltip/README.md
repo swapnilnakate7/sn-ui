@@ -11,7 +11,7 @@ npm i sn-tooltip
 ## Usage
 
 ```typescript
-import { ... } from 'sn-tooltip';
+import { TooltipDirective } from 'sn-tooltip';
 
 @Component({
   imports: [TooltipDirective],

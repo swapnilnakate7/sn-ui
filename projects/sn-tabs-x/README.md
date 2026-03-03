@@ -11,7 +11,7 @@ npm i sn-tabs-x
 ## Usage
 
 ```typescript
-import { ... } from 'sn-tabs-x';
+import { SnTabsXComponent } from 'sn-tabs-x';
 
 @Component({
   imports: [SnTabsXComponent],

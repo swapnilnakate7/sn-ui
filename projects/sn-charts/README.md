@@ -13,7 +13,7 @@ npm i sn-charts
 ### Bar Chart
 
 ```typescript
-import { ... } from 'sn-charts';
+import { SnBarChartComponent } from 'sn-charts';
 
 @Component({
   imports: [SnBarChartComponent],
@@ -33,7 +33,7 @@ export class MyComponent {
 ### Line Chart
 
 ```typescript
-import { ... } from 'sn-charts';
+import { SnLineChartComponent } from 'sn-charts';
 
 @Component({
   imports: [SnLineChartComponent],
@@ -46,7 +46,7 @@ import { ... } from 'sn-charts';
 ### Pie / Donut Chart
 
 ```typescript
-import { ... } from 'sn-charts';
+import { SnPieChartComponent } from 'sn-charts';
 
 @Component({
   imports: [SnPieChartComponent],

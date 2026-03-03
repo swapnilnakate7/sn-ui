@@ -11,7 +11,7 @@ npm i sn-modal
 ## Usage
 
 ```typescript
-import { ... } from 'sn-modal';
+import { SnModalComponent } from 'sn-modal';
 
 @Component({
   imports: [SnModalComponent],

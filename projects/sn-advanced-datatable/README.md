@@ -11,7 +11,7 @@ npm i sn-advanced-datatable
 ## Usage
 
 ```typescript
-import { ... } from 'sn-advanced-datatable';
+import { SnAdvancedDatatableComponent } from 'sn-advanced-datatable';
 
 @Component({
   imports: [SnAdvancedDatatableComponent],

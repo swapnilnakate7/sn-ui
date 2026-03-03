@@ -11,7 +11,7 @@ npm i sn-breadcrumbs
 ## Usage
 
 ```typescript
-import { ... } from 'sn-breadcrumbs';
+import { SnBreadcrumbsComponent } from 'sn-breadcrumbs';
 
 @Component({
   imports: [SnBreadcrumbsComponent],

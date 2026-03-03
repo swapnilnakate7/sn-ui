@@ -11,7 +11,7 @@ npm i sn-avatar
 ## Usage
 
 ```typescript
-import { ... } from 'sn-avatar';
+import { SnAvatarComponent } from 'sn-avatar';
 
 @Component({
   imports: [SnAvatarComponent],

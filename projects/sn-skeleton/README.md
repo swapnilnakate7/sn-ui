@@ -11,7 +11,7 @@ npm i sn-skeleton
 ## Usage
 
 ```typescript
-import { ... } from 'sn-skeleton';
+import { SnSkeletonComponent } from 'sn-skeleton';
 
 @Component({
   imports: [SnSkeletonComponent],

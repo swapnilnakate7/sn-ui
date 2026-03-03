@@ -11,7 +11,7 @@ npm i sn-pagination-x
 ## Usage
 
 ```typescript
-import { ... } from 'sn-pagination-x';
+import { SnPaginationComponent } from 'sn-pagination-x';
 
 @Component({
   imports: [SnPaginationComponent],

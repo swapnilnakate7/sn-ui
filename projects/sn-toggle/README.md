@@ -11,7 +11,7 @@ npm i sn-toggle
 ## Usage
 
 ```typescript
-import { ... } from 'sn-toggle';
+import { SnToggleComponent } from 'sn-toggle';
 
 @Component({
   imports: [SnToggleComponent],

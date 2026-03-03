@@ -11,7 +11,7 @@ npm i sn-spinner-x
 ## Usage
 
 ```typescript
-import { ... } from 'sn-spinner-x';
+import { SnSpinnerXComponent } from 'sn-spinner-x';
 
 @Component({
   imports: [SnSpinnerXComponent],

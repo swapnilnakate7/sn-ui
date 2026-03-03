@@ -11,7 +11,7 @@ npm i sn-input
 ## Usage
 
 ```typescript
-import { ... } from 'sn-input';
+import { SnInputComponent } from 'sn-input';
 
 @Component({
   imports: [SnInputComponent],

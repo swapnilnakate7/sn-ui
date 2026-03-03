@@ -11,7 +11,7 @@ npm i sn-badge
 ## Usage
 
 ```typescript
-import { ... } from 'sn-badge';
+import { SnBadgeComponent } from 'sn-badge';
 
 @Component({
   imports: [SnBadgeComponent],

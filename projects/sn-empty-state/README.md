@@ -11,7 +11,7 @@ npm i sn-empty-state
 ## Usage
 
 ```typescript
-import { ... } from 'sn-empty-state';
+import { SnEmptyStateComponent } from 'sn-empty-state';
 
 @Component({
   imports: [SnEmptyStateComponent],

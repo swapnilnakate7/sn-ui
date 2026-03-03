@@ -11,7 +11,7 @@ npm i sn-progress-bar
 ## Usage
 
 ```typescript
-import { ... } from 'sn-progress-bar';
+import { SnProgressBarComponent } from 'sn-progress-bar';
 
 @Component({
   imports: [SnProgressBarComponent],

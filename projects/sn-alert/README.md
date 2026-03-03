@@ -11,7 +11,7 @@ npm i sn-alert
 ## Usage
 
 ```typescript
-import { ... } from 'sn-alert';
+import { SnAlertComponent } from 'sn-alert';
 
 @Component({
   imports: [SnAlertComponent],
