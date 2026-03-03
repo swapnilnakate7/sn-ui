@@ -31,6 +31,9 @@
       "sn-checkbox": [
         "./dist/sn-checkbox"
       ],
+      "sn-empty-state": [
+        "./dist/sn-empty-state"
+      ],
       "sn-pagination": [
         "./dist/sn-pagination"
       ],
@@ -85,6 +88,12 @@
     },
     {
       "path": "./projects/sn-pagination/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/sn-empty-state/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/sn-empty-state/tsconfig.spec.json"
     }
   ]
 }

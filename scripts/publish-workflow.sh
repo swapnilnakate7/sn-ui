@@ -47,6 +47,7 @@ COMPONENTS=(
     "sn-avatar"
     "sn-skeleton"
     "sn-pagination"
+    "sn-empty-state"
 )
 
 
