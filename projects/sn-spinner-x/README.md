@@ -5,13 +5,13 @@ A loading spinner component for Angular with multiple sizes and color schemes.
 ## Installation
 
 ```bash
-npm install @nicosnapps/sn-spinner-x
+npm i sn-spinner-x
 ```
 
 ## Usage
 
 ```typescript
-import { SnSpinnerXComponent } from '@nicosnapps/sn-spinner-x';
+import { ... } from 'sn-spinner-x';
 
 @Component({
   imports: [SnSpinnerXComponent],

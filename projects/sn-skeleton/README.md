@@ -5,13 +5,13 @@ A flexible skeleton loading placeholder for Angular applications. Perfect for di
 ## Installation
 
 ```bash
-npm install @nicosnapps/sn-skeleton
+npm i sn-skeleton
 ```
 
 ## Usage
 
 ```typescript
-import { SnSkeletonComponent } from '@nicosnapps/sn-skeleton';
+import { ... } from 'sn-skeleton';
 
 @Component({
   imports: [SnSkeletonComponent],

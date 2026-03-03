@@ -5,13 +5,13 @@ A polished empty state display component for Angular applications. Use it when t
 ## Installation
 
 ```bash
-npm install @nicosnapps/sn-empty-state
+npm i sn-empty-state
 ```
 
 ## Usage
 
 ```typescript
-import { SnEmptyStateComponent } from '@nicosnapps/sn-empty-state';
+import { ... } from 'sn-empty-state';
 
 @Component({
   imports: [SnEmptyStateComponent],

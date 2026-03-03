@@ -5,7 +5,7 @@ Native SVG chart components for Angular — **zero external dependencies**.
 ## Installation
 
 ```bash
-npm install @nicosnapps/sn-charts
+npm i sn-charts
 ```
 
 ## Components
@@ -13,7 +13,7 @@ npm install @nicosnapps/sn-charts
 ### Bar Chart
 
 ```typescript
-import { SnBarChartComponent } from '@nicosnapps/sn-charts';
+import { ... } from 'sn-charts';
 
 @Component({
   imports: [SnBarChartComponent],
@@ -33,7 +33,7 @@ export class MyComponent {
 ### Line Chart
 
 ```typescript
-import { SnLineChartComponent } from '@nicosnapps/sn-charts';
+import { ... } from 'sn-charts';
 
 @Component({
   imports: [SnLineChartComponent],
@@ -46,7 +46,7 @@ import { SnLineChartComponent } from '@nicosnapps/sn-charts';
 ### Pie / Donut Chart
 
 ```typescript
-import { SnPieChartComponent } from '@nicosnapps/sn-charts';
+import { ... } from 'sn-charts';
 
 @Component({
   imports: [SnPieChartComponent],

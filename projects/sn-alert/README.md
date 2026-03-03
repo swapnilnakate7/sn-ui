@@ -5,13 +5,13 @@ A notification alert component for Angular with multiple severity levels and dis
 ## Installation
 
 ```bash
-npm install @nicosnapps/sn-alert
+npm i sn-alert
 ```
 
 ## Usage
 
 ```typescript
-import { SnAlertComponent } from '@nicosnapps/sn-alert';
+import { ... } from 'sn-alert';
 
 @Component({
   imports: [SnAlertComponent],

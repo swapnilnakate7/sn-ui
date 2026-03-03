@@ -5,13 +5,13 @@ A toggle switch component for Angular with label support and multiple color sche
 ## Installation
 
 ```bash
-npm install @nicosnapps/sn-toggle
+npm i sn-toggle
 ```
 
 ## Usage
 
 ```typescript
-import { SnToggleComponent } from '@nicosnapps/sn-toggle';
+import { ... } from 'sn-toggle';
 
 @Component({
   imports: [SnToggleComponent],

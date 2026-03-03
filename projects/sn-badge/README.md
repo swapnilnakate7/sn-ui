@@ -5,13 +5,13 @@ A small badge/label component for Angular to display status indicators, counts, 
 ## Installation
 
 ```bash
-npm install @nicosnapps/sn-badge
+npm i sn-badge
 ```
 
 ## Usage
 
 ```typescript
-import { SnBadgeComponent } from '@nicosnapps/sn-badge';
+import { ... } from 'sn-badge';
 
 @Component({
   imports: [SnBadgeComponent],

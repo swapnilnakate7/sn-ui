@@ -5,13 +5,13 @@ A linear progress bar component for Angular with determinate and indeterminate m
 ## Installation
 
 ```bash
-npm install @nicosnapps/sn-progress-bar
+npm i sn-progress-bar
 ```
 
 ## Usage
 
 ```typescript
-import { SnProgressBarComponent } from '@nicosnapps/sn-progress-bar';
+import { ... } from 'sn-progress-bar';
 
 @Component({
   imports: [SnProgressBarComponent],

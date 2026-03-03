@@ -5,13 +5,13 @@ A versatile card container component for Angular with header, body, and footer s
 ## Installation
 
 ```bash
-npm install @nicosnapps/sn-card
+npm i sn-card
 ```
 
 ## Usage
 
 ```typescript
-import { SnCardComponent } from '@nicosnapps/sn-card';
+import { ... } from 'sn-card';
 
 @Component({
   imports: [SnCardComponent],

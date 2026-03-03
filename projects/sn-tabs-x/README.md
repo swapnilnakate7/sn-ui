@@ -5,13 +5,13 @@ A tabbed navigation component for Angular with dynamic tab panels and customizab
 ## Installation
 
 ```bash
-npm install @nicosnapps/sn-tabs-x
+npm i sn-tabs-x
 ```
 
 ## Usage
 
 ```typescript
-import { SnTabsXComponent } from '@nicosnapps/sn-tabs-x';
+import { ... } from 'sn-tabs-x';
 
 @Component({
   imports: [SnTabsXComponent],

@@ -5,13 +5,13 @@ A dialog/modal component for Angular with backdrop, close button, and customizab
 ## Installation
 
 ```bash
-npm install @nicosnapps/sn-modal
+npm i sn-modal
 ```
 
 ## Usage
 
 ```typescript
-import { SnModalComponent } from '@nicosnapps/sn-modal';
+import { ... } from 'sn-modal';
 
 @Component({
   imports: [SnModalComponent],

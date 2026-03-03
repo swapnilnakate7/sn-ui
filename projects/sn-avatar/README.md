@@ -5,13 +5,13 @@ A lightweight, customizable avatar component for Angular applications.
 ## Installation
 
 ```bash
-npm install @nicosnapps/sn-avatar
+npm i sn-avatar
 ```
 
 ## Usage
 
 ```typescript
-import { SnAvatarComponent } from '@nicosnapps/sn-avatar';
+import { ... } from 'sn-avatar';
 
 @Component({
   imports: [SnAvatarComponent],

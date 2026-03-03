@@ -5,13 +5,13 @@ A customizable text input component for Angular with label, placeholder, and val
 ## Installation
 
 ```bash
-npm install @nicosnapps/sn-input
+npm i sn-input
 ```
 
 ## Usage
 
 ```typescript
-import { SnInputComponent } from '@nicosnapps/sn-input';
+import { ... } from 'sn-input';
 
 @Component({
   imports: [SnInputComponent],

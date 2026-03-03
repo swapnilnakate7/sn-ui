@@ -5,13 +5,13 @@ A feature-rich data table for Angular with search, filtering, sorting, row selec
 ## Installation
 
 ```bash
-npm install @nicosnapps/sn-advanced-datatable
+npm i sn-advanced-datatable
 ```
 
 ## Usage
 
 ```typescript
-import { SnAdvancedDatatableComponent } from '@nicosnapps/sn-advanced-datatable';
+import { ... } from 'sn-advanced-datatable';
 
 @Component({
   imports: [SnAdvancedDatatableComponent],

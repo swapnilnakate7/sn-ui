@@ -5,13 +5,13 @@ A hierarchical navigation breadcrumbs component for Angular with custom SVG sepa
 ## Installation
 
 ```bash
-npm install @nicosnapps/sn-breadcrumbs
+npm i sn-breadcrumbs
 ```
 
 ## Usage
 
 ```typescript
-import { SnBreadcrumbsComponent } from '@nicosnapps/sn-breadcrumbs';
+import { ... } from 'sn-breadcrumbs';
 
 @Component({
   imports: [SnBreadcrumbsComponent],

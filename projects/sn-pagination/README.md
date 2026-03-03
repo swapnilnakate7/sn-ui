@@ -5,13 +5,13 @@ A clean pagination component for Angular applications with configurable page siz
 ## Installation
 
 ```bash
-npm install @nicosnapps/sn-pagination
+npm i sn-pagination
 ```
 
 ## Usage
 
 ```typescript
-import { SnPaginationComponent } from '@nicosnapps/sn-pagination';
+import { ... } from 'sn-pagination';
 
 @Component({
   imports: [SnPaginationComponent],

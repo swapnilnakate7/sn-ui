@@ -5,13 +5,13 @@ A lightweight tooltip directive for Angular that shows contextual information on
 ## Installation
 
 ```bash
-npm install @nicosnapps/sn-tooltip
+npm i sn-tooltip
 ```
 
 ## Usage
 
 ```typescript
-import { TooltipDirective } from '@nicosnapps/sn-tooltip';
+import { ... } from 'sn-tooltip';
 
 @Component({
   imports: [TooltipDirective],
