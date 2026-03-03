@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Container */
+.sn-adv-table-wrapper {
+    @apply w-full bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200;
+}
+
+.sn-adv-table-bordered .sn-adv-table {
+    @apply border border-gray-300;
+}
+
+/* Toolbar */
+.sn-adv-toolbar {
+    @apply flex items-center justify-between gap-4 p-4 border-b border-gray-200 flex-wrap;
+}
+
+.sn-adv-search {
+    @apply relative flex items-center;
+}
+
+.sn-adv-search-icon {
+    @apply absolute left-3 text-gray-400 pointer-events-none;
+}
+
+.sn-adv-search-input {
+    @apply pl-9 pr-4 py-2 text-sm border border-gray-300 rounded-lg bg-gray-50 outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-colors w-64;
+}
+
+.sn-adv-toolbar-right {
+    @apply flex items-center gap-4;
+}
+
+.sn-adv-result-count {
+    @apply text-sm text-gray-500;
+}
+
+.sn-adv-page-size-select {
+    @apply text-sm border border-gray-300 rounded-lg py-1.5 px-3 bg-gray-50 outline-none focus:border-indigo-500 cursor-pointer;
+}
+
+/* Table */
+.sn-adv-table-scroll {
+    @apply overflow-x-auto;
+}
+
+.sn-adv-table {
+    @apply w-full text-sm border-collapse;
+}
+
+/* Header */
+.sn-adv-th {
+    @apply px-4 py-3 bg-gray-50 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider border-b-2 border-gray-200 select-none;
+}
+
+.sn-adv-th-sortable {
+    @apply cursor-pointer hover:bg-gray-100 transition-colors;
+}
+
+.sn-adv-th-content {
+    @apply flex items-center gap-1;
+}
+
+.sn-adv-sort-icon {
+    @apply text-gray-400 text-xs;
+}
+
+.sn-adv-th-checkbox,
+.sn-adv-td-checkbox {
+    @apply w-12 text-center;
+}
+
+.sn-adv-th-expand,
+.sn-adv-td-expand {
+    @apply w-10 text-center;
+}
+
+/* Filter Row */
+.sn-adv-filter-row .sn-adv-th-filter {
+    @apply px-2 py-2 bg-gray-50 border-b border-gray-200;
+}
+
+.sn-adv-filter-input {
+    @apply w-full text-xs border border-gray-300 rounded px-2 py-1.5 outline-none focus:border-indigo-500 bg-white;
+}
+
+/* Body */
+.sn-adv-tr {
+    @apply border-b border-gray-100 transition-colors;
+}
+
+.sn-adv-table-striped .sn-adv-tr:nth-child(even) {
+    @apply bg-gray-50;
+}
+
+.sn-adv-table-hoverable .sn-adv-tr:hover {
+    @apply bg-indigo-50;
+}
+
+.sn-adv-tr-selected {
+    @apply bg-indigo-50;
+}
+
+.sn-adv-td {
+    @apply px-4 py-3 text-gray-700;
+}
+
+.sn-adv-checkbox {
+    @apply w-4 h-4 rounded border-gray-300 text-indigo-600 cursor-pointer accent-indigo-600;
+}
+
+/* Expand */
+.sn-adv-td-expand {
+    @apply cursor-pointer;
+}
+
+.sn-adv-expand-icon {
+    @apply inline-flex text-gray-400 transition-transform duration-200;
+}
+
+.sn-adv-expand-icon-open {
+    @apply rotate-90 text-indigo-500;
+}
+
+.sn-adv-expanded-row td {
+    @apply p-0;
+}
+
+.sn-adv-expanded-content {
+    @apply p-4 bg-gray-50 border-b border-gray-200;
+    animation: slideDown 0.2s ease-out;
+}
+
+.sn-adv-expanded-default {
+    @apply text-xs text-gray-600 bg-white p-3 rounded-md border border-gray-200 overflow-x-auto;
+}
+
+/* Empty State */
+.sn-adv-empty {
+    @apply py-12 text-center text-gray-400 text-sm;
+}
+
+/* Pagination */
+.sn-adv-pagination {
+    @apply flex items-center justify-between p-4 border-t border-gray-200;
+}
+
+.sn-adv-page-info {
+    @apply text-sm text-gray-500;
+}
+
+.sn-adv-page-buttons {
+    @apply flex items-center gap-1;
+}
+
+.sn-adv-page-btn {
+    @apply inline-flex items-center justify-center w-8 h-8 text-sm rounded-md border border-gray-300 bg-white text-gray-600 hover:bg-gray-100 transition-colors disabled:opacity-40 disabled:cursor-not-allowed;
+}
+
+.sn-adv-page-btn-active {
+    @apply bg-indigo-600 text-white border-indigo-600 hover:bg-indigo-700;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        max-height: 0;
+    }
+
+    to {
+        opacity: 1;
+        max-height: 500px;
+    }
+}

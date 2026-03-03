@@ -1,0 +1,171 @@
+<div class="sn-adv-table-wrapper" [class.sn-adv-table-bordered]="bordered">
+
+    <!-- Toolbar: Search + Page Size -->
+    @if(searchable || pageSizeOptions.length > 1) {
+    <div class="sn-adv-toolbar">
+        @if(searchable) {
+        <div class="sn-adv-search">
+            <svg class="sn-adv-search-icon" viewBox="0 0 20 20" fill="currentColor" width="16" height="16">
+                <path fill-rule="evenodd"
+                    d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
+                    clip-rule="evenodd" />
+            </svg>
+            <input type="text" class="sn-adv-search-input" placeholder="Search all columns..." [(ngModel)]="searchQuery"
+                (ngModelChange)="onSearchChange()" />
+        </div>
+        }
+
+        <div class="sn-adv-toolbar-right">
+            <span class="sn-adv-result-count">{{ totalFilteredItems }} results</span>
+
+            <select class="sn-adv-page-size-select" [(ngModel)]="pageSize" (ngModelChange)="onPageSizeChange()">
+                @for(opt of pageSizeOptions; track opt) {
+                <option [value]="opt">{{ opt }} per page</option>
+                }
+            </select>
+        </div>
+    </div>
+    }
+
+    <!-- Table -->
+    <div class="sn-adv-table-scroll">
+        <table class="sn-adv-table" [class.sn-adv-table-striped]="striped" [class.sn-adv-table-hoverable]="hoverable">
+            <thead>
+                <tr>
+                    <!-- Selection Checkbox Header -->
+                    @if(selectable) {
+                    <th class="sn-adv-th sn-adv-th-checkbox">
+                        <input type="checkbox" [checked]="allSelected" (change)="toggleSelectAll()"
+                            class="sn-adv-checkbox" />
+                    </th>
+                    }
+
+                    <!-- Expand Toggle Header -->
+                    @if(expandable) {
+                    <th class="sn-adv-th sn-adv-th-expand"></th>
+                    }
+
+                    <!-- Column Headers -->
+                    @for(col of columns; track col.key) {
+                    <th class="sn-adv-th" [style.width]="col.width || 'auto'" [style.text-align]="col.align || 'left'"
+                        [class.sn-adv-th-sortable]="col.sortable !== false" (click)="sort(col.key)">
+                        <div class="sn-adv-th-content">
+                            <span>{{ col.header }}</span>
+                            @if(col.sortable !== false) {
+                            <span class="sn-adv-sort-icon">{{ getSortIcon(col.key) }}</span>
+                            }
+                        </div>
+                    </th>
+                    }
+                </tr>
+
+                <!-- Per-column filter row -->
+                @if(filterable) {
+                <tr class="sn-adv-filter-row">
+                    @if(selectable) { <th></th> }
+                    @if(expandable) { <th></th> }
+                    @for(col of columns; track col.key) {
+                    <th class="sn-adv-th-filter">
+                        @if(col.filterable !== false) {
+                        <input type="text" class="sn-adv-filter-input" [placeholder]="'Filter ' + col.header"
+                            [(ngModel)]="columnFilters[col.key]" (ngModelChange)="onFilterChange()" />
+                        }
+                    </th>
+                    }
+                </tr>
+                }
+            </thead>
+
+            <tbody>
+                @for(row of paginatedData; track row; let i = $index) {
+                @let globalIndex = (currentPage - 1) * pageSize + i;
+                <tr class="sn-adv-tr" [class.sn-adv-tr-selected]="isRowSelected(globalIndex)">
+
+                    <!-- Selection Checkbox -->
+                    @if(selectable) {
+                    <td class="sn-adv-td sn-adv-td-checkbox">
+                        <input type="checkbox" [checked]="isRowSelected(globalIndex)"
+                            (change)="toggleRowSelect(globalIndex)" class="sn-adv-checkbox" />
+                    </td>
+                    }
+
+                    <!-- Expand Toggle -->
+                    @if(expandable) {
+                    <td class="sn-adv-td sn-adv-td-expand" (click)="toggleRowExpand(globalIndex)">
+                        <span class="sn-adv-expand-icon" [class.sn-adv-expand-icon-open]="isRowExpanded(globalIndex)">
+                            <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16">
+                                <path fill-rule="evenodd"
+                                    d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </span>
+                    </td>
+                    }
+
+                    <!-- Data Cells -->
+                    @for(col of columns; track col.key) {
+                    <td class="sn-adv-td" [style.text-align]="col.align || 'left'">
+                        {{ row[col.key] }}
+                    </td>
+                    }
+                </tr>
+
+                <!-- Expanded Row Content -->
+                @if(expandable && isRowExpanded(globalIndex)) {
+                <tr class="sn-adv-expanded-row">
+                    <td [attr.colspan]="columns.length + (selectable ? 1 : 0) + (expandable ? 1 : 0)">
+                        <div class="sn-adv-expanded-content">
+                            @if(expandedRowTemplate) {
+                            <ng-container
+                                *ngTemplateOutlet="expandedRowTemplate; context: { $implicit: row, index: globalIndex }"></ng-container>
+                            } @else {
+                            <pre class="sn-adv-expanded-default">{{ row | json }}</pre>
+                            }
+                        </div>
+                    </td>
+                </tr>
+                }
+                }
+
+                <!-- Empty State -->
+                @if(paginatedData.length === 0) {
+                <tr>
+                    <td [attr.colspan]="columns.length + (selectable ? 1 : 0) + (expandable ? 1 : 0)"
+                        class="sn-adv-empty">
+                        No data found.
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Pagination Footer -->
+    @if(totalPages > 1) {
+    <div class="sn-adv-pagination">
+        <span class="sn-adv-page-info">
+            Page {{ currentPage }} of {{ totalPages }}
+        </span>
+        <div class="sn-adv-page-buttons">
+            <button class="sn-adv-page-btn" [disabled]="currentPage === 1" (click)="prevPage()">
+                <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14">
+                    <path fill-rule="evenodd"
+                        d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z"
+                        clip-rule="evenodd" />
+                </svg>
+            </button>
+            @for(p of getVisiblePages(); track p) {
+            <button class="sn-adv-page-btn" [class.sn-adv-page-btn-active]="p === currentPage" (click)="goToPage(p)">{{
+                p }}</button>
+            }
+            <button class="sn-adv-page-btn" [disabled]="currentPage === totalPages" (click)="nextPage()">
+                <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14">
+                    <path fill-rule="evenodd"
+                        d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                        clip-rule="evenodd" />
+                </svg>
+            </button>
+        </div>
+    </div>
+    }
+</div>

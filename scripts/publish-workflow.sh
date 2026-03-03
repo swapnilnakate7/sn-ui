@@ -51,6 +51,7 @@ COMPONENTS=(
     "sn-progress-bar"
     "sn-breadcrumbs"
     "sn-charts"
+    "sn-advanced-datatable"
 )
 
 
