@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.sn-skeleton {
+    @apply block bg-gray-200 overflow-hidden relative z-0;
+}
+
+/* Base Types */
+.sn-skeleton-text {
+    @apply rounded-md h-4;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+
+    &:empty:before {
+        content: "\\00a0";
+    }
+}
+
+.sn-skeleton-circle {
+    @apply rounded-full;
+    /* Usually overridden by inline width/height but provides a default */
+    min-height: 2rem;
+    min-width: 2rem;
+}
+
+.sn-skeleton-rectangle {
+    @apply rounded-md;
+}
+
+/* Animations */
+.sn-skeleton-anim-pulse {
+    @apply animate-pulse;
+}
+
+.sn-skeleton-anim-wave {
+    &::after {
+        @apply absolute top-0 left-0 right-0 bottom-0 z-10;
+        content: "";
+        background: linear-gradient(90deg,
+                transparent,
+                rgba(255, 255, 255, 0.4),
+                transparent);
+        transform: translateX(-100%);
+        animation: skeleton-wave 1.5s infinite linear;
+    }
+}
+
+.sn-skeleton-anim-none {
+    animation: none;
+
+    &::after {
+        content: none;
+    }
+}
+
+@keyframes skeleton-wave {
+    100% {
+        transform: translateX(100%);
+    }
+}

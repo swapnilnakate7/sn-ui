@@ -37,6 +37,9 @@
       "sn-select": [
         "./dist/sn-select"
       ],
+      "sn-skeleton": [
+        "./dist/sn-skeleton"
+      ],
       "sn-table": [
         "./dist/sn-table"
       ],
@@ -67,6 +70,12 @@
     },
     {
       "path": "./projects/sn-avatar/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/sn-skeleton/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/sn-skeleton/tsconfig.spec.json"
     }
   ]
 }

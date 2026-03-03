@@ -45,6 +45,7 @@ COMPONENTS=(
     # "sn-textarea"
     # "sn-toggle"
     "sn-avatar"
+    "sn-skeleton"
 )
 
 
