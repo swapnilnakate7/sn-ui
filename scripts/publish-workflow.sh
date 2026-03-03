@@ -49,6 +49,7 @@ COMPONENTS=(
     "sn-pagination"
     "sn-empty-state"
     "sn-progress-bar"
+    "sn-breadcrumbs"
 )
 
 

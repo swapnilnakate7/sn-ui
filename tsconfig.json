@@ -28,6 +28,9 @@
       "sn-avatar": [
         "./dist/sn-avatar"
       ],
+      "sn-breadcrumbs": [
+        "./dist/sn-breadcrumbs"
+      ],
       "sn-checkbox": [
         "./dist/sn-checkbox"
       ],
@@ -103,6 +106,12 @@
     },
     {
       "path": "./projects/sn-progress-bar/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/sn-breadcrumbs/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/sn-breadcrumbs/tsconfig.spec.json"
     }
   ]
 }
