@@ -48,6 +48,7 @@ COMPONENTS=(
     "sn-skeleton"
     "sn-pagination"
     "sn-empty-state"
+    "sn-progress-bar"
 )
 
 

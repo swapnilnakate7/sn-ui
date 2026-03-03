@@ -687,6 +687,32 @@
           }
         }
       }
+    },
+    "sn-progress-bar": {
+      "projectType": "library",
+      "root": "projects/sn-progress-bar",
+      "sourceRoot": "projects/sn-progress-bar/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/sn-progress-bar/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/sn-progress-bar/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "tsConfig": "projects/sn-progress-bar/tsconfig.spec.json"
+          }
+        }
+      }
     }
   },
   "cli": {

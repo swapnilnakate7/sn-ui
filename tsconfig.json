@@ -37,6 +37,9 @@
       "sn-pagination": [
         "./dist/sn-pagination"
       ],
+      "sn-progress-bar": [
+        "./dist/sn-progress-bar"
+      ],
       "sn-radio": [
         "./dist/sn-radio"
       ],
@@ -94,6 +97,12 @@
     },
     {
       "path": "./projects/sn-empty-state/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/sn-progress-bar/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/sn-progress-bar/tsconfig.spec.json"
     }
   ]
 }

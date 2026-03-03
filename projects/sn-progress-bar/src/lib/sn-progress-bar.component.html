@@ -1,0 +1,23 @@
+<div class="sn-progress-container" [ngClass]="['sn-progress-' + size, 'sn-progress-' + theme]">
+
+    <div class="flex justify-between items-center mb-1" *ngIf="showLabel && labelText">
+        <span class="sn-progress-label-text">{{ labelText }}</span>
+        <span class="sn-progress-label-percent">{{ percent }}%</span>
+    </div>
+
+    <div class="sn-progress-track">
+        <div class="sn-progress-fill" [ngClass]="{
+        'sn-progress-indeterminate': indeterminate,
+        'sn-progress-determinate': !indeterminate
+      }" [style.width.%]="indeterminate ? 100 : percent" role="progressbar"
+            [attr.aria-valuenow]="indeterminate ? null : value" [attr.aria-valuemin]="0" [attr.aria-valuemax]="max">
+            <span class="sn-progress-inner-label" *ngIf="showLabel && !labelText && size === 'lg' && !indeterminate">
+                {{ percent }}%
+            </span>
+        </div>
+    </div>
+
+    <div class="mt-1 text-right" *ngIf="showLabel && !labelText && size !== 'lg'">
+        <span class="sn-progress-label-percent">{{ percent }}%</span>
+    </div>
+</div>
