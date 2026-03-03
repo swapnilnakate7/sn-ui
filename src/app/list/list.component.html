@@ -286,6 +286,63 @@
   </div>
   }
 
+  @if(_display === 'sn-progress-bar') {
+  <div class="flex flex-col gap-6 p-4">
+    <sn-progress-bar [value]="45" size="md" theme="primary" [showLabel]="true"></sn-progress-bar>
+    <sn-progress-bar [value]="80" size="lg" theme="success" [showLabel]="true"
+      labelText="Uploading..."></sn-progress-bar>
+    <sn-progress-bar [indeterminate]="true" size="md" theme="warn"></sn-progress-bar>
+  </div>
+  }
+
+  @if(_display === 'sn-empty-state') {
+  <div class="p-4">
+    <sn-empty-state title="No items found"
+      description="You haven't added any items to this list yet. Get started by adding a new one."
+      actionText="Add Item">
+    </sn-empty-state>
+  </div>
+  }
+
+  @if(_display === 'sn-breadcrumbs') {
+  <div class="p-4">
+    <sn-breadcrumbs [items]="[
+      { label: 'Home', path: '#' },
+      { label: 'Library', path: '#' },
+      { label: 'Data', path: '#', disabled: true },
+      { label: 'Current Page' }
+    ]"></sn-breadcrumbs>
+  </div>
+  }
+
+  @if(_display === 'sn-avatar') {
+  <div class="flex gap-4 items-center p-4">
+    <sn-avatar initials="JD" size="sm" shape="circle" bgColor="#3b82f6" textColor="#fff"></sn-avatar>
+    <sn-avatar src="https://i.pravatar.cc/150?img=68" size="md" shape="rounded"></sn-avatar>
+    <sn-avatar src="https://i.pravatar.cc/150?img=33" size="lg" shape="square"></sn-avatar>
+  </div>
+  }
+
+  @if(_display === 'sn-skeleton') {
+  <div class="flex flex-col gap-4 p-4">
+    <div class="flex items-center gap-4">
+      <sn-skeleton type="circle" width="3rem" height="3rem" animation="pulse"></sn-skeleton>
+      <div class="w-full flex-col flex gap-2">
+        <sn-skeleton type="text" width="60%" height="1rem" animation="pulse"></sn-skeleton>
+        <sn-skeleton type="text" width="40%" height="1rem" animation="pulse"></sn-skeleton>
+      </div>
+    </div>
+    <sn-skeleton type="rectangle" width="100%" height="4rem" animation="wave"></sn-skeleton>
+  </div>
+  }
+
+  @if(_display === 'sn-pagination') {
+  <div class="p-4">
+    <sn-pagination [totalItems]="120" [pageSize]="10" [currentPage]="3" size="md"></sn-pagination>
+  </div>
+  }
+
+
   @if(_display === 'checkbox'){
   <div class="component-section border-b-2 border-gray-100 p-6">
     <h2 class="text-2xl mb-4">Checkbox</h2>

@@ -17,6 +17,12 @@ import { SelectOption, SnDropdownXComponent } from "@libs/sn-dropdown-x/src/lib/
 import { SnTab, SnTabsXComponent } from "@libs/sn-tabs-x/src/lib/sn-tabs-x.component";
 import { SnSpinnerXComponent } from "@libs/sn-spinner-x/src/lib/sn-spinner-x.component";
 import { TooltipDirective } from "@libs/sn-tooltip/src/public-api";
+import { SnAvatarComponent } from "@libs/sn-avatar/src/public-api";
+import { SnSkeletonComponent } from "@libs/sn-skeleton/src/public-api";
+import { SnPaginationComponent } from "@libs/sn-pagination/src/public-api";
+import { SnEmptyStateComponent } from "@libs/sn-empty-state/src/public-api";
+import { SnProgressBarComponent } from "@libs/sn-progress-bar/src/public-api";
+import { SnBreadcrumbsComponent } from "@libs/sn-breadcrumbs/src/public-api";
 
 @Component({
   selector: 'sn-list',
@@ -24,14 +30,16 @@ import { TooltipDirective } from "@libs/sn-tooltip/src/public-api";
   imports: [CommonModule, FormsModule, SnButtonComponent, SnCardComponent, SnInputComponent,
     SnBadgeComponent, SnAlertComponent, SnSpinnerXComponent, SnModalComponent,
     SnTabsXComponent, SnToggleComponent, SnCheckboxXComponent, SnRadioComponent,
-    SnTextareaComponent, SnDropdownXComponent, SnDatatableComponent, TooltipDirective],
+    SnTextareaComponent, SnDropdownXComponent, SnDatatableComponent, TooltipDirective,
+    SnAvatarComponent, SnSkeletonComponent, SnPaginationComponent, SnEmptyStateComponent,
+    SnProgressBarComponent, SnBreadcrumbsComponent],
   templateUrl: './list.component.html',
   styleUrl: './list.component.scss',
 })
 export class ListComponent implements OnInit {
   private route = inject(ActivatedRoute);
 
-  list = ['button', 'card', 'input', 'badge', 'alert', 'spinner', 'modal', 'tabs', 'toggle', 'checkbox', 'radio', 'textarea', 'dropdown', 'datatable'];
+  list = ['button', 'card', 'input', 'badge', 'alert', 'spinner', 'modal', 'tabs', 'toggle', 'checkbox', 'radio', 'textarea', 'dropdown', 'datatable', 'sn-progress-bar', 'sn-empty-state', 'sn-breadcrumbs', 'sn-avatar', 'sn-skeleton', 'sn-pagination'];
   @Input('componentName') _display = '';
 
   ngOnInit() {
@@ -45,6 +53,10 @@ export class ListComponent implements OnInit {
 
   display(componentName: string) {
     this._display = componentName;
+  }
+
+  click() {
+    console.log('Action clicked');
   }
   sayHello(evt: any) {
     console.log('Hello', evt);
