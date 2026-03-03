@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/angular';
-import { SnPaginationComponent } from './sn-pagination-x.component';
+import { SnPaginationComponent } from './sn-pagination.component';
 import { moduleMetadata } from '@storybook/angular';
 import { CommonModule } from '@angular/common';
 
