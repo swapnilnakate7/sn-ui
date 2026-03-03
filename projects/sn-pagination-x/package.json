@@ -1,5 +1,5 @@
 {
-  "name": "sn-pagination",
+  "name": "sn-pagination-x",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^21.2.0",

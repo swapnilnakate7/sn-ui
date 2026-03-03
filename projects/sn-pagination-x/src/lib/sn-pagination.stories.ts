@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/angular';
-import { SnPaginationComponent } from './sn-pagination.component';
+import { SnPaginationComponent } from './sn-pagination-x.component';
 import { moduleMetadata } from '@storybook/angular';
 import { CommonModule } from '@angular/common';
 
@@ -34,14 +34,14 @@ const meta: Meta<SnPaginationComponent> = {
     render: (args: any) => ({
         props: args,
         template: `
-      <sn-pagination 
+      <sn-pagination-x 
         [totalItems]="totalItems" 
         [pageSize]="pageSize" 
         [currentPage]="currentPage" 
         [size]="size" 
         [disabled]="disabled"
         (pageChange)="pageChange($event)">
-      </sn-pagination>
+      </sn-pagination-x>
     `,
     }),
 };

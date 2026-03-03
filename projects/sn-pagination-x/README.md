@@ -1,28 +1,28 @@
-# sn-pagination
+# sn-pagination-x
 
 A clean pagination component for Angular applications with configurable page sizes and navigation.
 
 ## Installation
 
 ```bash
-npm i sn-pagination
+npm i sn-pagination-x
 ```
 
 ## Usage
 
 ```typescript
-import { ... } from 'sn-pagination';
+import { ... } from 'sn-pagination-x';
 
 @Component({
   imports: [SnPaginationComponent],
   template: `
-    <sn-pagination 
+    <sn-pagination-x 
       [totalItems]="120" 
       [pageSize]="10" 
       [currentPage]="1" 
       size="md"
       (pageChange)="onPageChange($event)">
-    </sn-pagination>
+    </sn-pagination-x>
   `
 })
 ```

@@ -19,7 +19,7 @@ import { SnSpinnerXComponent } from "@libs/sn-spinner-x/src/lib/sn-spinner-x.com
 import { TooltipDirective } from "@libs/sn-tooltip/src/public-api";
 import { SnAvatarComponent } from "@libs/sn-avatar/src/public-api";
 import { SnSkeletonComponent } from "@libs/sn-skeleton/src/public-api";
-import { SnPaginationComponent } from "@libs/sn-pagination/src/public-api";
+import { SnPaginationComponent } from "@libs/sn-pagination-x/src/public-api";
 import { SnEmptyStateComponent } from "@libs/sn-empty-state/src/public-api";
 import { SnProgressBarComponent } from "@libs/sn-progress-bar/src/public-api";
 import { SnBreadcrumbsComponent } from "@libs/sn-breadcrumbs/src/public-api";
@@ -39,7 +39,7 @@ import { SnBreadcrumbsComponent } from "@libs/sn-breadcrumbs/src/public-api";
 export class ListComponent implements OnInit {
   private route = inject(ActivatedRoute);
 
-  list = ['button', 'card', 'input', 'badge', 'alert', 'spinner', 'modal', 'tabs', 'toggle', 'checkbox', 'radio', 'textarea', 'dropdown', 'datatable', 'sn-progress-bar', 'sn-empty-state', 'sn-breadcrumbs', 'sn-avatar', 'sn-skeleton', 'sn-pagination'];
+  list = ['button', 'card', 'input', 'badge', 'alert', 'spinner', 'modal', 'tabs', 'toggle', 'checkbox', 'radio', 'textarea', 'dropdown', 'datatable', 'sn-progress-bar', 'sn-empty-state', 'sn-breadcrumbs', 'sn-avatar', 'sn-skeleton', 'sn-pagination-x'];
   @Input('componentName') _display = '';
 
   ngOnInit() {

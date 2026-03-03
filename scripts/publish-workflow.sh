@@ -46,7 +46,7 @@ COMPONENTS=(
     # "sn-toggle"
     # "sn-avatar"
     # "sn-skeleton"
-   # "sn-pagination" -- conflict with rc-pagination
+    "sn-pagination-x" 
     "sn-empty-state"
     "sn-progress-bar"
     "sn-breadcrumbs"

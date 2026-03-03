@@ -43,7 +43,7 @@
       "sn-empty-state": [
         "./dist/sn-empty-state"
       ],
-      "sn-pagination": [
+      "sn-pagination-x": [
         "./dist/sn-pagination"
       ],
       "sn-progress-bar": [
@@ -96,10 +96,10 @@
       "path": "./projects/sn-skeleton/tsconfig.spec.json"
     },
     {
-      "path": "./projects/sn-pagination/tsconfig.lib.json"
+      "path": "./projects/sn-pagination-x/tsconfig.lib.json"
     },
     {
-      "path": "./projects/sn-pagination/tsconfig.spec.json"
+      "path": "./projects/sn-pagination-x/tsconfig.spec.json"
     },
     {
       "path": "./projects/sn-empty-state/tsconfig.lib.json"

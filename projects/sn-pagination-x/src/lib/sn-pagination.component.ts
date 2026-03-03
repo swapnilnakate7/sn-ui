@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 export type SnPaginationSize = 'sm' | 'md' | 'lg';
 
 @Component({
-  selector: 'sn-pagination',
+  selector: 'sn-pagination-x',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './sn-pagination.component.html',
