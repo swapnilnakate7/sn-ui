@@ -1,189 +1,359 @@
-<div class="flex h-screen bg-gray-50 font-sans text-gray-900 overflow-hidden">
+<div
+  class="flex h-screen bg-slate-50 font-sans text-slate-800 overflow-hidden font-inter selection:bg-indigo-500/30 selection:text-indigo-900">
 
   <!-- Sidebar -->
-  <aside class="w-72 bg-white border-r border-gray-200 flex flex-col shadow-sm z-10 transition-all duration-300">
-    <!-- Header -->
-    <div class="h-16 flex items-center px-6 border-b border-gray-200 bg-white">
+  <aside
+    class="relative z-20 flex flex-col transition-all duration-300 ease-spring bg-white/80 backdrop-blur-xl border-r border-slate-200/60 shadow-[4px_0_24px_-12px_rgba(0,0,0,0.1)] shrink-0"
+    [class.w-72]="isSidebarOpen" [class.w-20]="!isSidebarOpen" [class.translate-x-0]="true">
+    <!-- Header Logo -->
+    <div class="h-20 flex items-center px-6 border-b border-slate-200/50">
       <div
-        class="w-8 h-8 rounded bg-gradient-to-br from-indigo-600 to-violet-500 flex items-center justify-center mr-3 shadow-md">
-        <span class="text-white font-bold text-lg leading-none">S</span>
+        class="relative flex items-center justify-center shrink-0 w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-600 shadow-lg shadow-indigo-500/30 overflow-hidden group cursor-pointer"
+        (click)="toggleSidebar()">
+        <!-- Glow effect -->
+        <div class="absolute inset-0 bg-white/20 blur-md group-hover:bg-white/40 transition-all duration-300"></div>
+        <span class="relative text-white font-bold text-xl drop-shadow-sm font-outfit">S</span>
       </div>
-      <div>
+
+      <div class="ml-4 overflow-hidden transition-all duration-300 ease-out flex flex-col"
+        [class.opacity-100]="isSidebarOpen" [class.opacity-0]="!isSidebarOpen" [class.w-auto]="isSidebarOpen"
+        [class.w-0]="!isSidebarOpen">
         <h1
-          class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-violet-500 tracking-tight">
+          class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-violet-600 tracking-tight leading-none">
           sn-ui</h1>
+        <span class="text-[10px] font-semibold text-slate-400 uppercase tracking-widest mt-1">Design System</span>
       </div>
     </div>
 
     <!-- Navigation -->
-    <div class="flex-1 overflow-y-auto py-6 px-4 space-y-8 scrollbar-hide">
+    <div
+      class="flex-1 overflow-y-auto py-6 px-4 space-y-8 scrollbar-thin scrollbar-thumb-slate-200 scrollbar-track-transparent">
 
-      <!-- Core library info -->
-      <div class="px-2">
-        <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Library</h3>
-        <div class="space-y-1">
-          <a href="#"
-            class="flex items-center px-3 py-2 text-sm font-medium rounded-md bg-indigo-50 text-indigo-700 transition-colors">
-            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z">
-              </path>
-            </svg>
-            Components
-          </a>
-          <a href="#"
-            class="flex items-center px-3 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-100 hover:text-gray-900 transition-colors">
-            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <!-- General Links -->
+      <div class="space-y-1">
+        <a href="#"
+          class="flex items-center px-3 py-2.5 text-sm font-medium rounded-xl text-slate-600 hover:bg-slate-100/80 hover:text-slate-900 transition-all group overflow-hidden"
+          title="Getting Started">
+          <div class="w-6 flex justify-center shrink-0">
+            <svg
+              class="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-transform duration-300"
+              fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z">
               </path>
             </svg>
-            Getting Started
-          </a>
-        </div>
+          </div>
+          <span class="ml-3 truncate whitespace-nowrap transition-opacity duration-200"
+            [class.opacity-100]="isSidebarOpen" [class.opacity-0]="!isSidebarOpen">Getting Started</span>
+        </a>
       </div>
 
-      <!-- Components list -->
-      <div class="px-2">
-        <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3 flex items-center justify-between">
-          Components
-          <span class="bg-gray-100 text-gray-600 py-0.5 px-2 rounded-full text-[10px]">14</span>
+      <!-- Categories & Components -->
+      @if (categories.length > 0) {
+      @for (category of categories; track category) {
+      <div class="space-y-1">
+
+        <h3
+          class="text-[11px] font-bold text-slate-400 uppercase tracking-widest px-3 mb-3 transition-opacity duration-300 whitespace-nowrap"
+          [class.opacity-100]="isSidebarOpen" [class.opacity-0]="!isSidebarOpen">
+          {{category}}
         </h3>
-        <div class="space-y-1">
-          <!-- Dynamically generated or manually listed -->
-          <button (click)="setComponentName('alert')" [class.bg-indigo-50]="componentNameToDisplay === 'alert'"
-            [class.text-indigo-700]="componentNameToDisplay === 'alert'"
-            class="w-full flex items-center px-3 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-100 hover:text-gray-900 transition-colors text-left">Alert</button>
-          <button (click)="setComponentName('badge')" [class.bg-indigo-50]="componentNameToDisplay === 'badge'"
-            [class.text-indigo-700]="componentNameToDisplay === 'badge'"
-            class="w-full flex items-center px-3 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-100 hover:text-gray-900 transition-colors text-left">Badge</button>
-          <button (click)="setComponentName('button')" [class.bg-indigo-50]="componentNameToDisplay === 'button'"
-            [class.text-indigo-700]="componentNameToDisplay === 'button'"
-            class="w-full flex items-center px-3 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-100 hover:text-gray-900 transition-colors text-left">Button</button>
-          <button (click)="setComponentName('card')" [class.bg-indigo-50]="componentNameToDisplay === 'card'"
-            [class.text-indigo-700]="componentNameToDisplay === 'card'"
-            class="w-full flex items-center px-3 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-100 hover:text-gray-900 transition-colors text-left">Card</button>
-          <button (click)="setComponentName('checkbox')" [class.bg-indigo-50]="componentNameToDisplay === 'checkbox'"
-            [class.text-indigo-700]="componentNameToDisplay === 'checkbox'"
-            class="w-full flex items-center px-3 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-100 hover:text-gray-900 transition-colors text-left">Checkbox</button>
-          <button (click)="setComponentName('datatable')" [class.bg-indigo-50]="componentNameToDisplay === 'datatable'"
-            [class.text-indigo-700]="componentNameToDisplay === 'datatable'"
-            class="w-full flex items-center px-3 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-100 hover:text-gray-900 transition-colors text-left">Data
-            Table</button>
-          <button (click)="setComponentName('dropdown')" [class.bg-indigo-50]="componentNameToDisplay === 'dropdown'"
-            [class.text-indigo-700]="componentNameToDisplay === 'dropdown'"
-            class="w-full flex items-center px-3 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-100 hover:text-gray-900 transition-colors text-left">Dropdown</button>
-          <button (click)="setComponentName('input')" [class.bg-indigo-50]="componentNameToDisplay === 'input'"
-            [class.text-indigo-700]="componentNameToDisplay === 'input'"
-            class="w-full flex items-center px-3 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-100 hover:text-gray-900 transition-colors text-left">Input</button>
-          <button (click)="setComponentName('modal')" [class.bg-indigo-50]="componentNameToDisplay === 'modal'"
-            [class.text-indigo-700]="componentNameToDisplay === 'modal'"
-            class="w-full flex items-center px-3 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-100 hover:text-gray-900 transition-colors text-left">Modal</button>
-          <button (click)="setComponentName('radio')" [class.bg-indigo-50]="componentNameToDisplay === 'radio'"
-            [class.text-indigo-700]="componentNameToDisplay === 'radio'"
-            class="w-full flex items-center px-3 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-100 hover:text-gray-900 transition-colors text-left">Radio</button>
-          <button (click)="setComponentName('spinner')" [class.bg-indigo-50]="componentNameToDisplay === 'spinner'"
-            [class.text-indigo-700]="componentNameToDisplay === 'spinner'"
-            class="w-full flex items-center px-3 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-100 hover:text-gray-900 transition-colors text-left">Spinner</button>
-          <button (click)="setComponentName('tabs')" [class.bg-indigo-50]="componentNameToDisplay === 'tabs'"
-            [class.text-indigo-700]="componentNameToDisplay === 'tabs'"
-            class="w-full flex items-center px-3 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-100 hover:text-gray-900 transition-colors text-left">Tabs</button>
-          <button (click)="setComponentName('textarea')" [class.bg-indigo-50]="componentNameToDisplay === 'textarea'"
-            [class.text-indigo-700]="componentNameToDisplay === 'textarea'"
-            class="w-full flex items-center px-3 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-100 hover:text-gray-900 transition-colors text-left">Textarea</button>
-          <button (click)="setComponentName('toggle')" [class.bg-indigo-50]="componentNameToDisplay === 'toggle'"
-            [class.text-indigo-700]="componentNameToDisplay === 'toggle'"
-            class="w-full flex items-center px-3 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-100 hover:text-gray-900 transition-colors text-left">Toggle</button>
-          <button (click)="setComponentName('tooltip')" [class.bg-indigo-50]="componentNameToDisplay === 'tooltip'"
-            [class.text-indigo-700]="componentNameToDisplay === 'tooltip'"
-            class="w-full flex items-center px-3 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-100 hover:text-gray-900 transition-colors text-left">
-            Tooltip
-            <span
-              class="ml-auto bg-indigo-100 text-indigo-700 py-0.5 px-2 rounded-full text-[10px] font-bold">NEW</span>
+
+        <div class="space-y-0.5 relative">
+          @for (comp of getComponentsByCategory(category); track comp.name) {
+          <button (click)="setComponentName(comp.name)"
+            class="w-full flex items-center px-3 py-2 text-sm font-medium rounded-xl transition-all duration-200 text-left group overflow-hidden relative"
+            [ngClass]="{
+                    'bg-indigo-50/80 text-indigo-700 shadow-sm shadow-indigo-100': componentNameToDisplay === comp.name,
+                    'text-slate-600 hover:bg-slate-100 hover:text-slate-900': componentNameToDisplay !== comp.name,
+                    'justify-center': !isSidebarOpen
+                  }" [title]="!isSidebarOpen ? comp.label : ''">
+            <!-- Active Indicator -->
+            <div
+              class="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-0 bg-indigo-500 rounded-r-full transition-all duration-300 ease-out"
+              [class.h-5]="componentNameToDisplay === comp.name"></div>
+
+            @if (!isSidebarOpen) {
+            <div class="w-6 flex justify-center shrink-0">
+              <span class="text-xs font-bold" [class.text-indigo-600]="componentNameToDisplay === comp.name">{{
+                comp.label.charAt(0) }}</span>
+            </div>
+            }
+
+            <div class="flex items-center w-full transition-opacity duration-200" [class.opacity-100]="isSidebarOpen"
+              [class.opacity-0]="!isSidebarOpen" [class.absolute]="!isSidebarOpen" [class.invisible]="!isSidebarOpen">
+              <span class="truncate">{{ comp.label }}</span>
+              @if (comp.isNew) {
+              <span
+                class="ml-auto bg-gradient-to-r from-amber-200 to-amber-100 text-amber-800 border border-amber-300/50 py-0 px-2 rounded-full text-[9px] font-bold tracking-wider shadow-sm flex-shrink-0">NEW</span>
+              }
+            </div>
           </button>
+          }
         </div>
       </div>
-
+      }
+      }
     </div>
 
-    <!-- User / Profile / Footer section -->
-    <div class="p-4 border-t border-gray-200">
+    <!-- Sidebar Footer -->
+    <div class="p-4 border-t border-slate-200/50 bg-slate-50/50 mt-auto">
       <a href="https://github.com/swapnilnakate7/sn-ui" target="_blank"
-        class="flex items-center text-sm font-medium text-gray-600 hover:text-gray-900">
-        <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 24 24">
+        class="flex items-center p-2 rounded-xl text-sm font-medium text-slate-500 hover:text-slate-800 hover:bg-slate-200/50 transition-all group overflow-hidden relative justify-center"
+        [class.justify-start]="isSidebarOpen">
+        <svg class="w-5 h-5 shrink-0 group-hover:scale-110 transition-transform duration-300" fill="currentColor"
+          viewBox="0 0 24 24">
           <path fill-rule="evenodd"
             d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
             clip-rule="evenodd"></path>
         </svg>
-        GitHub Repository
+        <div class="ml-3 transition-opacity duration-200 whitespace-nowrap" [class.opacity-100]="isSidebarOpen"
+          [class.opacity-0]="!isSidebarOpen" [class.absolute]="!isSidebarOpen" [class.invisible]="!isSidebarOpen">
+          GitHub Repo
+        </div>
       </a>
     </div>
   </aside>
 
-  <!-- Main content area -->
-  <main class="flex-1 overflow-y-auto bg-gray-50 flex flex-col">
-    <!-- Topbar -->
-    <header
-      class="h-16 bg-white/80 backdrop-blur-md border-b border-gray-200 flex items-center justify-between px-8 sticky top-0 z-10 transition-all duration-300">
-      <div class="flex items-center">
-        <h2 class="text-xl font-bold text-gray-800 capitalize tracking-tight">{{ componentNameToDisplay }} Component
-        </h2>
-      </div>
-      <div class="flex items-center space-x-4">
-        <div class="text-sm text-gray-500 bg-gray-100 py-1.5 px-3 rounded-full font-medium border border-gray-200">
-          Angular 21
-        </div>
-      </div>
-    </header>
+  <!-- Main Content Area -->
+  <main
+    class="flex-1 overflow-y-auto overflow-x-hidden relative flex flex-col bg-slate-50 scrollbar-thin scrollbar-thumb-slate-200 scrollbar-track-transparent">
 
-    <!-- Content -->
-    <div class="flex-1 p-8 max-w-7xl mx-auto w-full">
-      <!-- Component Demonstration Container -->
+    <!-- Background Accents -->
+    <div
+      class="absolute top-0 inset-x-0 h-[400px] bg-gradient-to-b from-indigo-50/80 via-white to-transparent pointer-events-none -z-10">
+    </div>
+    <div
+      class="absolute -top-40 -right-40 w-[600px] h-[600px] bg-indigo-500/5 rounded-full blur-3xl pointer-events-none -z-10">
+    </div>
+    <div
+      class="absolute top-40 -left-20 w-[400px] h-[400px] bg-violet-500/5 rounded-full blur-3xl pointer-events-none -z-10">
+    </div>
+
+    <!-- Top Navigation Container -->
+    <div class="sticky top-0 z-10 p-4 pb-0">
+      <header
+        class="h-16 bg-white/70 backdrop-blur-xl border border-white/40 shadow-[0_8px_32px_-12px_rgba(0,0,0,0.08)] rounded-2xl flex items-center justify-between px-6 transition-all duration-300 hover:bg-white/90">
+
+        <!-- Mobile Toggle & Breadcrumbs -->
+        <div class="flex items-center space-x-4">
+          <button (click)="toggleSidebar()"
+            class="lg:hidden p-2 rounded-lg text-slate-500 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+
+          <div class="hidden sm:flex items-center text-sm font-medium text-slate-500 space-x-2">
+            <span>Components</span>
+            <svg class="w-4 h-4 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+            <span class="text-indigo-600 font-semibold capitalize bg-indigo-50 px-2.5 py-1 rounded-md">{{
+              componentNameToDisplay }}</span>
+          </div>
+        </div>
+
+        <!-- Right Actions -->
+        <div class="flex items-center space-x-4">
+          <!-- Search Mock -->
+          <div class="hidden md:flex relative group cursor-text">
+            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-500 transition-colors" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+              </svg>
+            </div>
+            <input type="text" readonly placeholder="Quick search..."
+              class="w-48 sm:w-64 pl-9 pr-10 py-2 border border-slate-200 hover:border-indigo-300 rounded-xl bg-slate-50/50 hover:bg-white text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all cursor-text shadow-sm" />
+            <div class="absolute inset-y-0 right-0 pr-2 flex items-center">
+              <kbd
+                class="hidden sm:inline-block border border-slate-200 rounded px-2 py-0.5 text-[10px] font-mono text-slate-400 font-bold tracking-widest bg-white">Ctrl
+                K</kbd>
+            </div>
+          </div>
+
+          <div class="h-6 w-px bg-slate-200 mx-1 hidden sm:block"></div>
+
+          <!-- Version Badge -->
+          <div
+            class="flex items-center bg-gradient-to-r from-slate-100 to-slate-50 border border-slate-200 py-1.5 px-3 rounded-xl shadow-sm text-xs font-bold text-slate-600 hover:shadow-md transition-shadow cursor-default">
+            v21.0.0
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <!-- Content Area -->
+    <div class="flex-1 p-6 sm:p-8 max-w-[1400px] mx-auto w-full mb-12 relative animate-fade-in-up">
+
+      <!-- Component Header -->
+      <div class="mb-10 mt-4 px-2">
+        <h2 class="text-4xl sm:text-5xl font-extrabold text-slate-900 capitalize tracking-tight mb-3 font-outfit">{{
+          componentNameToDisplay }}</h2>
+        <p class="text-lg text-slate-500 max-w-2xl font-light leading-relaxed">
+          Interactive demonstration and API documentation for the <span
+            class="font-semibold text-slate-700 capitalize">sn-{{ componentNameToDisplay }}</span> component. Designed
+          for accessibility and customization.
+        </p>
+      </div>
+
+      <!-- Demo Container with Premium Look -->
       <div
-        class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden mb-8 transition-shadow hover:shadow-md duration-300">
-        <div class="bg-gray-50/50 border-b border-gray-100 px-6 py-4 flex items-center justify-between">
-          <h3 class="text-sm font-semibold text-gray-700 flex items-center">
-            <span class="w-2 h-2 rounded-full bg-green-500 mr-2"></span>
-            Interactive Demo
-          </h3>
+        class="bg-white/80 backdrop-blur-xl rounded-[2rem] shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] border border-white relative mb-12 ring-1 ring-slate-200/50">
+
+        <!-- Interactive Gradient border top effect -->
+        <div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
+
+        <!-- Demo Header -->
+        <div
+          class="bg-slate-50/80 border-b border-slate-200/60 px-6 sm:px-8 py-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div class="flex items-center space-x-3">
+            <div class="flex space-x-1.5">
+              <div class="w-3 h-3 rounded-full bg-rose-400 shadow-sm"></div>
+              <div class="w-3 h-3 rounded-full bg-amber-400 shadow-sm"></div>
+              <div class="w-3 h-3 rounded-full bg-emerald-400 shadow-sm"></div>
+            </div>
+            <div class="h-4 w-px bg-slate-300 mx-2"></div>
+            <h3 class="text-sm font-semibold text-slate-700 font-mono tracking-tight flex items-center">
+              <svg class="w-4 h-4 mr-1.5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+              </svg>
+              Live Preview
+            </h3>
+          </div>
+
+          <div class="flex bg-slate-100 p-1 rounded-xl shadow-inner border border-slate-200/60">
+            <button (click)="setViewMode('preview')"
+              [ngClass]="viewMode === 'preview' ? 'bg-white text-indigo-700 shadow-sm' : 'text-slate-500 hover:text-slate-800 hover:bg-slate-50'"
+              class="px-4 py-1.5 text-xs font-bold rounded-lg transition-all focus:outline-none ring-1 ring-slate-200/60">Preview</button>
+            <button (click)="setViewMode('code')"
+              [ngClass]="viewMode === 'code' ? 'bg-white text-indigo-700 shadow-sm' : 'text-slate-500 hover:text-slate-800 hover:bg-slate-50'"
+              class="px-4 py-1.5 text-xs font-bold rounded-lg transition-all focus:outline-none">Code</button>
+          </div>
         </div>
 
-        <div class="p-8 md:p-12 lg:p-16 flex items-center justify-center min-h-[300px] bg-grid-slate-100">
-          <!-- Render the appropriate component or the generic list component wrapper -->
-          <sn-list [componentName]="componentNameToDisplay"></sn-list>
+        <!-- Main Area (Preview or Code) -->
+        <div class="relative p-8 md:p-16 flex items-center justify-center min-h-[400px] bg-slate-50/30">
+          <div class="absolute inset-0 opacity-[0.03] pointer-events-none"
+            style="background-image: radial-gradient(#000 1px, transparent 1px); background-size: 24px 24px;"></div>
+
+          @if (viewMode === 'preview') {
+          <div
+            class="relative z-10 w-full max-w-4xl bg-white p-8 rounded-2xl shadow-xl shadow-slate-200/50 border border-slate-100 transition-transform duration-500 hover:scale-[1.01]">
+            <router-outlet></router-outlet>
+          </div>
+          } @else if (viewMode === 'code') {
+          <div
+            class="relative z-10 w-full max-w-4xl bg-slate-900 p-8 rounded-2xl shadow-xl border border-slate-800 text-slate-300 font-mono text-sm overflow-x-auto">
+            <pre><code><span class="text-pink-400">import</span> &#123; <span class="text-blue-300">Sn{{ componentNameToDisplay | titlecase }}Module</span> &#125; <span class="text-pink-400">from</span> <span class="text-green-300">'sn-{{ componentNameToDisplay }}'</span>;
+
+<span class="text-slate-500">// Example template usage</span>
+&lt;<span class="text-blue-400">sn-{{ componentNameToDisplay }}</span>&gt;
+  Content here...
+&lt;/<span class="text-blue-400">sn-{{ componentNameToDisplay }}</span>&gt;</code></pre>
+          </div>
+          }
         </div>
       </div>
 
-      <!-- Documentation Area (Stub for now) -->
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <div class="lg:col-span-2 space-y-8">
-          <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-            <h3 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">Usage</h3>
-            <div class="bg-gray-900 rounded-lg p-4 font-mono text-sm text-gray-300 leading-relaxed overflow-x-auto">
-              <span class="text-pink-400">import</span> &#123; <span class="text-blue-300">Sn{{ componentNameToDisplay |
-                titlecase }}Module</span> &#125; <span class="text-pink-400">from</span> <span
-                class="text-green-300">'sn-{{ componentNameToDisplay }}'</span>;
-              <br><br>
-              <span class="text-gray-500">// Example template usage</span><br>
-              &lt;<span class="text-blue-400">sn-{{ componentNameToDisplay }}</span>&gt;<br>
-              &nbsp;&nbsp;Content here...<br>
-              &lt;/<span class="text-blue-400">sn-{{ componentNameToDisplay }}</span>&gt;
+      <!-- Configuration & Integration Grid -->
+      <div class="grid grid-cols-1 xl:grid-cols-3 gap-8 pb-10">
+        <!-- Usage Block (2/3 width) -->
+        <div class="xl:col-span-2 flex flex-col h-full space-y-6">
+          <div
+            class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm relative overflow-hidden flex-1 group hover:border-indigo-200 hover:shadow-md transition-all duration-300">
+            <!-- Decorative bg -->
+            <div
+              class="absolute -right-20 -top-20 w-64 h-64 bg-slate-50 rounded-full mix-blend-multiply filter blur-3xl opacity-70 group-hover:bg-indigo-50 transition-colors duration-500 pointer-events-none">
+            </div>
+
+            <div class="flex items-center mb-6">
+              <div class="p-2.5 bg-indigo-50 text-indigo-600 rounded-xl mr-4 shadow-sm border border-indigo-100">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-slate-800 tracking-tight">Installation & Usage</h3>
+            </div>
+
+            <div
+              class="bg-slate-900 rounded-2xl p-5 font-mono text-sm leading-relaxed overflow-x-auto shadow-inner border border-slate-800 relative group/code">
+
+              <!-- Copy button mock -->
+              <button
+                class="absolute top-4 right-4 p-2 bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white rounded-lg transition-colors border border-slate-700 opacity-0 group-hover/code:opacity-100">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z">
+                  </path>
+                </svg>
+              </button>
+
+              <div class="flex text-slate-400 mb-2 select-none border-b border-slate-800 pb-2">
+                <div
+                  class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-md shadow-sm mr-2 cursor-pointer font-bold">
+                  TypeScript</div>
+                <div
+                  class="px-3 py-1 bg-transparent hover:bg-slate-800 hover:text-slate-300 text-xs rounded-md cursor-pointer transition-colors">
+                  HTML</div>
+              </div>
+
+              <div class="mt-4">
+                <span class="text-pink-400 font-semibold">import</span> <span class="text-slate-100">&#123;</span> <span
+                  class="text-blue-300 font-semibold">Sn{{ componentNameToDisplay | titlecase }}Module</span> <span
+                  class="text-slate-100">&#125;</span> <span class="text-pink-400 font-semibold">from</span> <span
+                  class="text-emerald-300">"sn-{{ componentNameToDisplay }}"</span><span class="text-slate-400">;</span>
+                <br><br>
+                <span class="text-slate-500 italic">@NgModule</span><span class="text-slate-100">(&#123;</span><br>
+                &nbsp;&nbsp;<span class="text-orange-300">imports:</span> <span class="text-slate-100">[</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;...<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-blue-300 font-bold">Sn{{ componentNameToDisplay | titlecase
+                  }}Module</span><br>
+                &nbsp;&nbsp;<span class="text-slate-100">]</span><br>
+                <span class="text-slate-100">&#125;)</span><br>
+                <span class="text-pink-400 font-semibold">export class</span> <span
+                  class="text-yellow-200">AppModule</span> <span class="text-slate-100">&#123; &#125;</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="space-y-6">
+        <!-- Resources & Pro Block (1/3 width) -->
+        <div class="flex flex-col space-y-6">
           <div
-            class="bg-gradient-to-br from-indigo-50 to-violet-50 rounded-xl border border-indigo-100 p-6 relative overflow-hidden">
-            <div class="absolute -right-4 -top-4 w-24 h-24 bg-indigo-200/50 rounded-full blur-xl"></div>
-            <h4 class="text-indigo-900 font-bold mb-2">Need help?</h4>
-            <p class="text-sm text-indigo-700 mb-4 leading-relaxed">Check out our documentation for detailed API
-              references, props, events, and styling options.</p>
-            <a href="#" class="inline-flex items-center text-sm font-semibold text-indigo-600 hover:text-indigo-800">
-              Read full docs
-              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-              </svg>
-            </a>
+            class="bg-gradient-to-br from-indigo-500 via-purple-600 to-indigo-800 rounded-3xl p-8 relative overflow-hidden shadow-lg shadow-indigo-500/20 group h-full flex flex-col justify-center transform transition-transform duration-300 hover:-translate-y-1">
+            <!-- Decorative glass shapes -->
+            <div
+              class="absolute -right-12 -bottom-12 w-48 h-48 bg-white/10 backdrop-blur-3xl rounded-full pointer-events-none transition-transform duration-700 group-hover:scale-150">
+            </div>
+            <div class="absolute -left-8 -top-8 w-32 h-32 bg-indigo-400/30 rounded-full blur-2xl pointer-events-none">
+            </div>
+
+            <div class="relative z-10">
+              <div
+                class="inline-flex items-center px-3 py-1 rounded-full bg-white/20 text-white text-xs font-bold tracking-wider mb-6 border border-white/20 backdrop-blur-md">
+                RESOURCES
+              </div>
+              <h4 class="text-white text-2xl font-bold mb-3 font-outfit drop-shadow-sm">Master {{ componentNameToDisplay
+                }}</h4>
+              <p class="text-indigo-100 text-sm mb-8 leading-relaxed font-medium">
+                Dive deep into the precise API interface, comprehensive prop coverage, emitted events, and advanced
+                styling strategies.
+              </p>
+
+              <a href="#"
+                class="inline-flex items-center justify-center w-full px-5 py-3.5 bg-white text-indigo-700 text-sm font-bold rounded-xl hover:bg-indigo-50 shadow-md transition-all duration-300 group/btn">
+                <span>View Full Documentation</span>
+                <svg class="w-4 h-4 ml-2 group-hover/btn:translate-x-1.5 transition-transform duration-300" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                  </path>
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
       </div>

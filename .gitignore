@@ -51,3 +51,6 @@ result.*
 docs/
 
 
+
+*storybook.log
+storybook-static

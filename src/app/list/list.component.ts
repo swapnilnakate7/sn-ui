@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit, inject } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { SnButtonComponent } from '@libs/sn-button-x/src/public-api';
@@ -27,9 +28,21 @@ import { TooltipDirective } from "@libs/sn-tooltip/src/public-api";
   templateUrl: './list.component.html',
   styleUrl: './list.component.scss',
 })
-export class ListComponent {
+export class ListComponent implements OnInit {
+  private route = inject(ActivatedRoute);
+
   list = ['button', 'card', 'input', 'badge', 'alert', 'spinner', 'modal', 'tabs', 'toggle', 'checkbox', 'radio', 'textarea', 'dropdown', 'datatable'];
   @Input('componentName') _display = '';
+
+  ngOnInit() {
+    this.route.paramMap.subscribe(params => {
+      const name = params.get('name');
+      if (name) {
+        this._display = name;
+      }
+    });
+  }
+
   display(componentName: string) {
     this._display = componentName;
   }

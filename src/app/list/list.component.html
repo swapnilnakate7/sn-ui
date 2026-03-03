@@ -139,22 +139,7 @@
   </div>
 
   }@else if(_display ==='input'){
-  <!-- <form class="grid grid-cols-4 gap-2">
-    <sn-input type="text" pattern="^[A-Z].*$" required
-    [successMessages]="['Message 1','Message 2']"
-    success="true"
-    class="col-span-2"
-    ></sn-input> -->
 
-  <!-- <sn-input type="checkbox"  class="col-span-2"></sn-input>
-    <sn-input type="number"  class="col-span-2"></sn-input>
-    <sn-input type="date"  class="col-span-2"></sn-input>
-    <sn-input type="datetime-local"  class="col-span-2"></sn-input>
-    <sn-input type="email"  class="col-span-2"></sn-input>
-    <sn-input type="password"  class="col-span-2"></sn-input>
-    <sn-input type="color"  class="col-span-2"></sn-input>
-    <sn-input type="range"  class="col-span-2"></sn-input> -->
-  <!-- </form> -->
   <div class="flex flex-wrap">
     <div class="p-2">
       <h2 class="text-2xl">Text Input Info Messages</h2>
@@ -214,10 +199,7 @@
       </div>
     </div>
 
-    <code><pre>
-&lt;sn-badge scheme="primary"&gt;Primary&lt;/sn-badge&gt;
-&lt;sn-badge scheme="success" pill&gt;Success&lt;/sn-badge&gt;
-&lt;sn-badge scheme="danger" size="lg"&gt;Danger&lt;/sn-badge&gt;</pre></code>
+
   </div>
 
   } @else if(_display === 'alert'){
@@ -230,10 +212,7 @@
     <sn-alert scheme="danger" title="Error">Something went wrong. Please try again.</sn-alert>
     <sn-alert scheme="info" title="Dismissible Alert" dismissible>You can dismiss this alert by clicking ×.</sn-alert>
 
-    <code><pre>
-&lt;sn-alert scheme="info" title="Info Alert"&gt;Message here.&lt;/sn-alert&gt;
-&lt;sn-alert scheme="success" title="Success!"&gt;Done!&lt;/sn-alert&gt;
-&lt;sn-alert scheme="danger" dismissible&gt;Dismiss me.&lt;/sn-alert&gt;</pre></code>
+
   </div>
 
   } @else if(_display === 'spinner'){
@@ -259,10 +238,6 @@
         <sn-spinner-x size="lg" scheme="primary"></sn-spinner-x>
       </div>
     </div>
-
-    <code><pre>
-&lt;sn-spinner-x scheme="primary"&gt;&lt;/sn-spinner-x&gt;
-&lt;sn-spinner-x scheme="success" size="lg"&gt;&lt;/sn-spinner-x&gt;</pre></code>
   </div>
 
   } @else if(_display === 'modal'){
@@ -282,11 +257,7 @@
       </div>
     </sn-modal>
 
-    <code><pre>
-&lt;sn-modal [open]="isOpen" title="My Modal" (closed)="isOpen=false"&gt;
-  &lt;div modal-body&gt;Body content here.&lt;/div&gt;
-  &lt;div modal-footer&gt;Footer actions here.&lt;/div&gt;
-&lt;/sn-modal&gt;</pre></code>
+
   </div>
 
   } @else if(_display === 'tabs'){
@@ -295,12 +266,6 @@
 
     <sn-tabs-x [tabs]="demoTabs"></sn-tabs-x>
 
-    <code class="mt-4 block"><pre>
-&lt;sn-tabs-x-x [tabs]="myTabs"&gt;&lt;/sn-tabs-x-x&gt;
-// myTabs = [
-//   {{ '{' }} label: 'Tab One', content: 'Content one' {{ '}' }},
-//   {{ '{' }} label: 'Tab Two', content: 'Content two' {{ '}' }},
-// ];</pre></code>
   </div>
 
   } @else if(_display === 'toggle'){
@@ -318,9 +283,6 @@
       Notifications: {{ _toggle1 ? 'ON' : 'OFF' }} | Dark Mode: {{ _toggle2 ? 'ON' : 'OFF' }}
     </p>
 
-    <code
-      class="mt-4 block"><pre>
-&lt;sn-toggle label="Notifications" [checked]="isOn" scheme="primary" (toggled)="isOn=$event"&gt;&lt;/sn-toggle&gt;</pre></code>
   </div>
   }
 
@@ -350,13 +312,7 @@
       Terms Accepted: {{ agreeTerms ? 'Yes' : 'No' }} | Checkbox Value: {{ checkboxValue ? 'Checked' : 'Unchecked' }}
     </p>
 
-    <code class="mt-4 block"><pre>
-&lt;sn-checkbox-x
-  id="agree"
-  label="I agree to terms"
-  [(ngModel)]="agreeTerms"
-  (changed)="onCheckboxChange($event)"
-&gt;&lt;/sn-checkbox-x&gt;</pre></code>
+
   </div>
   }
 
@@ -389,14 +345,7 @@
       Selected Gender: {{ selectedGender }} | Selected Size: {{ selectedSize }}
     </p>
 
-    <code class="mt-4 block"><pre>
-&lt;sn-radio
-  id="male"
-  name="gender"
-  value="male"
-  label="Male"
-  [(ngModel)]="selectedGender"
-&gt;&lt;/sn-radio&gt;</pre></code>
+
   </div>
   }
 
@@ -429,14 +378,7 @@
       Comments length: {{ comments.length }} | Feedback length: {{ feedback.length }}
     </p>
 
-    <code class="mt-4 block"><pre>
-&lt;sn-textarea
-  id="comments"
-  label="Comments"
-  placeholder="Enter your comments"
-  [maxLength]="200"
-  [(ngModel)]="comments"
-&gt;&lt;/sn-textarea&gt;</pre></code>
+
   </div>
   }
 
@@ -476,15 +418,7 @@
       selectedLanguages.join(', ') : 'None' }}
     </p>
 
-    <code class="mt-4 block"><pre>
-&lt;sn-dropdown-x
-  id="country"
-  label="Country"
-  placeholder="Select a country"
-  [options]="countries"
-  [searchable]="true"
-  [(ngModel)]="selectedCountry"
-&gt;&lt;/sn-dropdown-x&gt;</pre></code>
+
   </div>
   }
 
@@ -513,15 +447,7 @@
       </div>
     </div>
 
-    <code class="mt-4 block"><pre>
-&lt;sn-datatable
-  [columns]="tableColumns"
-  [data]="employees"
-  [striped]="true"
-  [hoverable]="true"
-  [pageSize]="10"
-  (sorted)="onTableSorted($event)"
-&gt;&lt;/sn-datatable&gt;</pre></code>
+
   </div>
   }
 
@@ -541,9 +467,7 @@
       </div>
     </div>
 
-    <code
-      class="mt-4 block"><pre>
-&lt;sn-button-x scheme="primary" filled snTooltip="Tooltip text here!" tooltipPosition="top"&gt;Hover Me&lt;/sn-button-x&gt;</pre></code>
+
   </div>
   }
 </main>
