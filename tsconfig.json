@@ -64,7 +64,7 @@
       "sn-textarea": [
         "./dist/sn-textarea"
       ],
-      "sn-tooltip": [
+      "sn-tooltip-x": [
         "./dist/sn-tooltip"
       ],
       "sntest": [

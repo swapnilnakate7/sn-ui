@@ -1,5 +1,5 @@
 {
-  "name": "sn-tooltip",
+  "name": "sn-tooltip-x",
   "version": "0.0.3",
   "peerDependencies": {
     "@angular/common": "^21.2.0",

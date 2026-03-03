@@ -30,28 +30,29 @@ AUTHOR_EMAIL="nakate.swapnil7@gmail.com"
 
 # All SnUI components to process
 COMPONENTS=(
-    # "sn-alert"
-    # "sn-badge"
-    # "sn-button-x"
-    # "sn-card"
-    # "sn-checkbox-x"
-    # "sn-input"
-    # "sn-modal"
-    # "sn-radio"
-    # "sn-dropdown-x"
-    # "sn-spinner-x"
-    # "sn-datatable"
-    # "sn-tabs-x"
-    # "sn-textarea"
-    # "sn-toggle"
-    # "sn-avatar"
-    # "sn-skeleton"
-    # "sn-pagination-x" 
-    # "sn-empty-state"
-    # "sn-progress-bar"
+    "sn-alert"
+    "sn-badge"
+    "sn-button-x"
+    "sn-card"
+    "sn-checkbox-x"
+    "sn-input"
+    "sn-modal"
+    "sn-radio"
+    "sn-dropdown-x"
+    "sn-spinner-x"
+    "sn-datatable"
+    "sn-tabs-x"
+    "sn-textarea"
+    "sn-toggle"
+    "sn-avatar"
+    "sn-skeleton"
+    "sn-pagination-x"
+    "sn-empty-state"
+    "sn-progress-bar"
     "sn-breadcrumbs"
     "sn-charts"
     "sn-advanced-datatable"
+    "sn-tooltip-x"
 )
 
 
@@ -224,12 +225,12 @@ sync_version() {
 }
 
 
-build_and_publish() {
+READY_TO_PUBLISH=()
+
+build_package() {
     local folder_name=$1
     local package_file="projects/$folder_name/package.json"
     local package_name=$(node -pe "require('./$package_file').name")
-    local version=$(node -pe "require('./$package_file').version")
-    local dest_path=$(node -pe "require('path').resolve('projects/$folder_name', require('./projects/$folder_name/ng-package.json').dest)")
     
     echo "🔨 Building $package_name..."
     cd "projects/$folder_name"
@@ -241,13 +242,24 @@ build_and_publish() {
     cd ../../
 
     if npm run build -- --configuration production "$package_name" > /tmp/build_${package_name}.log 2>&1; then
+         echo -e "  ${GREEN}✅ Build successful${NC}"
          BUILT+=("$package_name")
+         READY_TO_PUBLISH+=("$folder_name")
+         return 0
     else
          echo -e "${RED}❌ Failed to build $package_name${NC}"
          BUILD_FAILED+=("$package_name")
          return 1
     fi
+}
 
+publish_package() {
+    local folder_name=$1
+    local package_file="projects/$folder_name/package.json"
+    local package_name=$(node -pe "require('./$package_file').name")
+    local version=$(node -pe "require('./$package_file').version")
+    local dest_path=$(node -pe "require('path').resolve('projects/$folder_name', require('./projects/$folder_name/ng-package.json').dest)")
+    
     echo "📤 Publishing $package_name@$version..."
     cd "$dest_path"
     
@@ -257,7 +269,7 @@ build_and_publish() {
     fi
 
     if $publish_cmd > /tmp/publish_${package_name}.log 2>&1; then
-        echo -e "${GREEN}✅ Successfully published $package_name@$version${NC}"
+        echo -e "  ${GREEN}✅ Successfully published${NC}"
         cd ../../
         PUBLISHED+=("$package_name")
         return 0
@@ -328,10 +340,24 @@ for component in "${COMPONENTS[@]}"; do
 done
 
 # ============================================================================
-# OTP Setup
+# PHASE 2: Building All
+# ============================================================================
+echo ""
+echo "=========================================="
+echo "PHASE 2: Building Components"
+echo "=========================================="
+echo ""
+
+for folder in "${READY_COMPONENTS[@]}"; do
+   build_package "$folder"
+done
+
+# ============================================================================
+# OTP Setup (Move here to ensure it's fresh)
 # ============================================================================
 echo ""
 echo "🔐 Two-Factor Authentication Setup"
+echo -e "${YELLOW}OTP will be requested now to proceed with publishing built components.${NC}"
 read -p "Do you want to use OTP for publishing? (y/n): " use_otp
 
 OTP_CODE=""
@@ -340,17 +366,21 @@ if [[ "$use_otp" == "y" || "$use_otp" == "Y" ]]; then
 fi
 
 # ============================================================================
-# PHASE 2: Build & Publish
+# PHASE 3: Publishing All
 # ============================================================================
 echo ""
 echo "=========================================="
-echo "PHASE 2: Building & Publishing"
+echo "PHASE 3: Publishing Components"
 echo "=========================================="
 echo ""
 
-for folder in "${READY_COMPONENTS[@]}"; do
-   build_and_publish "$folder"
-done
+if [ ${#READY_TO_PUBLISH[@]} -eq 0 ]; then
+    echo -e "${RED}❌ No components were built successfully. Skipping publishing.${NC}"
+else
+    for folder in "${READY_TO_PUBLISH[@]}"; do
+       publish_package "$folder"
+    done
+fi
 
 # ============================================================================
 # PHASE 3: Summary

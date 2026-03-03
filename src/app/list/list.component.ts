@@ -16,7 +16,7 @@ import { SnDatatableComponent, TableColumn, TableRow } from "@libs/sn-datatable/
 import { SelectOption, SnDropdownXComponent } from "@libs/sn-dropdown-x/src/lib/sn-dropdown-x";
 import { SnTab, SnTabsXComponent } from "@libs/sn-tabs-x/src/lib/sn-tabs-x.component";
 import { SnSpinnerXComponent } from "@libs/sn-spinner-x/src/lib/sn-spinner-x.component";
-import { TooltipDirective } from "@libs/sn-tooltip/src/public-api";
+import { TooltipDirective } from "@libs/sn-tooltip-x/src/public-api";
 import { SnAvatarComponent } from "@libs/sn-avatar/src/public-api";
 import { SnSkeletonComponent } from "@libs/sn-skeleton/src/public-api";
 import { SnPaginationComponent } from "@libs/sn-pagination-x/src/public-api";

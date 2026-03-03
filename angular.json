@@ -558,20 +558,20 @@
         }
       }
     },
-    "sn-tooltip": {
+    "sn-tooltip-x": {
       "projectType": "library",
-      "root": "projects/sn-tooltip",
-      "sourceRoot": "projects/sn-tooltip/src",
+      "root": "projects/sn-tooltip-x",
+      "sourceRoot": "projects/sn-tooltip-x/src",
       "prefix": "sn",
       "architect": {
         "build": {
           "builder": "@angular/build:ng-packagr",
           "configurations": {
             "production": {
-              "tsConfig": "projects/sn-tooltip/tsconfig.lib.prod.json"
+              "tsConfig": "projects/sn-tooltip-x/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/sn-tooltip/tsconfig.lib.json"
+              "tsConfig": "projects/sn-tooltip-x/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -579,7 +579,7 @@
         "test": {
           "builder": "@angular/build:unit-test",
           "options": {
-            "tsConfig": "projects/sn-tooltip/tsconfig.spec.json"
+            "tsConfig": "projects/sn-tooltip-x/tsconfig.spec.json"
           }
         }
       }
