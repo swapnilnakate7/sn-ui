@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.sn-chart-container {
+    @apply relative w-full overflow-hidden block;
+}
+
+.sn-line-chart-svg {
+    @apply block overflow-visible font-sans;
+}
+
+.sn-chart-axis {
+    @apply stroke-gray-300 stroke-1;
+}
+
+.sn-chart-grid-line {
+    @apply stroke-gray-200 stroke-1;
+    stroke-dasharray: 4 4;
+}
+
+.sn-chart-label {
+    @apply fill-gray-500 text-xs font-medium;
+}
+
+.sn-chart-label-y {
+    text-anchor: end;
+}
+
+.sn-chart-label-x {
+    text-anchor: middle;
+}
+
+.sn-line-path {
+    @apply stroke-2;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    animation: drawLine 1s ease-out forwards;
+}
+
+.sn-line-area {
+    animation: fadeIn 1.2s ease-out forwards;
+}
+
+.sn-point-group {
+    @apply outline-none cursor-pointer;
+}
+
+.sn-line-point {
+    @apply transition-all duration-300 ease-out;
+}
+
+.sn-chart-tooltip-text {
+    @apply fill-gray-900 text-sm font-semibold;
+    text-anchor: middle;
+    animation: fadeIn 0.2s ease-out forwards;
+}
+
+@keyframes drawLine {
+    from {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+    }
+
+    to {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

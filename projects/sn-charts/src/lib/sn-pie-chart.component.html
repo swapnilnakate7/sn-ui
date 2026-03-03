@@ -1,0 +1,36 @@
+<div class="sn-pie-chart-wrapper">
+    <svg [attr.width]="size" [attr.height]="size" class="sn-pie-chart-svg">
+        @for(slice of slices; track slice.label; let i = $index) {
+        <g class="sn-pie-slice-group" (mouseenter)="hoveredIndex = i" (mouseleave)="hoveredIndex = null">
+            <path [attr.d]="slice.path" [attr.fill]="slice.color" class="sn-pie-slice"
+                [class.sn-pie-slice-hovered]="hoveredIndex === i"></path>
+
+            @if(slice.percentage >= 8) {
+            <text [attr.x]="slice.labelX" [attr.y]="slice.labelY" class="sn-pie-label">
+                {{ slice.percentage }}%
+            </text>
+            }
+        </g>
+        }
+
+        <!-- Center text for donut -->
+        @if(donut) {
+        <text [attr.x]="cx" [attr.y]="cy - 6" class="sn-pie-center-total-label">Total</text>
+        <text [attr.x]="cx" [attr.y]="cy + 14" class="sn-pie-center-total-value">{{ total }}</text>
+        }
+    </svg>
+
+    <!-- Legend -->
+    @if(showLegend) {
+    <div class="sn-pie-legend">
+        @for(slice of slices; track slice.label; let i = $index) {
+        <div class="sn-pie-legend-item" [class.sn-pie-legend-item-hovered]="hoveredIndex === i"
+            (mouseenter)="hoveredIndex = i" (mouseleave)="hoveredIndex = null">
+            <span class="sn-pie-legend-dot" [style.background-color]="slice.color"></span>
+            <span class="sn-pie-legend-label">{{ slice.label }}</span>
+            <span class="sn-pie-legend-value">{{ slice.value }} ({{ slice.percentage }}%)</span>
+        </div>
+        }
+    </div>
+    }
+</div>

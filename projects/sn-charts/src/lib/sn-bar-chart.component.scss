@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.sn-chart-container {
+    @apply relative w-full overflow-hidden block;
+}
+
+.sn-bar-chart-svg {
+    @apply block overflow-visible font-sans;
+}
+
+.sn-chart-axis {
+    @apply stroke-gray-300 stroke-1;
+}
+
+.sn-chart-grid-line {
+    @apply stroke-gray-200 stroke-1;
+    stroke-dasharray: 4 4;
+}
+
+.sn-chart-label {
+    @apply fill-gray-500 text-xs font-medium origin-center;
+}
+
+.sn-chart-label-y {
+    text-anchor: end;
+}
+
+.sn-chart-label-x {
+    text-anchor: middle;
+}
+
+.sn-bar-group {
+    @apply outline-none cursor-pointer;
+}
+
+.sn-bar {
+    @apply transition-all duration-300 ease-out;
+    rx: 4;
+    /* Rounded top corners natively via SVG */
+}
+
+.sn-bar-hovered {
+    @apply opacity-80;
+}
+
+.sn-chart-tooltip-text {
+    @apply fill-gray-900 text-sm font-semibold;
+    text-anchor: middle;
+    animation: fadeIn 0.2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

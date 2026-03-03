@@ -1,0 +1,67 @@
+<div class="sn-chart-container" [style.height.px]="height">
+    <svg [attr.width]="width" [attr.height]="height" class="sn-line-chart-svg">
+
+        <!-- Definitions for Area Gradient -->
+        <defs>
+            <linearGradient id="areaGradient" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0%" [attr.stop-color]="color" stop-opacity="0.3"></stop>
+                <stop offset="100%" [attr.stop-color]="color" stop-opacity="0.0"></stop>
+            </linearGradient>
+        </defs>
+
+        <!-- Grid and Axes -->
+        <line [attr.x1]="padding" [attr.y1]="padding" [attr.x2]="padding" [attr.y2]="height - padding"
+            class="sn-chart-axis" />
+        <line [attr.x1]="padding" [attr.y1]="height - padding" [attr.x2]="width - padding" [attr.y2]="height - padding"
+            class="sn-chart-axis" />
+
+        <g class="sn-chart-grid">
+            @for(i of [0, 1, 2, 3, 4]; track i) {
+            <line [attr.x1]="padding" [attr.y1]="padding + i * (chartHeight / 4)" [attr.x2]="width - padding"
+                [attr.y2]="padding + i * (chartHeight / 4)" class="sn-chart-grid-line" />
+            <text [attr.x]="padding - 10" [attr.y]="padding + i * (chartHeight / 4) + 4"
+                class="sn-chart-label sn-chart-label-y">
+                {{ (maxValue - (i * maxValue / 4)) | number:'1.0-0' }}
+            </text>
+            }
+        </g>
+
+        <!-- Filled Area Under Line -->
+        @if(fillArea && data.length > 0) {
+        <path [attr.d]="areaPath" fill="url(#areaGradient)" class="sn-line-area"></path>
+        }
+
+        <!-- The Line Path -->
+        @if(data.length > 0) {
+        <path [attr.d]="linePath" fill="none" [attr.stroke]="color" class="sn-line-path"></path>
+        }
+
+        <!-- Interactive Data Points -->
+        <g class="sn-chart-points">
+            @for(item of data; track item.label; let i = $index) {
+
+            <g class="sn-point-group" (mouseenter)="hoveredIndex = i" (mouseleave)="hoveredIndex = null">
+                <!-- Hover Hitbox (Larger invisible circle for better ux) -->
+                <circle [attr.cx]="getPointX(i)" [attr.cy]="getPointY(item.value)" r="15" fill="transparent"></circle>
+
+                <!-- Visual Point Circle -->
+                <circle [attr.cx]="getPointX(i)" [attr.cy]="getPointY(item.value)" [attr.r]="hoveredIndex === i ? 6 : 4"
+                    [attr.fill]="hoveredIndex === i ? '#fff' : color" [attr.stroke]="color" stroke-width="2"
+                    class="sn-line-point"></circle>
+
+                <!-- Tooltip Value -->
+                @if(hoveredIndex === i) {
+                <text [attr.x]="getPointX(i)" [attr.y]="getPointY(item.value) - 15" class="sn-chart-tooltip-text">
+                    {{ item.value }}
+                </text>
+                }
+
+                <!-- X Axis Label -->
+                <text [attr.x]="getPointX(i)" [attr.y]="height - padding + 20" class="sn-chart-label sn-chart-label-x">
+                    {{ item.label }}
+                </text>
+            </g>
+            }
+        </g>
+    </svg>
+</div>

@@ -50,6 +50,7 @@ COMPONENTS=(
     "sn-empty-state"
     "sn-progress-bar"
     "sn-breadcrumbs"
+    "sn-charts"
 )
 
 

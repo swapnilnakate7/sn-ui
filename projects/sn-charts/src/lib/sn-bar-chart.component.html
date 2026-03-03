@@ -1,0 +1,53 @@
+<div class="sn-chart-container" [style.height.px]="height">
+    <svg [attr.width]="width" [attr.height]="height" class="sn-bar-chart-svg">
+
+        <!-- Y Axis Line -->
+        <line [attr.x1]="padding" [attr.y1]="padding" [attr.x2]="padding" [attr.y2]="height - padding"
+            class="sn-chart-axis" />
+
+        <!-- X Axis Line -->
+        <line [attr.x1]="padding" [attr.y1]="height - padding" [attr.x2]="width - padding" [attr.y2]="height - padding"
+            class="sn-chart-axis" />
+
+        <!-- Horizontal Grid Lines and Y-Axis Labels -->
+        <g class="sn-chart-grid">
+            @for(i of [0, 1, 2, 3, 4]; track i) {
+            <line [attr.x1]="padding" [attr.y1]="padding + i * (chartHeight / 4)" [attr.x2]="width - padding"
+                [attr.y2]="padding + i * (chartHeight / 4)" class="sn-chart-grid-line" />
+            <text [attr.x]="padding - 10" [attr.y]="padding + i * (chartHeight / 4) + 4"
+                class="sn-chart-label sn-chart-label-y">
+                <!-- Display rounded values for the quartiles -->
+                {{ (maxValue - (i * maxValue / 4)) | number:'1.0-0' }}
+            </text>
+            }
+        </g>
+
+        <!-- Bars and X-Axis Labels -->
+        <g class="sn-chart-bars">
+            @for(item of data; track item.label; let i = $index) {
+
+            <!-- Interactive Bar Group -->
+            <g class="sn-bar-group" (mouseenter)="hoveredIndex = i" (mouseleave)="hoveredIndex = null">
+                <!-- The Bar -->
+                <rect [attr.x]="getBarX(i)" [attr.y]="getBarY(item.value)" [attr.width]="getBarWidth()"
+                    [attr.height]="getBarHeight(item.value)" [attr.fill]="color" class="sn-bar"
+                    [class.sn-bar-hovered]="hoveredIndex === i"></rect>
+
+                <!-- Value Tooltip/Label (shows on hover) -->
+                @if(hoveredIndex === i) {
+                <text [attr.x]="getBarX(i) + getBarWidth() / 2" [attr.y]="getBarY(item.value) - 10"
+                    class="sn-chart-tooltip-text">
+                    {{ item.value }}
+                </text>
+                }
+            </g>
+
+            <!-- X Axis Label under the bar -->
+            <text [attr.x]="getBarX(i) + getBarWidth() / 2" [attr.y]="height - padding + 20"
+                class="sn-chart-label sn-chart-label-x">
+                {{ item.label }}
+            </text>
+            }
+        </g>
+    </svg>
+</div>
