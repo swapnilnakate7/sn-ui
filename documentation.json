@@ -9,7 +9,7 @@
     "components": [
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-3594aa42f48524095d1ced5f1e47ce58ed151801eb4c17e9245c67a8b9c581057927b10333bc2b5f605b16103d4b2f8f6720236c83fe78c73d79c949f560b4cd",
+            "id": "component-AppComponent-0e0006bdc3a5aaa7c533eef41b43403b911eeda90cc6c1739c9a54bb0bf5b75941aa808382df975ecb206708ac91c868deb09ba695ffe4c6a37a4e8ca7025477",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -38,7 +38,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 17
+                    "line": 16
                 },
                 {
                     "name": "components",
@@ -49,7 +49,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 21
+                    "line": 20
                 },
                 {
                     "name": "isSidebarOpen",
@@ -60,7 +60,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 18
+                    "line": 17
                 },
                 {
                     "name": "router",
@@ -71,7 +71,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 15
+                    "line": 14
                 },
                 {
                     "name": "title",
@@ -82,7 +82,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 16
+                    "line": 15
                 },
                 {
                     "name": "viewMode",
@@ -93,7 +93,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 19
+                    "line": 18
                 }
             ],
             "methodsClass": [
@@ -112,7 +112,7 @@
                     "optional": false,
                     "returnType": "any",
                     "typeParameters": [],
-                    "line": 43,
+                    "line": 42,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -135,7 +135,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 47,
+                    "line": 46,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -154,7 +154,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 57,
+                    "line": 56,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -186,7 +186,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 61,
+                    "line": 60,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -209,7 +209,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 65,
+                    "line": 64,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -226,16 +226,12 @@
                 },
                 {
                     "name": "RouterOutlet"
-                },
-                {
-                    "name": "ListComponent",
-                    "type": "component"
                 }
             ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, inject, OnInit } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { RouterOutlet, Router, NavigationEnd } from '@angular/router';\nimport { filter } from 'rxjs/operators';\nimport { ListComponent } from '@app/list/list.component';\n\n@Component({\n  selector: 'app-root',\n  standalone: true,\n  imports: [CommonModule, RouterOutlet, ListComponent],\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss'],\n})\nexport class AppComponent implements OnInit {\n  router = inject(Router);\n  title = 'sn-ui';\n  componentNameToDisplay = 'alert';\n  isSidebarOpen = true;\n  viewMode: 'preview' | 'code' = 'preview';\n\n  components = [\n    { name: 'alert', label: 'Alert', isNew: false, category: 'Feedback' },\n    { name: 'badge', label: 'Badge', isNew: false, category: 'Data Display' },\n    { name: 'button', label: 'Button', isNew: false, category: 'Forms' },\n    { name: 'card', label: 'Card', isNew: false, category: 'Data Display' },\n    { name: 'checkbox', label: 'Checkbox', isNew: false, category: 'Forms' },\n    { name: 'datatable', label: 'Data Table', isNew: false, category: 'Data Display' },\n    { name: 'dropdown', label: 'Dropdown', isNew: false, category: 'Forms' },\n    { name: 'input', label: 'Input', isNew: false, category: 'Forms' },\n    { name: 'modal', label: 'Modal', isNew: false, category: 'Overlay' },\n    { name: 'radio', label: 'Radio', isNew: false, category: 'Forms' },\n    { name: 'spinner', label: 'Spinner', isNew: false, category: 'Feedback' },\n    { name: 'tabs', label: 'Tabs', isNew: false, category: 'Navigation' },\n    { name: 'textarea', label: 'Textarea', isNew: false, category: 'Forms' },\n    { name: 'toggle', label: 'Toggle', isNew: false, category: 'Forms' },\n    { name: 'tooltip', label: 'Tooltip', isNew: true, category: 'Overlay' },\n  ];\n\n  get categories() {\n    return [...new Set(this.components.map(c => c.category))];\n  }\n\n  getComponentsByCategory(cat: string) {\n    return this.components.filter(c => c.category === cat);\n  }\n\n  ngOnInit() {\n    this.router.events.pipe(\n      filter(event => event instanceof NavigationEnd)\n    ).subscribe((event: any) => {\n      const url = event.urlAfterRedirects;\n      const parts = url.split('/');\n      this.componentNameToDisplay = parts[parts.length - 1];\n    });\n  }\n\n  setComponentName(name: string) {\n    this.router.navigate(['/components', name]);\n  }\n\n  setViewMode(mode: 'preview' | 'code') {\n    this.viewMode = mode;\n  }\n\n  toggleSidebar() {\n    this.isSidebarOpen = !this.isSidebarOpen;\n  }\n}\n",
+            "sourceCode": "import { Component, inject, OnInit } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { RouterOutlet, Router, NavigationEnd } from '@angular/router';\nimport { filter } from 'rxjs/operators';\n\n@Component({\n  selector: 'app-root',\n  standalone: true,\n  imports: [CommonModule, RouterOutlet],\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss'],\n})\nexport class AppComponent implements OnInit {\n  router = inject(Router);\n  title = 'sn-ui';\n  componentNameToDisplay = 'alert';\n  isSidebarOpen = true;\n  viewMode: 'preview' | 'code' = 'preview';\n\n  components = [\n    { name: 'alert', label: 'Alert', isNew: false, category: 'Feedback' },\n    { name: 'badge', label: 'Badge', isNew: false, category: 'Data Display' },\n    { name: 'button', label: 'Button', isNew: false, category: 'Forms' },\n    { name: 'card', label: 'Card', isNew: false, category: 'Data Display' },\n    { name: 'checkbox', label: 'Checkbox', isNew: false, category: 'Forms' },\n    { name: 'datatable', label: 'Data Table', isNew: false, category: 'Data Display' },\n    { name: 'dropdown', label: 'Dropdown', isNew: false, category: 'Forms' },\n    { name: 'input', label: 'Input', isNew: false, category: 'Forms' },\n    { name: 'modal', label: 'Modal', isNew: false, category: 'Overlay' },\n    { name: 'radio', label: 'Radio', isNew: false, category: 'Forms' },\n    { name: 'spinner', label: 'Spinner', isNew: false, category: 'Feedback' },\n    { name: 'tabs', label: 'Tabs', isNew: false, category: 'Navigation' },\n    { name: 'textarea', label: 'Textarea', isNew: false, category: 'Forms' },\n    { name: 'toggle', label: 'Toggle', isNew: false, category: 'Forms' },\n    { name: 'tooltip', label: 'Tooltip', isNew: true, category: 'Overlay' },\n  ];\n\n  get categories() {\n    return [...new Set(this.components.map(c => c.category))];\n  }\n\n  getComponentsByCategory(cat: string) {\n    return this.components.filter(c => c.category === cat);\n  }\n\n  ngOnInit() {\n    this.router.events.pipe(\n      filter(event => event instanceof NavigationEnd)\n    ).subscribe((event: any) => {\n      const url = event.urlAfterRedirects;\n      const parts = url.split('/');\n      this.componentNameToDisplay = parts[parts.length - 1];\n    });\n  }\n\n  setComponentName(name: string) {\n    this.router.navigate(['/components', name]);\n  }\n\n  setViewMode(mode: 'preview' | 'code') {\n    this.viewMode = mode;\n  }\n\n  toggleSidebar() {\n    this.isSidebarOpen = !this.isSidebarOpen;\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -255,7 +251,7 @@
                         "name": "categories",
                         "type": "",
                         "returnType": "",
-                        "line": 39
+                        "line": 38
                     }
                 }
             },
@@ -263,7 +259,7 @@
         },
         {
             "name": "ListComponent",
-            "id": "component-ListComponent-6f8a4b4d22244b87471b7075f67fa16ad52529a101b7df4dfb1633992ec586e015ae1079823ffd1be069b4a663136ec4dc171570ed45d390ea3f9aee5dfb7b71",
+            "id": "component-ListComponent-6415b8290ca64446767dc3f97c37cd394f123721bf0e432a551fd64c6cf78fc66221f4e0c9cd1b1ed55cf3403292a4daf5ff01a4c8d6c95d7868a410ef03a196",
             "file": "src/app/list/list.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -905,7 +901,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, OnInit, inject } from '@angular/core';\nimport { ActivatedRoute } from '@angular/router';\nimport { CommonModule } from '@angular/common';\nimport { FormsModule } from '@angular/forms';\nimport { SnButtonComponent } from '@libs/sn-button-x/src/public-api';\nimport { SnCardComponent } from '@libs/sn-card/src/public-api';\nimport { SnInputComponent } from '@libs/sn-input/src/public-api';\nimport { SnBadgeComponent } from '@libs/sn-badge/src/public-api';\nimport { SnAlertComponent } from '@libs/sn-alert/src/public-api';\nimport { SnModalComponent } from '@libs/sn-modal/src/public-api';\nimport { SnToggleComponent } from '@libs/sn-toggle/src/public-api';\nimport { SnCheckboxXComponent } from '@libs/sn-checkbox-x/src/public-api';\nimport { SnRadioComponent } from '@libs/sn-radio/src/public-api';\nimport { SnTextareaComponent } from '@libs/sn-textarea/src/public-api';\nimport { SnDatatableComponent, TableColumn, TableRow } from \"@libs/sn-datatable/src/lib/sn-datatable\";\nimport { SelectOption, SnDropdownXComponent } from \"@libs/sn-dropdown-x/src/lib/sn-dropdown-x\";\nimport { SnTab, SnTabsXComponent } from \"@libs/sn-tabs-x/src/lib/sn-tabs-x.component\";\nimport { SnSpinnerXComponent } from \"@libs/sn-spinner-x/src/lib/sn-spinner-x.component\";\nimport { TooltipDirective } from \"@libs/sn-tooltip/src/public-api\";\nimport { SnAvatarComponent } from \"@libs/sn-avatar/src/public-api\";\nimport { SnSkeletonComponent } from \"@libs/sn-skeleton/src/public-api\";\nimport { SnPaginationComponent } from \"@libs/sn-pagination-x/src/public-api\";\nimport { SnEmptyStateComponent } from \"@libs/sn-empty-state/src/public-api\";\nimport { SnProgressBarComponent } from \"@libs/sn-progress-bar/src/public-api\";\nimport { SnBreadcrumbsComponent } from \"@libs/sn-breadcrumbs/src/public-api\";\n\n@Component({\n  selector: 'sn-list',\n  standalone: true,\n  imports: [CommonModule, FormsModule, SnButtonComponent, SnCardComponent, SnInputComponent,\n    SnBadgeComponent, SnAlertComponent, SnSpinnerXComponent, SnModalComponent,\n    SnTabsXComponent, SnToggleComponent, SnCheckboxXComponent, SnRadioComponent,\n    SnTextareaComponent, SnDropdownXComponent, SnDatatableComponent, TooltipDirective,\n    SnAvatarComponent, SnSkeletonComponent, SnPaginationComponent, SnEmptyStateComponent,\n    SnProgressBarComponent, SnBreadcrumbsComponent],\n  templateUrl: './list.component.html',\n  styleUrl: './list.component.scss',\n})\nexport class ListComponent implements OnInit {\n  private route = inject(ActivatedRoute);\n\n  list = ['button', 'card', 'input', 'badge', 'alert', 'spinner', 'modal', 'tabs', 'toggle', 'checkbox', 'radio', 'textarea', 'dropdown', 'datatable', 'sn-progress-bar', 'sn-empty-state', 'sn-breadcrumbs', 'sn-avatar', 'sn-skeleton', 'sn-pagination-x'];\n  @Input('componentName') _display = '';\n\n  ngOnInit() {\n    this.route.paramMap.subscribe(params => {\n      const name = params.get('name');\n      if (name) {\n        this._display = name;\n      }\n    });\n  }\n\n  display(componentName: string) {\n    this._display = componentName;\n  }\n\n  click() {\n    console.log('Action clicked');\n  }\n  sayHello(evt: any) {\n    console.log('Hello', evt);\n  }\n\n  // Modal demo state\n  _modalOpen = false;\n  openModal() { this._modalOpen = true; }\n  onModalClosed() { this._modalOpen = false; }\n\n  // Tabs demo data\n  demoTabs: SnTab[] = [\n    { label: 'Tab One', content: 'Content for Tab One: This is the first tab panel.' },\n    { label: 'Tab Two', content: 'Content for Tab Two: Here is some different content.' },\n    { label: 'Tab Three', content: 'Content for Tab Three: And a third tab for good measure.' },\n  ];\n\n  // Toggle demo state\n  _toggle1 = false;\n  _toggle2 = true;\n\n  // Checkbox demo state\n  checkboxValue = false;\n  agreeTerms = false;\n  selectAll = false;\n  indeterminateState = false;\n  disabledCheckedValue = true;\n\n  // Radio demo state\n  selectedGender = 'male';\n  selectedSize = 'medium';\n\n  // Textarea demo state\n  comments = '';\n  feedback = '';\n  readonlyText = 'This text is readonly and cannot be edited';\n\n  // Select demo state\n  selectedCountry: string | null = null;\n  selectedLanguages: string[] = [];\n\n  countries: SelectOption[] = [\n    { label: 'United States', value: 'us' },\n    { label: 'United Kingdom', value: 'uk' },\n    { label: 'Canada', value: 'ca' },\n    { label: 'Australia', value: 'au' },\n    { label: 'Germany', value: 'de' },\n    { label: 'France', value: 'fr' },\n    { label: 'Japan', value: 'jp' },\n    { label: 'India', value: 'in' },\n  ];\n\n  languages: SelectOption[] = [\n    { label: 'JavaScript', value: 'js' },\n    { label: 'TypeScript', value: 'ts' },\n    { label: 'Python', value: 'py' },\n    { label: 'Java', value: 'java' },\n    { label: 'C#', value: 'csharp' },\n    { label: 'Ruby', value: 'ruby' },\n  ];\n\n  // Table demo data\n  tableColumns: TableColumn[] = [\n    { header: 'ID', key: 'id', sortable: true, width: '80px', align: 'center' },\n    { header: 'Name', key: 'name', sortable: true, width: '200px', align: 'left' },\n    { header: 'Email', key: 'email', sortable: true, width: '250px', align: 'left' },\n    { header: 'Department', key: 'department', sortable: true, width: '150px', align: 'left' },\n    { header: 'Status', key: 'status', sortable: false, width: '120px', align: 'center' },\n  ];\n\n  tableData: TableRow[] = [\n    { id: 1, name: 'Alice Johnson', email: 'alice.johnson@company.com', department: 'Engineering', status: 'Active' },\n    { id: 2, name: 'Bob Smith', email: 'bob.smith@company.com', department: 'Marketing', status: 'Active' },\n    { id: 3, name: 'Charlie Brown', email: 'charlie.brown@company.com', department: 'Engineering', status: 'Inactive' },\n    { id: 4, name: 'Diana Prince', email: 'diana.prince@company.com', department: 'Sales', status: 'Active' },\n    { id: 5, name: 'Eve Wilson', email: 'eve.wilson@company.com', department: 'HR', status: 'Active' },\n    { id: 6, name: 'Frank Miller', email: 'frank.miller@company.com', department: 'Engineering', status: 'Active' },\n    { id: 7, name: 'Grace Lee', email: 'grace.lee@company.com', department: 'Finance', status: 'Inactive' },\n    { id: 8, name: 'Henry Taylor', email: 'henry.taylor@company.com', department: 'Marketing', status: 'Active' },\n    { id: 9, name: 'Iris Davis', email: 'iris.davis@company.com', department: 'Engineering', status: 'Active' },\n    { id: 10, name: 'Jack Anderson', email: 'jack.anderson@company.com', department: 'Sales', status: 'Active' },\n    { id: 11, name: 'Karen White', email: 'karen.white@company.com', department: 'HR', status: 'Inactive' },\n    { id: 12, name: 'Leo Harris', email: 'leo.harris@company.com', department: 'Engineering', status: 'Active' },\n  ];\n\n  onCheckboxChange(value: boolean) {\n    console.log('Checkbox changed:', value);\n  }\n\n  onRadioChange(value: string) {\n    console.log('Radio changed:', value);\n  }\n\n  onTextareaChange(value: string) {\n    console.log('Textarea changed:', value);\n  }\n\n  onSelectChange(value: any) {\n    console.log('Select changed:', value);\n  }\n\n  onTableSorted(event: any) {\n    console.log('Table sorted:', event);\n  }\n}\n",
+            "sourceCode": "import { Component, Input, OnInit, inject } from '@angular/core';\nimport { ActivatedRoute } from '@angular/router';\nimport { CommonModule } from '@angular/common';\nimport { FormsModule } from '@angular/forms';\nimport { SnButtonComponent } from '@libs/sn-button-x/src/public-api';\nimport { SnCardComponent } from '@libs/sn-card/src/public-api';\nimport { SnInputComponent } from '@libs/sn-input/src/public-api';\nimport { SnBadgeComponent } from '@libs/sn-badge/src/public-api';\nimport { SnAlertComponent } from '@libs/sn-alert/src/public-api';\nimport { SnModalComponent } from '@libs/sn-modal/src/public-api';\nimport { SnToggleComponent } from '@libs/sn-toggle/src/public-api';\nimport { SnCheckboxXComponent } from '@libs/sn-checkbox-x/src/public-api';\nimport { SnRadioComponent } from '@libs/sn-radio/src/public-api';\nimport { SnTextareaComponent } from '@libs/sn-textarea/src/public-api';\nimport { SnDatatableComponent, TableColumn, TableRow } from \"@libs/sn-datatable/src/lib/sn-datatable\";\nimport { SelectOption, SnDropdownXComponent } from \"@libs/sn-dropdown-x/src/lib/sn-dropdown-x\";\nimport { SnTab, SnTabsXComponent } from \"@libs/sn-tabs-x/src/lib/sn-tabs-x.component\";\nimport { SnSpinnerXComponent } from \"@libs/sn-spinner-x/src/lib/sn-spinner-x.component\";\nimport { TooltipDirective } from \"@libs/sn-tooltip-x/src/public-api\";\nimport { SnAvatarComponent } from \"@libs/sn-avatar/src/public-api\";\nimport { SnSkeletonComponent } from \"@libs/sn-skeleton/src/public-api\";\nimport { SnPaginationComponent } from \"@libs/sn-pagination-x/src/public-api\";\nimport { SnEmptyStateComponent } from \"@libs/sn-empty-state/src/public-api\";\nimport { SnProgressBarComponent } from \"@libs/sn-progress-bar/src/public-api\";\nimport { SnBreadcrumbsComponent } from \"@libs/sn-breadcrumbs/src/public-api\";\n\n@Component({\n  selector: 'sn-list',\n  standalone: true,\n  imports: [CommonModule, FormsModule, SnButtonComponent, SnCardComponent, SnInputComponent,\n    SnBadgeComponent, SnAlertComponent, SnSpinnerXComponent, SnModalComponent,\n    SnTabsXComponent, SnToggleComponent, SnCheckboxXComponent, SnRadioComponent,\n    SnTextareaComponent, SnDropdownXComponent, SnDatatableComponent, TooltipDirective,\n    SnAvatarComponent, SnSkeletonComponent, SnPaginationComponent, SnEmptyStateComponent,\n    SnProgressBarComponent, SnBreadcrumbsComponent],\n  templateUrl: './list.component.html',\n  styleUrl: './list.component.scss',\n})\nexport class ListComponent implements OnInit {\n  private route = inject(ActivatedRoute);\n\n  list = ['button', 'card', 'input', 'badge', 'alert', 'spinner', 'modal', 'tabs', 'toggle', 'checkbox', 'radio', 'textarea', 'dropdown', 'datatable', 'sn-progress-bar', 'sn-empty-state', 'sn-breadcrumbs', 'sn-avatar', 'sn-skeleton', 'sn-pagination-x'];\n  @Input('componentName') _display = '';\n\n  ngOnInit() {\n    this.route.paramMap.subscribe(params => {\n      const name = params.get('name');\n      if (name) {\n        this._display = name;\n      }\n    });\n  }\n\n  display(componentName: string) {\n    this._display = componentName;\n  }\n\n  click() {\n    console.log('Action clicked');\n  }\n  sayHello(evt: any) {\n    console.log('Hello', evt);\n  }\n\n  // Modal demo state\n  _modalOpen = false;\n  openModal() { this._modalOpen = true; }\n  onModalClosed() { this._modalOpen = false; }\n\n  // Tabs demo data\n  demoTabs: SnTab[] = [\n    { label: 'Tab One', content: 'Content for Tab One: This is the first tab panel.' },\n    { label: 'Tab Two', content: 'Content for Tab Two: Here is some different content.' },\n    { label: 'Tab Three', content: 'Content for Tab Three: And a third tab for good measure.' },\n  ];\n\n  // Toggle demo state\n  _toggle1 = false;\n  _toggle2 = true;\n\n  // Checkbox demo state\n  checkboxValue = false;\n  agreeTerms = false;\n  selectAll = false;\n  indeterminateState = false;\n  disabledCheckedValue = true;\n\n  // Radio demo state\n  selectedGender = 'male';\n  selectedSize = 'medium';\n\n  // Textarea demo state\n  comments = '';\n  feedback = '';\n  readonlyText = 'This text is readonly and cannot be edited';\n\n  // Select demo state\n  selectedCountry: string | null = null;\n  selectedLanguages: string[] = [];\n\n  countries: SelectOption[] = [\n    { label: 'United States', value: 'us' },\n    { label: 'United Kingdom', value: 'uk' },\n    { label: 'Canada', value: 'ca' },\n    { label: 'Australia', value: 'au' },\n    { label: 'Germany', value: 'de' },\n    { label: 'France', value: 'fr' },\n    { label: 'Japan', value: 'jp' },\n    { label: 'India', value: 'in' },\n  ];\n\n  languages: SelectOption[] = [\n    { label: 'JavaScript', value: 'js' },\n    { label: 'TypeScript', value: 'ts' },\n    { label: 'Python', value: 'py' },\n    { label: 'Java', value: 'java' },\n    { label: 'C#', value: 'csharp' },\n    { label: 'Ruby', value: 'ruby' },\n  ];\n\n  // Table demo data\n  tableColumns: TableColumn[] = [\n    { header: 'ID', key: 'id', sortable: true, width: '80px', align: 'center' },\n    { header: 'Name', key: 'name', sortable: true, width: '200px', align: 'left' },\n    { header: 'Email', key: 'email', sortable: true, width: '250px', align: 'left' },\n    { header: 'Department', key: 'department', sortable: true, width: '150px', align: 'left' },\n    { header: 'Status', key: 'status', sortable: false, width: '120px', align: 'center' },\n  ];\n\n  tableData: TableRow[] = [\n    { id: 1, name: 'Alice Johnson', email: 'alice.johnson@company.com', department: 'Engineering', status: 'Active' },\n    { id: 2, name: 'Bob Smith', email: 'bob.smith@company.com', department: 'Marketing', status: 'Active' },\n    { id: 3, name: 'Charlie Brown', email: 'charlie.brown@company.com', department: 'Engineering', status: 'Inactive' },\n    { id: 4, name: 'Diana Prince', email: 'diana.prince@company.com', department: 'Sales', status: 'Active' },\n    { id: 5, name: 'Eve Wilson', email: 'eve.wilson@company.com', department: 'HR', status: 'Active' },\n    { id: 6, name: 'Frank Miller', email: 'frank.miller@company.com', department: 'Engineering', status: 'Active' },\n    { id: 7, name: 'Grace Lee', email: 'grace.lee@company.com', department: 'Finance', status: 'Inactive' },\n    { id: 8, name: 'Henry Taylor', email: 'henry.taylor@company.com', department: 'Marketing', status: 'Active' },\n    { id: 9, name: 'Iris Davis', email: 'iris.davis@company.com', department: 'Engineering', status: 'Active' },\n    { id: 10, name: 'Jack Anderson', email: 'jack.anderson@company.com', department: 'Sales', status: 'Active' },\n    { id: 11, name: 'Karen White', email: 'karen.white@company.com', department: 'HR', status: 'Inactive' },\n    { id: 12, name: 'Leo Harris', email: 'leo.harris@company.com', department: 'Engineering', status: 'Active' },\n  ];\n\n  onCheckboxChange(value: boolean) {\n    console.log('Checkbox changed:', value);\n  }\n\n  onRadioChange(value: string) {\n    console.log('Radio changed:', value);\n  }\n\n  onTextareaChange(value: string) {\n    console.log('Textarea changed:', value);\n  }\n\n  onSelectChange(value: any) {\n    console.log('Select changed:', value);\n  }\n\n  onTableSorted(event: any) {\n    console.log('Table sorted:', event);\n  }\n}\n",
             "styleUrl": "./list.component.scss",
             "assetsDirs": [],
             "styleUrlsData": "",
