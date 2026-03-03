@@ -44,9 +44,9 @@ COMPONENTS=(
     # "sn-tabs-x"
     # "sn-textarea"
     # "sn-toggle"
-    "sn-avatar"
-    "sn-skeleton"
-    "sn-pagination"
+    # "sn-avatar"
+    # "sn-skeleton"
+   # "sn-pagination" -- conflict with rc-pagination
     "sn-empty-state"
     "sn-progress-bar"
     "sn-breadcrumbs"
@@ -169,6 +169,41 @@ verify_package_status() {
     fi
 }
 
+# Dry-run publish to catch NPM name-similarity spam detection (403 errors)
+# This builds a minimal tar and tries --dry-run to see if NPM allows the name
+dry_run_name_check() {
+    local folder_name=$1
+    local package_file="projects/$folder_name/package.json"
+    local package_name=$(node -pe "require('./$package_file').name")
+
+    # Build the library first so dist exists
+    npx ng build "$package_name" > /dev/null 2>&1
+    local dest_path="dist/$folder_name"
+
+    if [ ! -d "$dest_path" ]; then
+        echo "BUILD_FAIL"
+        return 0
+    fi
+
+    # Try a dry-run publish to catch 403 name conflicts
+    local dry_output
+    dry_output=$(cd "$dest_path" && npm publish --dry-run --access public 2>&1)
+    
+    if echo "$dry_output" | grep -qi "403\|too similar\|forbidden"; then
+        # Extract the conflicting package name if mentioned
+        local conflict=$(echo "$dry_output" | grep -oP 'too similar to existing package \K\S+' | head -1 | tr -d ';')
+        if [ -n "$conflict" ]; then
+            echo "CONFLICT:$conflict"
+        else
+            echo "CONFLICT:unknown"
+        fi
+        return 0
+    fi
+
+    echo "OK"
+    return 0
+}
+
 # Ensure final version is strictly greater than NPM version
 sync_version() {
     local folder_name=$1
@@ -265,11 +300,28 @@ for component in "${COMPONENTS[@]}"; do
          RENAMED+=("$component → $new_folder")
          sync_version "$new_folder"
          READY_COMPONENTS+=("$new_folder")
-    else
-         # NEW or OWNED
-         if [ "$status" = "OWNED" ]; then
-             sync_version "$component"
+    elif [ "$status" = "NEW" ]; then
+         # Package doesn't exist — test for name-similarity conflicts via dry-run
+         echo "  🧪 Running dry-run name conflict check..."
+         dry_result=$(dry_run_name_check "$component")
+
+         if [[ "$dry_result" == CONFLICT:* ]]; then
+             conflict_pkg="${dry_result#CONFLICT:}"
+             echo -e "  ${YELLOW}⚠️  Name conflict detected! '$package_name' is too similar to '$conflict_pkg'${NC}"
+             echo -e "  ${YELLOW}   Auto-renaming to ${component}-x ...${NC}"
+             new_folder=$(rename_component_x "$component")
+             RENAMED+=("$component → $new_folder (conflict with $conflict_pkg)")
+             READY_COMPONENTS+=("$new_folder")
+         elif [ "$dry_result" = "BUILD_FAIL" ]; then
+             echo -e "  ${RED}❌ Build failed during dry-run check, skipping${NC}"
+             BUILD_FAILED+=("$package_name")
+         else
+             echo -e "  ${GREEN}✅ Name check passed${NC}"
+             READY_COMPONENTS+=("$component")
          fi
+    else
+         # OWNED — we already published this before
+         sync_version "$component"
          READY_COMPONENTS+=("$component")
     fi
     echo "----------------------------------------"
