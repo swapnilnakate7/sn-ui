@@ -1,7 +1,7 @@
-# sn-select
+# sn-dropdown-x
 A powerful and accessible dropdown select component for Angular applications with search and multi-select support.
 ## Overview
-The `sn-select` component provides a feature-rich dropdown with:
+The `sn-dropdown-x` component provides a feature-rich dropdown with:
 - ✅ Single and multi-select modes
 - ✅ Search/filter functionality
 - ✅ Clearable selections
@@ -13,25 +13,25 @@ The `sn-select` component provides a feature-rich dropdown with:
 - ✅ Click-outside-to-close behavior
 ## Installation
 ```bash
-npm install sn-select
+npm install sn-dropdown-x
 ```
 ## Usage
 ### Basic Single Select
 ```typescript
 import { Component } from '@angular/core';
-import { SnSelectComponent, SelectOption } from 'sn-select';
+import { SnDropdownXComponent, SelectOption } from 'sn-dropdown-x';
 @Component({
   selector: 'app-demo',
   template: `
-    <sn-select 
+    <sn-dropdown-x 
       id="country"
       label="Country"
       placeholder="Select a country"
       [options]="countries"
       (changed)="onSelectionChange($event)"
-    ></sn-select>
+    ></sn-dropdown-x>
   `,
-  imports: [SnSelectComponent]
+  imports: [SnDropdownXComponent]
 })
 export class DemoComponent {
   countries: SelectOption[] = [
@@ -46,23 +46,23 @@ export class DemoComponent {
 ```
 ### With Search
 ```typescript
-<sn-select 
+<sn-dropdown-x 
   id="searchable"
   label="Search Countries"
   [options]="countries"
   [searchable]="true"
   [(ngModel)]="selectedCountry"
-></sn-select>
+></sn-dropdown-x>
 ```
 ### Multi-Select
 ```typescript
-<sn-select 
+<sn-dropdown-x 
   id="multi"
   label="Select Multiple"
   [options]="options"
   [multiple]="true"
   [(ngModel)]="selectedValues"
-></sn-select>
+></sn-dropdown-x>
 ```
 ### With Reactive Forms
 ```typescript
@@ -70,15 +70,15 @@ import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 @Component({
   template: `
     <form [formGroup]="form">
-      <sn-select 
+      <sn-dropdown-x 
         id="category"
         label="Category"
         [options]="categories"
         formControlName="category"
-      ></sn-select>
+      ></sn-dropdown-x>
     </form>
   `,
-  imports: [SnSelectComponent, ReactiveFormsModule]
+  imports: [SnDropdownXComponent, ReactiveFormsModule]
 })
 export class FormComponent {
   form: FormGroup;
@@ -149,11 +149,11 @@ The component uses Tailwind CSS for styling. It includes:
 - Search input styling
 ## Testing
 ```bash
-ng test sn-select
+ng test sn-dropdown-x
 ```
 ## Building
 ```bash
-ng build sn-select
+ng build sn-dropdown-x
 ```
 ## Accessibility
 The component includes:

@@ -1,4 +1,4 @@
-# SnButton
+# sn-button-x
 
 Angular v21 standalone button component easy to use. It is a part of SnUI Library.
 

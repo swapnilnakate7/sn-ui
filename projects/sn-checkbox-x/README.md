@@ -1,4 +1,4 @@
-# sn-checkbox
+# sn-checkbox-x
 
 A customizable and accessible checkbox component for Angular applications.
 
@@ -26,16 +26,16 @@ npm install sn-checkbox
 
 ```typescript
 import { Component } from '@angular/core';
-import { SnCheckboxComponent } from 'sn-checkbox';
+import { SnCheckboxComponent } from 'sn-checkbox-x';
 
 @Component({
   selector: 'app-demo',
   template: `
-    <sn-checkbox 
+    <sn-checkbox-x 
       id="agree"
       label="I agree to the terms"
       (changed)="onChecked($event)"
-    ></sn-checkbox>
+    ></sn-checkbox-x>
   `,
   imports: [SnCheckboxComponent]
 })
@@ -51,17 +51,17 @@ export class DemoComponent {
 ```typescript
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { SnCheckboxComponent } from 'sn-checkbox';
+import { SnCheckboxComponent } from 'sn-checkbox-x';
 
 @Component({
   selector: 'app-form',
   template: `
     <form [formGroup]="form">
-      <sn-checkbox 
+      <sn-checkbox-x 
         id="newsletter"
         label="Subscribe to newsletter"
         formControlName="newsletter"
-      ></sn-checkbox>
+      ></sn-checkbox-x>
     </form>
   `,
   imports: [SnCheckboxComponent, ReactiveFormsModule]
@@ -82,16 +82,16 @@ export class FormComponent {
 ```typescript
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { SnCheckboxComponent } from 'sn-checkbox';
+import { SnCheckboxComponent } from 'sn-checkbox-x';
 
 @Component({
   selector: 'app-template-form',
   template: `
-    <sn-checkbox 
+    <sn-checkbox-x 
       id="terms"
       [(ngModel)]="accepted"
       label="I accept"
-    ></sn-checkbox>
+    ></sn-checkbox-x>
   `,
   imports: [SnCheckboxComponent, FormsModule]
 })
@@ -103,22 +103,22 @@ export class TemplateFormComponent {
 ### Indeterminate State
 
 ```typescript
-<sn-checkbox 
+<sn-checkbox-x 
   id="select-all"
   [indeterminate]="someSelected && !allSelected"
   [checked]="allSelected"
   label="Select All"
-></sn-checkbox>
+></sn-checkbox-x>
 ```
 
 ### Disabled State
 
 ```typescript
-<sn-checkbox 
+<sn-checkbox-x 
   id="disabled-check"
   [disabled]="true"
   label="Disabled checkbox"
-></sn-checkbox>
+></sn-checkbox-x>
 ```
 
 ## API

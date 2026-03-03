@@ -1,7 +1,7 @@
-# sn-table
+# sn-datatable
 A powerful and flexible data table component for Angular with sorting, pagination, and multiple styling options.
 ## Overview
-The `sn-table` component provides:
+The `sn-datatable` component provides:
 - ✅ Sortable columns (click header to sort)
 - ✅ Pagination with next/previous navigation
 - ✅ Multiple row styling (striped, hoverable, bordered)
@@ -12,22 +12,22 @@ The `sn-table` component provides:
 - ✅ Full accessibility support
 ## Installation
 ```bash
-npm install sn-table
+npm install sn-datatable
 ```
 ## Usage
 ### Basic Table
 ```typescript
 import { Component } from '@angular/core';
-import { SnTableComponent, TableColumn, TableRow } from 'sn-table';
+import { SnDatatableComponent, TableColumn, TableRow } from 'sn-datatable';
 @Component({
   selector: 'app-demo',
   template: `
-    <sn-table 
+    <sn-datatable 
       [columns]="columns"
       [data]="employees"
-    ></sn-table>
+    ></sn-datatable>
   `,
-  imports: [SnTableComponent]
+  imports: [SnDatatableComponent]
 })
 export class DemoComponent {
   columns: TableColumn[] = [
@@ -45,7 +45,7 @@ export class DemoComponent {
 ```
 ### With Styling Options
 ```typescript
-<sn-table 
+<sn-datatable 
   [columns]="columns"
   [data]="data"
   [striped]="true"
@@ -53,7 +53,7 @@ export class DemoComponent {
   [bordered]="false"
   [pageSize]="25"
   (sorted)="onSort($event)"
-></sn-table>
+></sn-datatable>
 ```
 ### With Custom Column Width and Alignment
 ```typescript
@@ -114,11 +114,11 @@ The table uses Tailwind CSS utilities and custom SCSS. Customization via:
 - Custom CSS classes
 ## Testing
 ```bash
-ng test sn-table
+ng test sn-datatable
 ```
 ## Building
 ```bash
-ng build sn-table
+ng build sn-datatable
 ```
 ## Accessibility
 - Semantic HTML table structure
