@@ -1,24 +1,24 @@
-# SnInput
+# sn-input
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 21.0.0.
+A customizable text input component for Angular with label, placeholder, and validation support.
 
-## Code scaffolding
+## Installation
 
-Run `ng generate component component-name --project sn-input` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project sn-input`.
-> Note: Don't forget to add `--project sn-input` or else it will be added to the default project in your `angular.json` file. 
+```bash
+npm install @nicosnapps/sn-input
+```
 
-## Build
+## Usage
 
-Run `ng build sn-input` to build the project. The build artifacts will be stored in the `dist/` directory.
+```typescript
+import { SnInputComponent } from '@nicosnapps/sn-input';
 
-## Publishing
+@Component({
+  imports: [SnInputComponent],
+  template: `
+    <sn-input label="Email" placeholder="Enter your email" type="email" [(value)]="email"></sn-input>
+  `
+})
+```
 
-After building your library with `ng build sn-input`, go to the dist folder `cd dist/sn-input` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test sn-input` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Part of [sn-ui](https://github.com/nicosnapps/sn-ui)

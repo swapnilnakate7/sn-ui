@@ -1,64 +1,55 @@
-# SnAdvancedDatatable
+# sn-advanced-datatable
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.0.
+A feature-rich data table for Angular with search, filtering, sorting, row selection, expandable rows, and pagination.
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Installation
 
 ```bash
-ng generate component component-name
+npm install @nicosnapps/sn-advanced-datatable
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Usage
 
-```bash
-ng generate --help
+```typescript
+import { SnAdvancedDatatableComponent } from '@nicosnapps/sn-advanced-datatable';
+
+@Component({
+  imports: [SnAdvancedDatatableComponent],
+  template: `
+    <sn-advanced-datatable 
+      [columns]="columns" 
+      [data]="data"
+      [searchable]="true"
+      [filterable]="true"
+      [selectable]="true"
+      [expandable]="true"
+      [pageSize]="10">
+    </sn-advanced-datatable>
+  `
+})
+export class MyComponent {
+  columns = [
+    { header: 'Name', key: 'name', sortable: true, filterable: true },
+    { header: 'Email', key: 'email', sortable: true },
+    { header: 'Status', key: 'status', sortable: true, filterable: true },
+  ];
+  data = [
+    { name: 'Alice', email: 'alice@co.com', status: 'Active' },
+    { name: 'Bob', email: 'bob@co.com', status: 'Inactive' },
+  ];
+}
 ```
 
-## Building
+## Features
 
-To build the library, run:
+| Feature | Description |
+|---|---|
+| **Global search** | Full-text filter across all columns |
+| **Column filters** | Per-column text inputs |
+| **Sorting** | Click headers to sort asc/desc |
+| **Row selection** | Checkbox-based, select-all per page |
+| **Expandable rows** | Accordion content with custom `ng-template` |
+| **Pagination** | Page size selector, visible page range |
+| **Appearance** | Striped, hoverable, bordered options |
 
-```bash
-ng build sn-advanced-datatable
-```
-
-This command will compile your project, and the build artifacts will be placed in the `dist/` directory.
-
-### Publishing the Library
-
-Once the project is built, you can publish your library by following these steps:
-
-1. Navigate to the `dist` directory:
-
-   ```bash
-   cd dist/sn-advanced-datatable
-   ```
-
-2. Run the `npm publish` command to publish your library to the npm registry:
-   ```bash
-   npm publish
-   ```
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Part of [sn-ui](https://github.com/nicosnapps/sn-ui)

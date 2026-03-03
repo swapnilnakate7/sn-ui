@@ -1,0 +1,24 @@
+# sn-spinner-x
+
+A loading spinner component for Angular with multiple sizes and color schemes.
+
+## Installation
+
+```bash
+npm install @nicosnapps/sn-spinner-x
+```
+
+## Usage
+
+```typescript
+import { SnSpinnerXComponent } from '@nicosnapps/sn-spinner-x';
+
+@Component({
+  imports: [SnSpinnerXComponent],
+  template: `
+    <sn-spinner-x size="md" scheme="primary"></sn-spinner-x>
+  `
+})
+```
+
+## Part of [sn-ui](https://github.com/nicosnapps/sn-ui)

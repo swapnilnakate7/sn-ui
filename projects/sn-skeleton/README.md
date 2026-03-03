@@ -1,64 +1,36 @@
-# SnSkeleton
+# sn-skeleton
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.0.
+A flexible skeleton loading placeholder for Angular applications. Perfect for displaying while content is being fetched.
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Installation
 
 ```bash
-ng generate component component-name
+npm install @nicosnapps/sn-skeleton
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Usage
 
-```bash
-ng generate --help
+```typescript
+import { SnSkeletonComponent } from '@nicosnapps/sn-skeleton';
+
+@Component({
+  imports: [SnSkeletonComponent],
+  template: `
+    <sn-skeleton type="text" width="60%" height="1rem" animation="pulse"></sn-skeleton>
+    <sn-skeleton type="circle" width="3rem" height="3rem" animation="wave"></sn-skeleton>
+    <sn-skeleton type="rectangle" width="100%" height="8rem"></sn-skeleton>
+  `
+})
 ```
 
-## Building
+## Inputs
 
-To build the library, run:
+| Input | Type | Default | Description |
+|---|---|---|---|
+| `type` | `'text' \| 'circle' \| 'rectangle'` | `'text'` | Shape of the skeleton |
+| `animation` | `'pulse' \| 'wave' \| 'none'` | `'pulse'` | Animation style |
+| `width` | `string` | `'100%'` | Width (CSS value) |
+| `height` | `string` | `'1rem'` | Height (CSS value) |
+| `customClass` | `string` | `''` | Additional CSS classes |
 
-```bash
-ng build sn-skeleton
-```
-
-This command will compile your project, and the build artifacts will be placed in the `dist/` directory.
-
-### Publishing the Library
-
-Once the project is built, you can publish your library by following these steps:
-
-1. Navigate to the `dist` directory:
-
-   ```bash
-   cd dist/sn-skeleton
-   ```
-
-2. Run the `npm publish` command to publish your library to the npm registry:
-   ```bash
-   npm publish
-   ```
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Part of [sn-ui](https://github.com/nicosnapps/sn-ui)

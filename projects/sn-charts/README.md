@@ -1,64 +1,74 @@
-# SnCharts
+# sn-charts
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.0.
+Native SVG chart components for Angular — **zero external dependencies**.
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Installation
 
 ```bash
-ng generate component component-name
+npm install @nicosnapps/sn-charts
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Components
 
-```bash
-ng generate --help
+### Bar Chart
+
+```typescript
+import { SnBarChartComponent } from '@nicosnapps/sn-charts';
+
+@Component({
+  imports: [SnBarChartComponent],
+  template: `
+    <sn-bar-chart [data]="data" color="#3b82f6" [height]="300"></sn-bar-chart>
+  `
+})
+export class MyComponent {
+  data = [
+    { label: 'Jan', value: 30 },
+    { label: 'Feb', value: 80 },
+    { label: 'Mar', value: 45 },
+  ];
+}
 ```
 
-## Building
+### Line Chart
 
-To build the library, run:
+```typescript
+import { SnLineChartComponent } from '@nicosnapps/sn-charts';
 
-```bash
-ng build sn-charts
+@Component({
+  imports: [SnLineChartComponent],
+  template: `
+    <sn-line-chart [data]="data" color="#ec4899" [fillArea]="true" [height]="300"></sn-line-chart>
+  `
+})
 ```
 
-This command will compile your project, and the build artifacts will be placed in the `dist/` directory.
+### Pie / Donut Chart
 
-### Publishing the Library
+```typescript
+import { SnPieChartComponent } from '@nicosnapps/sn-charts';
 
-Once the project is built, you can publish your library by following these steps:
-
-1. Navigate to the `dist` directory:
-
-   ```bash
-   cd dist/sn-charts
-   ```
-
-2. Run the `npm publish` command to publish your library to the npm registry:
-   ```bash
-   npm publish
-   ```
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
+@Component({
+  imports: [SnPieChartComponent],
+  template: `
+    <sn-pie-chart [data]="data" [size]="250" [donut]="true" [showLegend]="true"></sn-pie-chart>
+  `
+})
+export class MyComponent {
+  data = [
+    { label: 'Direct', value: 40 },
+    { label: 'Organic', value: 30, color: '#10b981' },
+    { label: 'Social', value: 15 },
+  ];
+}
 ```
 
-## Running end-to-end tests
+## Features
 
-For end-to-end (e2e) testing, run:
+- **Native SVG** — no Chart.js, D3, or other dependencies
+- **Responsive** — automatically resizes to container width
+- **Interactive** — hover tooltips on all chart types
+- **Animated** — line draw animation, fade-in effects
+- **Donut mode** — pie chart supports donut with center label
 
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Part of [sn-ui](https://github.com/nicosnapps/sn-ui)

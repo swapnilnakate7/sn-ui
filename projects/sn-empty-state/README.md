@@ -1,64 +1,44 @@
-# SnEmptyState
+# sn-empty-state
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.0.
+A polished empty state display component for Angular applications. Use it when tables, lists, or views have no data to show.
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Installation
 
 ```bash
-ng generate component component-name
+npm install @nicosnapps/sn-empty-state
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Usage
 
-```bash
-ng generate --help
+```typescript
+import { SnEmptyStateComponent } from '@nicosnapps/sn-empty-state';
+
+@Component({
+  imports: [SnEmptyStateComponent],
+  template: `
+    <sn-empty-state 
+      title="No items found" 
+      description="Get started by adding a new item."
+      actionText="Add Item"
+      (actionClicked)="onAdd()">
+    </sn-empty-state>
+  `
+})
 ```
 
-## Building
+## Inputs
 
-To build the library, run:
+| Input | Type | Default | Description |
+|---|---|---|---|
+| `title` | `string` | `''` | Heading text |
+| `description` | `string` | `''` | Supporting message |
+| `actionText` | `string` | `''` | CTA button label (hidden if empty) |
+| `iconClass` | `string` | `''` | Custom icon class |
 
-```bash
-ng build sn-empty-state
-```
+## Outputs
 
-This command will compile your project, and the build artifacts will be placed in the `dist/` directory.
+| Output | Type | Description |
+|---|---|---|
+| `actionClicked` | `EventEmitter<void>` | Fires when the CTA button is clicked |
 
-### Publishing the Library
-
-Once the project is built, you can publish your library by following these steps:
-
-1. Navigate to the `dist` directory:
-
-   ```bash
-   cd dist/sn-empty-state
-   ```
-
-2. Run the `npm publish` command to publish your library to the npm registry:
-   ```bash
-   npm publish
-   ```
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Part of [sn-ui](https://github.com/nicosnapps/sn-ui)

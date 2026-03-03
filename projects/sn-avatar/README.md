@@ -1,64 +1,37 @@
-# SnAvatar
+# sn-avatar
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.0.
+A lightweight, customizable avatar component for Angular applications.
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Installation
 
 ```bash
-ng generate component component-name
+npm install @nicosnapps/sn-avatar
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Usage
 
-```bash
-ng generate --help
+```typescript
+import { SnAvatarComponent } from '@nicosnapps/sn-avatar';
+
+@Component({
+  imports: [SnAvatarComponent],
+  template: `
+    <sn-avatar src="https://example.com/photo.jpg" size="md" shape="circle"></sn-avatar>
+    <sn-avatar initials="JD" bgColor="#3b82f6" textColor="#fff" size="lg"></sn-avatar>
+  `
+})
 ```
 
-## Building
+## Inputs
 
-To build the library, run:
+| Input | Type | Default | Description |
+|---|---|---|---|
+| `src` | `string` | `''` | URL of the avatar image |
+| `alt` | `string` | `''` | Alt text for the image |
+| `initials` | `string` | `''` | Fallback text when no image is provided |
+| `size` | `'sm' \| 'md' \| 'lg' \| 'xl'` | `'md'` | Size of the avatar |
+| `shape` | `'circle' \| 'square' \| 'rounded'` | `'circle'` | Shape of the avatar |
+| `bgColor` | `string` | — | Background color for initials |
+| `textColor` | `string` | — | Text color for initials |
 
-```bash
-ng build sn-avatar
-```
-
-This command will compile your project, and the build artifacts will be placed in the `dist/` directory.
-
-### Publishing the Library
-
-Once the project is built, you can publish your library by following these steps:
-
-1. Navigate to the `dist` directory:
-
-   ```bash
-   cd dist/sn-avatar
-   ```
-
-2. Run the `npm publish` command to publish your library to the npm registry:
-   ```bash
-   npm publish
-   ```
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Part of [sn-ui](https://github.com/nicosnapps/sn-ui)
