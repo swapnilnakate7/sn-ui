@@ -17,3 +17,6 @@ Before creating any new components for the `sn-ui` library, follow this checklis
    
 4. **Update Documentation**:
    Ensure the new component is added to the relevant documentation and exported properly in the public API surface.
+   
+5. **Create Storybook Stories**:
+   After fully developing the component, generate a beautiful `.stories.ts` file inside the component's `src/lib/` directory so it can be viewed interactively in the Storybook dashboard.
