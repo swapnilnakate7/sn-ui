@@ -1,6 +1,7 @@
 {
   "extends": "../tsconfig.app.json",
   "compilerOptions": {
+    "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true
   },
